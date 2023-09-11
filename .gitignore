@@ -3,3 +3,5 @@
 !/mods
 !/kubejs
 !/.gitignore
+!/instance.cfg
+!/mmc-pack.json
