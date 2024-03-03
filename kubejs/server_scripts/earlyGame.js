@@ -39,49 +39,6 @@ ServerEvents.recipes(event => {
     event.remove({ output: "enderio:photovoltaic_composite" })
     event.shapeless("3x enderio:photovoltaic_composite", ["gtceu:lapis_dust", "gtceu:coal_dust", "gtceu:silicon_dust"])
 
-    // Drawers
-    event.remove({ output: "storagedrawers:obsidian_storage_upgrade" })
-    event.remove({ output: "storagedrawers:compacting_drawers_3" })
-    event.remove({ output: "storagedrawers:controller" })
-    event.remove({ output: "storagedrawers:controller_slave" })
-    event.shaped(
-        "storagedrawers:obsidian_storage_upgrade", [
-            'SSS',
-            'CUC',
-            'SSS'
-        ], {
-            S: "minecraft:stick",
-            C: "minecraft:coal",
-            U: "storagedrawers:upgrade_template"
-        }
-    )
-    event.shaped(
-        "storagedrawers:compacting_drawers_3", [
-            'III',
-            'PDP',
-            'III'
-        ], {
-            I: "gtceu:iron_plate",
-            P: "gtceu:lv_electric_piston",
-            D: "#storagedrawers:drawers"
-        }
-    )
-
-    var controllerCore = ["minecraft:diamond_block", "minecraft:emerald_block"]
-    controllerCore.forEach(coreBlock => {
-        event.shaped(
-            "storagedrawers:controller", [
-                'III',
-                'CDC',
-                'IEI'
-            ], {
-                I: "gtceu:iron_plate",
-                C: "#gtceu:circuits/lv",
-                D: "#storagedrawers:drawers",
-                E: coreBlock
-            }
-        )
-    })
 
     event.remove({ id: 'gtceu:assembler/phenolic_board' })
     event.recipes.gtceu.chemical_reactor('phenolic_board')
