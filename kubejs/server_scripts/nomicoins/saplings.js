@@ -1,0 +1,39 @@
+ServerEvents.recipes(event => {
+    //-- Saplings
+    event.shaped(
+        Item.of('minecraft:dark_oak_sapling', 64), [
+        'AA ',
+        '   ',
+        'A  '
+    ], {
+        A: 'kubejs:nomi_penny'
+    }).noMirror().noShrink()
+
+
+    event.shaped(
+        Item.of('minecraft:acacia_sapling', 64), [
+        'AA ',
+        '  A',
+        '   '
+    ], {
+        A: 'kubejs:nomi_penny'
+    }).noMirror().noShrink()
+
+    event.shaped(
+        Item.of('minecraft:spruce_sapling', 64), [
+        'AA ',
+        '   ',
+        ' A '
+    ], {
+        A: 'kubejs:nomi_penny'
+    }).noMirror().noShrink()
+
+    event.shaped(
+        Item.of('minecraft:birch_sapling', 64), [
+        'AA ',
+        'A  ',
+        '   '
+    ], {
+        A: 'kubejs:nomi_penny'
+    }).noMirror().noShrink()
+})
