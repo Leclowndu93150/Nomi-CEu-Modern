@@ -500,14 +500,14 @@ ServerEvents.recipes(event => {
 
     /*event.shaped(
 
-      Item.of('gtceu:banded_iron_ore', 32), 
-      [ 
-        '   ', 
-        '   ', 
-        ' AA'  
+      Item.of('gtceu:banded_iron_ore', 32),
+      [
+        '   ',
+        '   ',
+        ' AA'
       ],
       {
-        A: 'kubejs:nomi_nickel'  
+        A: 'kubejs:nomi_nickel'
       }).noMirror().noShrink()*/
 
     event.shaped(
@@ -737,14 +737,14 @@ ServerEvents.recipes(event => {
 
     /*event.shaped(
 
-      Item.of('gtceu:brown_limonite_ore', 32), 
-      [ 
-        'A  ', 
-        ' A ', 
-        '   '  
+      Item.of('gtceu:brown_limonite_ore', 32),
+      [
+        'A  ',
+        ' A ',
+        '   '
       ],
       {
-        A: 'kubejs:nomi_nickel'  
+        A: 'kubejs:nomi_nickel'
       }).noMirror().noShrink()*/
 
     event.shaped(
@@ -872,45 +872,4 @@ ServerEvents.recipes(event => {
     ], {
         A: 'kubejs:nomi_quarter'
     }).noMirror().noShrink()
-
-    event.shaped(
-        Item.of('ulvcovm:ulv_conveyor_module', 2), [
-        '   ',
-        '   ',
-        'A A'
-    ], {
-        A: 'kubejs:nomi_nickel'
-    }).noMirror().noShrink()
-
-    event.shaped(
-        Item.of('ulvcovm:ulv_electric_pump', 2), [
-        '   ',
-        '   ',
-        ' AA'
-    ], {
-        A: 'kubejs:nomi_nickel'
-    }).noMirror().noShrink()
-
-    event.shaped(
-        Item.of('ulvcovm:ulv_robot_arm'), [
-        '   ',
-        ' A ',
-        '  A'
-    ], {
-        A: 'kubejs:nomi_nickel'
-    }).noMirror().noShrink()
-
-    event.shaped(
-        Item.of('ulvcovm:ulv_fluid_regulator'), [
-        '   ',
-        '  A',
-        '  A'
-    ], {
-        A: 'kubejs:nomi_nickel'
-    }).noMirror().noShrink()
-
-
-
-    /*NOMIDOLLAR RECIPES
-      NO RECIPES*/
 })
