@@ -46,4 +46,22 @@ ServerEvents.recipes(event => {
     ], {
         A: 'kubejs:nomi_penny'
     }).noMirror().noShrink()
+
+    event.shaped(
+        Item.of('minecraft:cherry_sapling', 64), [
+        'AA ',
+        '   ',
+        '  A'
+    ], {
+        A: 'kubejs:nomi_penny'
+    }).noMirror().noShrink()
+
+    event.shaped(
+        Item.of('minecraft:mangrove_propagule', 64), [
+        'AA ',
+        ' A ',
+        '   '
+    ], {
+        A: 'kubejs:nomi_penny'
+    }).noMirror().noShrink()
 })
