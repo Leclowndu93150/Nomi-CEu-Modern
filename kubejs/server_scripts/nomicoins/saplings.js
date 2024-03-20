@@ -1,5 +1,15 @@
 ServerEvents.recipes(event => {
     //-- Saplings
+        event.shaped(
+        Item.of('minecraft:oak_sapling', 64), [
+        'AAA',
+        '   ',
+        '   '
+    ], {
+        A: 'kubejs:nomi_penny'
+    }).noMirror().noShrink()
+
+
     event.shaped(
         Item.of('minecraft:dark_oak_sapling', 64), [
         'AA ',
