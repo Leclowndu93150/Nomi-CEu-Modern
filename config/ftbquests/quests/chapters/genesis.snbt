@@ -11,13 +11,11 @@
 		{
 			dependencies: ["2A511DB40C66CF35"]
 			description: [
-				"This pack is intended to be played in a &bLost cities/Overworld dimension&r"
+				"This pack is intended to be played in a &bLost cities/Overworld dimension&r."
 				""
-				"If you're playing with friends, don't forget to invite them to the"
-				"&eFTB Teams party&r. "
+				"If you're playing with friends, don't forget to invite them to the &eFTB Teams party&r. "
 				""
-				"If you wish to build your base in a skyblock world, place the &6Void World Cake&r down on the ground, and eat a slice to be sent"
-				"to the void. Please note that you'll still need to return to the Lost Cities/Overworld dimension to mine, but you can freely build in complete safety in the &eVoid&r"
+				"If you wish to build your base in a skyblock world, place the &6Void World Cake&r down on the ground, and eat a slice to be sent to the void. Please note that you'll still need to return to the Lost Cities/Overworld dimension to mine, but you can freely build in complete safety in the &eVoid World&r."
 				""
 				"Features new to &2CEu&r and quests with new content will be higlighted in &2dark green&r."
 				""
@@ -324,13 +322,11 @@
 		{
 			dependencies: ["2E8BFA2E719B1C47"]
 			description: [
-				"One of the eccentricities of the pack you'll need to get used to is the way the tools are displayed. Most tools can be made out of nearly any metal, and &bJEI&f will display a huge number of options... every combination of every tool with every material. However, the pattern to make the tool is always identical, so &ejust arrange the plates and ingots in the same manner as the examples, ignoring whatever material it says&f. Rods where rods go, plates where plates, etc. The only restriction is that tools &emust be made from all of the same material&f... you cannot mix and match different metals in a single item."
+				"&dWith EMI, instead of showing you a separate recipe for every tool-resource combination, tools are instead grouped. You can use any any tool from that group - for example, the &6#forge:tools/hammers &dgroup means that any &aHammer &dcan be used there."
 				""
-				"Recipes will default to showing a &6Iron tool &rof the appropriate type if a tool is required, but the correct type of tool made out of any metal will work. Just ignore the tool's material in the recipes: it can be whatever you'd like."
+				"First, make a &aHammer&f (not a &aMining Hammer&f, mind you... six ingots, not plates). Hammers can be used to turn &etwo ingots into one plate&f. &6Plates&f can make a &aFile&f, Files can make &6Rods&f, etc. Use EMI to work your way down the list of tools."
 				""
-				"For now, make a &aHammer&f (not a &aMining Hammer&f, mind you... six ingots, not plates). Hammers can be used to turn &etwo ingots into one plate&f. &6Plates&f can make a &aFile&f, Files can make &6Rods&f, etc. Use JEI to work your way down the list of tools."
-				""
-				"&6Wrought Iron&f is probably your best bet for a tool material right now, but better materials will become available as you progress. This quest accepts any tool material."
+				"&6Wrought Iron&f is probably your best bet for a tool material right now, but better materials will become available as you progress."
 			]
 			icon: {
 				Count: 1b
@@ -1373,7 +1369,7 @@
 				"12B95158E4C792DB"
 			]
 			description: [
-				"This is where your &3Crafting Station&f setups will really shine! With the patterns encoded into a Crafting Stations (well, really over &omany&r Crafting Stations), you'll be able to &ebatch craft circuits quickly&f."
+				"&dThis is where &bEMI&d really shines! Using it alongside &3Crafting Stations&d, you should be able to easily calculate the amount of raw resources and intermediate components you'll need to &ebatch craft &delectronic circuits quickly."
 				""
 				"You'll be making a LOT&r of circuits, so take advantage of the improved crafting efficiency."
 			]
@@ -1570,13 +1566,26 @@
 		}
 		{
 			dependencies: ["2FA9404468E4BBD9"]
+			description: [
+				"&6Batteries&r are &bGregTech &rpower storage for &aEU&r energy."
+				""
+				"Although there are several types of rechargeable batteries you can make, &2Lithium Batteries&r are the best ones, and the only ones you should really consider making."
+				""
+				"&6Lithium&r is possible to find inside of &6Tungsten&r veins, however, they are fairly rare. Consider \"buying\" some Lithium with &dNomicoins&r."
+			]
 			id: "077AA27F26B7831F"
+			rewards: [{
+				id: "0630EB540FFAC21C"
+				item: "kubejs:nomi_nickel"
+				type: "item"
+			}]
 			tasks: [{
 				count: 4L
 				id: "7923DEDAB3298371"
 				item: { Count: 4b, id: "gtceu:lv_battery_hull" }
 				type: "item"
 			}]
+			title: "LV Power Storage"
 			x: -2.5d
 			y: 10.5d
 		}
