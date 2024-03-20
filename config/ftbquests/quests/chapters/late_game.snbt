@@ -1804,7 +1804,10 @@
 			y: 16.75d
 		}
 		{
-			dependencies: ["5792330C6E5B87A3"]
+			dependencies: [
+				"5792330C6E5B87A3"
+				"0562D9F4C441EAF9"
+			]
 			description: ["A complex plating material used exclusively for the Tier Nine Micro Miner."]
 			id: "57D9FA04817CB92F"
 			rewards: [{
@@ -1823,7 +1826,7 @@
 			y: 18.25d
 		}
 		{
-			dependencies: ["5792330C6E5B87A3"]
+			dependencies: ["7FAB6FD0A054443E"]
 			description: [
 				"You don't need it just yet, but you can make it now."
 				""
@@ -1848,6 +1851,7 @@
 			dependencies: [
 				"2358A5CF22FF5495"
 				"7E3A179376673590"
+				"0B6196692F9E176D"
 			]
 			description: [
 				"The source of &6Dragon Hearts&r and the valuable &6Lair of The Chaos Guardian Data&r."
@@ -2003,7 +2007,7 @@
 			y: 8.25d
 		}
 		{
-			dependencies: ["0B6196692F9E176D"]
+			dependencies: ["1CC092A2F2CD4589"]
 			description: [
 				"&6Draconic Cores&r are the first crafting step into &bDraconic Evolution&r."
 				""
@@ -2048,11 +2052,7 @@
 			y: 10.25d
 		}
 		{
-			dependencies: [
-				"57D9FA04817CB92F"
-				"5FE96C30454A0374"
-				"4DF92773C82F4AAC"
-			]
+			dependencies: ["5FE96C30454A0374"]
 			description: ["&6Dragon Hearts&r are needed for both &6Awakened Draconium&r and &6The Ultimate Material&r."]
 			id: "7FAB6FD0A054443E"
 			rewards: [{
@@ -2302,6 +2302,7 @@
 				"57D9FA04817CB92F"
 				"619D94FE1D9834FA"
 				"6ABD83B58FADD4DF"
+				"483652BAEF59E125"
 			]
 			description: [
 				"Combines &bStellar Creation Data&r into the &dUniverse Creation Data&r, which is a crucial component for the Tier Ten Micro Miner mission."
@@ -2327,8 +2328,8 @@
 		}
 		{
 			dependencies: [
-				"6BF4A76C5B84EEE9"
 				"03F04B4005F2CBE1"
+				"738A141D31AD7CE3"
 			]
 			description: [
 				"The &6Reactor Stabilizer&r is a component needed for the Tier Nine and Tier Ten Micro Miners, as well as a component in a few Endgame recipes."
@@ -2411,7 +2412,6 @@
 			dependencies: [
 				"22E50A6923EBF5CB"
 				"235C1E5B2C58B5AF"
-				"483652BAEF59E125"
 			]
 			description: [
 				"The highest tier of fusion crafting injectors. You will need at least ten of these to reach the &dCreative Tank&r."
@@ -2716,7 +2716,7 @@
 		}
 		{
 			dependencies: ["3E51686E2DBD380F"]
-			description: [" &6TNT&r is an explosive made from &9Toluene&r, a distillation byproduct of &9Wood Tar&r or various &eSteam-Cracked Fuels&r. Besides its typical uses in Minecraft, it is a crafting ingredient you can use in the &3Implosion Compressor&r."]
+			description: ["&6TNT&r is an explosive made from &9Toluene&r, a distillation byproduct of &9Wood Tar&r or various &eSteam-Cracked Fuels&r. Besides its typical uses in Minecraft, it is a crafting ingredient you can use in the &3Implosion Compressor&r."]
 			id: "25B0271106684DF7"
 			rewards: [{
 				id: "3025735A47D591DE"
