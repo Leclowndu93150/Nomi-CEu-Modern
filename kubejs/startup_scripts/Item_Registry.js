@@ -181,7 +181,7 @@ StartupEvents.registry('item', event => {
     event.create('glitch_infused_boots', 'boots').tier('glitch').displayName('§bGlitch Infused Boots')
 
     //Dev Tool
-    event.create('dev_tool', 'paxel').tier("dev").unstackable().displayName("The Holy Pickaxe")
+    //event.create('dev_tool', 'paxel').tier("dev").unstackable().displayName("The Holy Pickaxe")
 
     //Ultimate Generator Components
     //event.create('survival_generator_component').textureJson({ layer0: 'gtceu:item/material_sets/dull/gear'}).color(0, '#70F00F')

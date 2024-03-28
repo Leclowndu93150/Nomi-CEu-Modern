@@ -16,8 +16,8 @@ JEIEvents.hideItems(event => {
     event.hide(['extendedcrafting:the_ultimate_component', 'extendedcrafting:enhanced_ender_catalyst', 'extendedcrafting:enhanced_redstone_catalyst', 'extendedcrafting:enhanced_redstone_component', 'extendedcrafting:enhanced_ender_component', 'extendedcrafting:ender_component', 'extendedcrafting:black_iron_block', 'extendedcrafting:black_iron_ingot', 'extendedcrafting:redstone_ingot_block', 'extendedcrafting:redstone_ingot', 'extendedcrafting:enhanced_redstone_ingot_block', 'extendedcrafting:enhanced_redstone_ingot', 'extendedcrafting:ender_ingot_block', 'extendedcrafting:ender_ingot', 'extendedcrafting:enhanced_ender_ingot_block', 'extendedcrafting:enhanced_ender_ingot', 'extendedcrafting:ender_star_block', 'extendedcrafting:ender_star', 'extendedcrafting:flux_star_block', 'extendedcrafting:flux_star', 'extendedcrafting:frame', 'extendedcrafting:basic_table', 'extendedcrafting:basic_auto_table', 'extendedcrafting:compressor', 'extendedcrafting:ender_alternator', 'extendedcrafting:ender_crafter', 'extendedcrafting:auto_ender_crafter', 'extendedcrafting:flux_alternator', 'extendedcrafting:flux_crafter', 'extendedcrafting:auto_flux_crafter', 'extendedcrafting:black_iron_slate', 'extendedcrafting:ender_catalyst'])
     event.hide(['extendedcrafting:black_iron_nugget', 'extendedcrafting:redstone_nugget', 'extendedcrafting:enhanced_redstone_nugget', 'extendedcrafting:ender_nugget', 'extendedcrafting:enhanced_ender_nugget'])
 
-	//Avaritia
-	event.hide(['avaritia:extreme_crafting_table', 'avaritia:neutron_collector', 'avaritia:neutronium_compressor', 'avaritia:infinity_shovel', 'avaritia:infinity_axe', 'avaritia:infinity_pickaxe', 'avaritia:record_fragment', 'avaritia:endest_pearl', 'avaritia:infinity_bow']);
+    //Avaritia
+    event.hide(['avaritia:extreme_crafting_table', 'avaritia:neutron_collector', 'avaritia:neutronium_compressor', 'avaritia:infinity_shovel', 'avaritia:infinity_axe', 'avaritia:infinity_pickaxe', 'avaritia:record_fragment', 'avaritia:endest_pearl', 'avaritia:infinity_bow']);
     event.hide(/avaritia:.+_singularity/);
 
     //Thermal
@@ -27,7 +27,7 @@ JEIEvents.hideItems(event => {
 
     //EnderIO
     event.hide(['enderio:energy_conduit', 'enderio:plant_matter_green', 'enderio:plant_matter_brown', 'enderio:clayed_glowstone', 'enderio:flour', 'enderio:organic_green_dye', 'enderio:organic_brown_dye', 'enderio:industrial_insulation_block', "enderio:primitive_alloy_smelter", "enderio:alloy_smelter", "enderio:sag_mill", "enderio:stirling_generator"])
-    //EnderIO (grinding balls) haha grind my balls -clown
+        //EnderIO (grinding balls) haha grind my balls -clown
     event.hide(['enderio:soularium_grinding_ball', 'enderio:conductive_alloy_grinding_ball', 'enderio:pulsating_alloy_grinding_ball', 'enderio:redstone_alloy_grinding_ball', 'enderio:energetic_alloy_grinding_ball', 'enderio:vibrant_alloy_grinding_ball', 'enderio:copper_alloy_grinding_ball', 'enderio:dark_steel_grinding_ball', 'enderio:end_steel_grinding_ball'])
 
     //GT Steam Age
@@ -73,7 +73,7 @@ JEIEvents.hideItems(event => {
     event.hide('sophisticatedbackpacks:copper_backpack')
 
     //Leave me alone
-    event.hide('kubejs:dev_tool')
+    //event.hide('kubejs:dev_tool')
 })
 
 JEIEvents.hideFluids(event => {
