@@ -1,9 +1,11 @@
 name: Build PR
+
 on:
   workflow_dispatch:
+
 jobs:
   pack_pr:
-    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
     name: Pack PR
     runs-on: ubuntu-22.04
     concurrency:
@@ -11,6 +13,7 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
+
       - name: Restore Node cache
         uses: actions/cache@v4
         with:
@@ -18,18 +21,20 @@ jobs:
           key: ${{ runner.os }}-node-18.19.1
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Restore mods cache
         uses: actions/cache@v4
         with:
-          # observe if this makes broken builds due to outdated mods (server onl)
           path: dist/modcache
           key: ${{ runner.os }}-mods-${{ hashFiles('manifest.json') }}
           restore-keys: |
             ${{ runner.os }}-mods-
+
       - name: Pack Modpack
         env:
           CFCORE_API_TOKEN: ${{ secrets.API_TOKEN }}
         run: bash tools/build/build -c build-client
+
       - name: Upload client artifact
         uses: actions/upload-artifact@v4
         with:
@@ -37,12 +42,12 @@ jobs:
           path: dist/client.zip
           if-no-files-found: error
           overwrite: true
-      # - name: Upload server artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: "server"
-      #     path: dist/server.zip
-      #     if-no-files-found: error
-      #     retention-days: 30
-      #     overwrite: true
 
+      - name: Upload server artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: "server"
+          path: dist/server.zip
+          if-no-files-found: error
+          retention-days: 30
+          overwrite: true
