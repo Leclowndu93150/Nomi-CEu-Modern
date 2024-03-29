@@ -72,6 +72,9 @@ JEIEvents.hideItems(event => {
     //Backpacks
     event.hide('sophisticatedbackpacks:copper_backpack')
 
+	//ext crafting
+	event.hide('extendedcrafting:the_ultimate_ingot')
+
     //Leave me alone
     //event.hide('kubejs:dev_tool')
 })

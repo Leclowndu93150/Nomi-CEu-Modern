@@ -93,7 +93,7 @@ ServerEvents.recipes(event => {
     // Mote of omnium
     event.recipes.gtceu.implosion_compressor("implosion_compressor_ominium_nugget")
         .itemInputs('kubejs:mote_of_omnium', 'minecraft:tnt')
-        .itemOutputs('gtceu:omnium_nugget')
+        .itemOutputs('extendedcrafting:the_ultimate_nugget')
         .duration(20)
         .EUt(30)
 
@@ -129,12 +129,13 @@ ServerEvents.recipes(event => {
         }
     )
 
-    event.recipes.gtceu.bender("crystal_matrix_plate")
-        .itemInputs('avaritia:crystal_matrix_ingot')
-        .itemOutputs('kubejs:crystal_matrix_plate')
-        .duration(98)
-        .EUt(24)
-        .circuit(1)
+	// Handled by gregtech, left here incase of emergency
+    // event.recipes.gtceu.bender("crystal_matrix_plate")
+    //     .itemInputs('avaritia:crystal_matrix_ingot')
+    //     .itemOutputs('kubejs:crystal_matrix_plate')
+    //     .duration(98)
+    //     .EUt(24)
+    //     .circuit(1)
 
     // Ultimate Gem
 	event.recipes.extendedcrafting.shapeless_table(

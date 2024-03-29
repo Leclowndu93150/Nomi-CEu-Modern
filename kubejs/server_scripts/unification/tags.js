@@ -1,12 +1,7 @@
 ServerEvents.tags('item', event => {
-    event.add('forge:ingots/neutronium', 'avaritia:neutronium_ingot')
-    event.add('forge:nuggets/neutronium', 'avaritia:neutronium_nugget')
-    event.add('forge:storage_blocks/neutronium', 'avaritia:neutronium_block')
-    event.add('forge:dusts/tiny/neutronium', 'avaritia:pile_of_neutrons')
     event.add('ae2:all_fluix', 'gtceu:fluix_gem')
     event.add('forge:singularities/ultimate', 'kubejs:mote_of_omnium')
     event.add('forge:singularities/ultimate', 'extendedcrafting:ultimate_singularity')
-    event.add('forge:ingots/the_ultimate', 'kubejs:omnium_ingot')
     event.add('forge:ingots/electrum_flux', 'redstone_arsenal:flux_ingot')
     event.add('forge:dusts/electrum_flux', 'redstone_arsenal:flux_dust')
     event.add('forge:nuggets/electrum_flux', 'redstone_arsenal:flux_nugget')
@@ -15,14 +10,40 @@ ServerEvents.tags('item', event => {
     event.remove('forge:ingots/aluminum', 'nuclearcraft:aluminum_ingot')
     event.add('forge:ingots/aluminium', 'nuclearcraft:aluminum_ingot')
 
-		// can't replace tags in recipes so we just add the tag to the item instead
-		event.add('forge:ingots/redstone_alloy', 'gtceu:red_alloy_ingot')
-		event.add('forge:ingots/copper_alloy', 'gtceu:electrical_steel_ingot')
+	// can't replace tags in recipes so we just add the tag to the item instead
+	event.add('forge:ingots/redstone_alloy', 'gtceu:red_alloy_ingot')
+	event.add('forge:ingots/copper_alloy', 'gtceu:electrical_steel_ingot')
 
-		event.remove('forge:gears/wood', 'enderio:wood_gear')
-		event.remove('forge:gears/stone', 'enderio:stone_gear')
-		event.remove('forge:gears/iron', 'enderio:iron_gear')
-		event.remove('forge:gears/dark_steel', 'enderio:dark_bimetal_gear')
+	event.remove('forge:gears/wood', 'enderio:wood_gear')
+	event.remove('forge:gears/stone', 'enderio:stone_gear')
+	event.remove('forge:gears/iron', 'enderio:iron_gear')
+	event.remove('forge:gears/dark_steel', 'enderio:dark_bimetal_gear')
+
+	// endgame mats
+	// neutronium
+    event.add('forge:ingots/neutronium', 'avaritia:neutronium_ingot')
+    event.add('forge:nuggets/neutronium', 'avaritia:neutronium_nugget')
+    event.add('forge:tiny_dusts/neutronium', 'avaritia:pile_of_neutrons')
+    event.add('forge:storage_blocks/neutronium', 'avaritia:neutronium_block')
+	// crystal matrix
+	event.add('forge:ingots/crystal_matrix', 'avaritia:crystal_matrix_ingot')
+	event.add('forge:storage_blocks/crystal_matrix', 'avaritia:crystal_matrix_block')
+	event.add('forge:plates/crystal_matrix', 'kubejs:crystal_matrix_plate')
+	// omnium
+    event.add('forge:ingots/the_ultimate', 'kubejs:omnium_ingot') // this sucks!
+    event.add('forge:ingots/omnium', 'kubejs:omnium_ingot')
+	// HACK: remove extreme crafting tags
+	event.add('forge:nuggets/omnium', 'extendedcrafting:the_ultimate_nugget')
+	event.add('forge:storage_blocks/omnium', 'extendedcrafting:the_ultimate_block')
+	// infinity
+	event.add('forge:ingots/infinity', 'avaritia:infinity_ingot')
+	event.add('forge:storage_blocks/infinity', 'avaritia:infinity_block')
+	event.add('forge:plates/infinity', 'kubejs:infinity_plate')
+
+	// generic unification
+    event.add('forge:storage_blocks', ['avaritia:neutronium_block', 'avaritia:crystal_matrix_block', 'avaritia:infinity_block'])
+    event.add('forge:nuggets', ['extendedcrafting:the_ultimate_nugget', 'avaritia:neutronium_nugget'])
+	event.add('forge:plates', ['kubejs:crystal_matrix_plate', 'kubejs:infinity_plate'])
 })
 
 ServerEvents.tags('block', event => {

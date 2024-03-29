@@ -95,8 +95,11 @@ ServerEvents.recipes(event => {
     event.remove({ output: ['nuclearcraft:foursmore', 'nuclearcraft:evenmoresmore', 'nuclearcraft:moresmore', 'nuclearcraft:smore'] })
 
     //Nugget fix
-    event.remove({id: 'minecraft:iron_nugget'})
-    event.remove({id: 'minecraft:gold_nugget'})
-    event.remove({id: 'minecraft:kjs/iron_nugget'})
-    event.remove({id: 'minecraft:kjs/gold_nugget'})
+    // event.remove({id: 'minecraft:iron_nugget'})
+    // event.remove({id: 'minecraft:gold_nugget'})
+    // event.remove({id: 'minecraft:kjs/iron_nugget'})
+    // event.remove({id: 'minecraft:kjs/gold_nugget'})
+
+	// remove this, we have omnium
+	event.remove({ output: 'extendedcrafting:the_ultimate_ingot'})
 })

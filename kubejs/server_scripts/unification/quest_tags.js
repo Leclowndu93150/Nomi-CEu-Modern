@@ -46,4 +46,12 @@ ServerEvents.tags('item', event => {
     event.add('nomi:output_bus', 'gtceu:zpm_output_bus')
     event.add('nomi:output_bus', 'gtceu:uv_output_bus')
     event.add('nomi:output_bus', 'gtceu:uhv_output_bus')
+
+	//'nomi_quest:backpack'
+	const bps = event.get('curios:back').getObjectIds()
+	const isOwnedByTheBackpackMod = Ingredient.of(/.*sophisticatedbackpacks.*/)
+	bps.forEach(myBP => {
+		if (isOwnedByTheBackpackMod.test(myBP))
+			event.add('nomi_quest:backpack', myBP);
+	})
 })

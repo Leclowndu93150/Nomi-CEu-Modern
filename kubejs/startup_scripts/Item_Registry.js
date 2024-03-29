@@ -105,12 +105,12 @@ StartupEvents.registry('item', event => {
     event.create('radium_salt').displayName("Radium Salt").rarity('Epic')
     event.create('moon_dust').displayName("Moon Dust")
     event.create('dilithium_crystal').displayName("Dilithium Crystal")
-    event.create('crystal_matrix_plate').tag('forge:plates/crystal_matrix')
+    event.create('crystal_matrix_plate')
     event.create('ender_star').displayName('§dEnder Star').glow(true)
     event.create('endest_star').displayName('§dEndest Star').glow(true)
     event.create('debug_laser').displayName('§dDebug Laser').glow(true)
     event.create('ender_energy_manipulator').displayName('Ender Energy Manipulator').glow(true)
-    event.create('infinity_plate').displayName('\u00A7cInfinity Plate')
+    event.create('infinity_plate'); //.displayName('\u00A7cInfinity Plate')
 
     //Jetpack Units
     event.create('empty_fluxed_jetpack_unit').displayName('Empty Fluxed Jetpack Unit')
