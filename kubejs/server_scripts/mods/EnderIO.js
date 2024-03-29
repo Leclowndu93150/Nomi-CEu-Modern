@@ -281,7 +281,7 @@ ServerEvents.recipes(event => {
 
     // dark fused quartz (FIXME: replace bedrock with actual AA item, was too lazy to fire up normal nomi to see)
     event.recipes.gtceu.alloy_smelter("dark_fused_quartz")
-        .itemInputs('#enderio:fused_quartz', 'minecraft:bedrock')
+        .itemInputs('#enderio:fused_quartz', 'gtceu:black_quartz_gem')
         .itemOutputs('enderio:fused_quartz_d')
         .duration(200)
         .EUt(32)
@@ -295,7 +295,7 @@ ServerEvents.recipes(event => {
 
     // dark clear glass
     event.recipes.gtceu.alloy_smelter("dark_clear_glass")
-        .itemInputs('#enderio:clear_glass', 'minecraft:bedrock')
+        .itemInputs('#enderio:clear_glass', 'gtceu:black_quartz_gem')
         .itemOutputs('enderio:clear_glass_d')
         .duration(200)
         .EUt(32)

@@ -26,6 +26,26 @@ ServerEvents.recipes(event => {
     event.remove({ id: /gtceu:shaped\/gear_\w+_empowered/g })
     event.remove({ output: ['gtceu:enori_gear', 'gtceu:void_gear', 'gtceu:palis_gear', 'gtceu:diamatine_gear', 'gtceu:restonia_gear', 'gtceu:emeradic_gear'] })
 
+		// Black Quartz
+		event.recipes.gtceu.electrolyzer("kubejs:black_quartz_dust")
+			.itemInputs("4x gtceu:quartzite_dust")
+			.itemOutputs("gtceu:black_quartz_dust")
+			.duration(400)
+			.EUt(90)
+		event.recipes.gtceu.autoclave('kubejs:black_quartz_gem__water')
+		.itemInputs('gtceu:black_quartz_dust')
+		.inputFluids(Fluid.of('minecraft:water', 250))
+		.itemOutputs('gtceu:black_quartz_gem')
+		.duration(1200)
+		.EUt(24)
+		event.recipes.gtceu.autoclave('kubejs:black_quartz_gem__distilled')
+		.itemInputs('gtceu:black_quartz_dust')
+		.inputFluids(Fluid.of('gtceu:distilled_water', 50))
+		.itemOutputs('gtceu:black_quartz_gem')
+		.duration(600)
+		.EUt(24)
+
+
     // Reconstruction
     reconstructedItems.forEach(itemPair => {
         event.recipes.gtceu.atomic_reconstruction(itemPair[2])
