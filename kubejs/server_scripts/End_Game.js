@@ -137,143 +137,133 @@ ServerEvents.recipes(event => {
         .circuit(1)
 
     // Ultimate Gem
-    event.custom({
-        "type": "extendedcrafting:shapeless_table",
-        "ingredients": [
-            { "item": "kubejs:destabilized_clathrate" },
-            { "item": "gtceu:enori_empowered_gem" },
-            { "item": "enderio:ender_crystal" },
-            { "item": "enderio:vibrant_crystal" },
-            { "item": "kubejs:dilithium_crystal" },
-            { "item": "enderio:enticing_crystal" },
-            { "item": "enderio:weather_crystal" },
-            { "item": "enderio:prescient_crystal" },
-            { "item": "enderio:pulsating_crystal" },
-            { "item": "minecraft:prismarine_shard" },
-            { "item": "gtceu:cinnabar_gem" },
-            { "item": "kubejs:energized_clathrate" },
-            { "item": "minecraft:quartz" },
-            { "item": "gtceu:certus_quartz_gem" },
-            { "item": "gtceu:fluix_gem" },
-            { "item": "gtceu:restonia_empowered_gem" },
-            { "item": "gtceu:palis_empowered_gem" },
-            { "item": "gtceu:diamatine_empowered_gem" },
-            { "item": "gtceu:void_empowered_gem" },
-            { "item": "gtceu:emeradic_empowered_gem" },
-            { "item": "armorplus:infused_lava_crystal" },
-            { "item": "minecraft:emerald" },
-            { "item": "redstone_arsenal:flux_gem" },
-            { "item": "minecraft:diamond" },
-            { "item": "kubejs:resonant_clathrate" }
-        ],
-        "result": {
-            "item": "kubejs:ultimate_gem"
-
-        }
-    })
+	event.recipes.extendedcrafting.shapeless_table(
+		'kubejs:ultimate_gem',
+		[
+            "kubejs:destabilized_clathrate",
+            "gtceu:enori_empowered_gem",
+            "enderio:ender_crystal",
+            "enderio:vibrant_crystal",
+            "kubejs:dilithium_crystal",
+            "enderio:enticing_crystal",
+            "enderio:weather_crystal",
+            "enderio:prescient_crystal",
+            "enderio:pulsating_crystal",
+            "minecraft:prismarine_shard",
+            "gtceu:cinnabar_gem",
+            "kubejs:energized_clathrate",
+            "minecraft:quartz",
+            "gtceu:certus_quartz_gem",
+            "gtceu:fluix_gem",
+            "gtceu:restonia_empowered_gem",
+            "gtceu:palis_empowered_gem",
+            "gtceu:diamatine_empowered_gem",
+            "gtceu:void_empowered_gem",
+            "gtceu:emeradic_empowered_gem",
+            "armorplus:infused_lava_crystal",
+            "minecraft:emerald",
+            "redstone_arsenal:flux_gem",
+            "minecraft:diamond",
+            "kubejs:resonant_clathrate"
+		]
+	)
 
     // Ultimate Generator
-    event.custom({
-        "type": "extendedcrafting:shapeless_table",
-        "ingredients": [
-            // Row 1
-            { "item": "solarflux:sp_1" },
-            { "item": "solarflux:sp_2" },
-            { "item": "solarflux:sp_3" },
-            { "item": "solarflux:sp_4" },
-            { "item": "gtceu:steam_large_turbine" },
-            { "item": "solarflux:sp_5" },
-            { "item": "solarflux:sp_6" },
-            { "item": "solarflux:sp_7" },
-            { "item": "solarflux:sp_8" },
+	event.recipes.extendedcrafting.shapeless_table(
+		'kubejs:ultimate_generator',
+		[
+			// Row 1
+            "solarflux:sp_1",
+            "solarflux:sp_2",
+            "solarflux:sp_3",
+            "solarflux:sp_4",
+            "gtceu:steam_large_turbine",
+            "solarflux:sp_5",
+            "solarflux:sp_6",
+            "solarflux:sp_7",
+            "solarflux:sp_8",
             // Row 2
-            { "item": "solarflux:sp_de.wyvern" },
-            { "item": "solarflux:sp_de.draconic" },
-            { "item": "gtceu:bronze_large_boiler" },
-            { "item": "gtceu:lv_steam_turbine" },
-            { "item": "gtceu:mv_steam_turbine" },
-            { "item": "gtceu:hv_steam_turbine" },
-            { "item": "gtceu:steel_large_boiler" },
-            { "item": "solarflux:sp_de.chaotic" },
-            { "item": "solarflux:sp_avaritia.neutronium" },
+            "solarflux:sp_de.wyvern",
+            "solarflux:sp_de.draconic",
+            "gtceu:bronze_large_boiler" ,
+            "gtceu:lv_steam_turbine" ,
+            "gtceu:mv_steam_turbine" ,
+            "gtceu:hv_steam_turbine" ,
+            "gtceu:steel_large_boiler" ,
+            "solarflux:sp_de.chaotic",
+            "solarflux:sp_avaritia.neutronium",
             // Row 3
-            { "item": "thermal:upgrade_augment_3"},
-            { "item": "nuclearcraft:enderium_heat_sink"},
-            { "item": "kubejs:survival_generator_component"}, // Survival Generator
-            { "item": "kubejs:furnace_generator_component"}, // Furnace Generator
-            { "item": "kubejs:culinary_generator_component"}, // Culinary Generator
-            { "item": "kubejs:magmatic_generator_component"}, // Magmatic Generator
-            { "item": "kubejs:heated_redstone_generator_component"}, //Heated Redstone Generator
-            { "item": "nuclearcraft:enderium_heat_sink"},
-            { "item": "thermal:upgrade_augment_3"},
+            "thermal:upgrade_augment_3",
+            "nuclearcraft:enderium_heat_sink",
+            "kubejs:survival_generator_component", // Survival Generator
+            "kubejs:furnace_generator_component", // Furnace Generator
+            "kubejs:culinary_generator_component", // Culinary Generator
+            "kubejs:magmatic_generator_component", // Magmatic Generator
+            "kubejs:heated_redstone_generator_component", //Heated Redstone Generator
+            "nuclearcraft:enderium_heat_sink",
+            "thermal:upgrade_augment_3",
             // Row 4
-            { "item": "gtceu:lv_combustion"},
-            { "item": "gtceu:luv_fusion_reactor"},
-            { "item": "kubejs:slimey_generator_component"}, // Slimey Generator
-            { "item": "steamdynamo:steam_dynamo"},
-            { "item": "nuclearcraft:fission_reactor_controller"},
-            { "item": "steamdynamo:steam_dynamo"},
-            { "item": "kubejs:ender_generator_component"}, // Ender Generator
-            { "item": "gtceu:uv_fusion_reactor"},
-            { "item": "gtceu:lv_combustion"},
+            "gtceu:lv_combustion",
+            "gtceu:luv_fusion_reactor",
+            "kubejs:slimey_generator_component", // Slimey Generator
+            "steamdynamo:steam_dynamo",
+            "nuclearcraft:fission_reactor_controller",
+            "steamdynamo:steam_dynamo",
+            "kubejs:ender_generator_component", // Ender Generator
+            "gtceu:uv_fusion_reactor",
+            "gtceu:lv_combustion",
             // Row 5
-            { "item": "gtceu:mv_combustion"},
-            { "item": "draconicevolution:reactor_stabilizer"},
-            { "item": "kubejs:disenchantment_generator_component"}, // Disenchantment Generator
-            { "item": "thermal:dynamo_magmatic"},
-            { "item": "draconicevolution:reactor_core"},
-            { "item": "thermal:dynamo_magmatic"},
-            { "item": "kubejs:potion_generator_component"}, // Potion Generator
-            { "item": "draconicevolution:reactor_stabilizer"},
-            { "item": "gtceu:mv_combustion"},
+            "gtceu:mv_combustion",
+            "draconicevolution:reactor_stabilizer",
+            "kubejs:disenchantment_generator_component", // Disenchantment Generator
+            "thermal:dynamo_magmatic",
+            "draconicevolution:reactor_core",
+            "thermal:dynamo_magmatic",
+            "kubejs:potion_generator_component", // Potion Generator
+            "draconicevolution:reactor_stabilizer",
+            "gtceu:mv_combustion",
             // Row 6
-            { "item": "gtceu:hv_combustion"},
-            { "item": "gtceu:zpm_fusion_reactor"},
-            { "item": "kubejs:death_generator_component"}, // Death Generator
-            { "item": "thermal:dynamo_numismatic"},
-            { "item": "draconicevolution:generator"},
-            { "item": "thermal:dynamo_numismatic"},
-            { "item": "kubejs:pink_generator_component"}, // Pink Generator
-            { "item": "gtceu:draconic_reactor"},
-            { "item": "gtceu:hv_combustion"},
+            "gtceu:hv_combustion",
+            "gtceu:zpm_fusion_reactor",
+            "kubejs:death_generator_component", // Death Generator
+            "thermal:dynamo_numismatic",
+            "draconicevolution:generator",
+            "thermal:dynamo_numismatic",
+            "kubejs:pink_generator_component", // Pink Generator
+            "gtceu:draconic_reactor",
+            "gtceu:hv_combustion",
             // Row 7
-            { "item": "thermal:upgrade_augment_3"},
-            { "item": "nuclearcraft:enderium_heat_sink"},
-            { "item": "kubejs:frosty_generator_component"}, // Frosty Generator
-            { "item": "kubejs:halitosis_generator_component"}, // Halitosis Generator
-            { "item": "kubejs:nether_star_generator_component"}, // Netherstar Generator
-            { "item": "kubejs:explosive_generator_component"}, // Explosive Generator
-            { "item": "kubejs:overclocked_generator_component"}, // Overclocked Generator
-            { "item": "nuclearcraft:enderium_heat_sink"},
-            { "item": "thermal:upgrade_augment_3"},
+            "thermal:upgrade_augment_3",
+            "nuclearcraft:enderium_heat_sink",
+            "kubejs:frosty_generator_component",
+            "kubejs:halitosis_generator_component",
+            "kubejs:nether_star_generator_component",
+            "kubejs:explosive_generator_component",
+            "kubejs:overclocked_generator_component",
+            "nuclearcraft:enderium_heat_sink",
+            "thermal:upgrade_augment_3",
             // Row 8
-            { "item": "solarflux:sp_de.wyvern" },
-            { "item": "solarflux:sp_de.draconic" },
-            { "item": "gtceu:titanium_large_boiler" },
-            { "item": "gtceu:lv_gas_turbine" },
-            { "item": "gtceu:mv_gas_turbine" },
-            { "item": "gtceu:hv_gas_turbine" },
-            { "item": "gtceu:tungstensteel_large_boiler" },
-            { "item": "solarflux:sp_de.chaotic" },
-            { "item": "solarflux:sp_avaritia.neutronium" },
+            "solarflux:sp_de.wyvern",
+            "solarflux:sp_de.draconic",
+            "gtceu:titanium_large_boiler",
+            "gtceu:lv_gas_turbine",
+            "gtceu:mv_gas_turbine",
+            "gtceu:hv_gas_turbine",
+            "gtceu:tungstensteel_large_boiler",
+            "solarflux:sp_de.chaotic",
+            "solarflux:sp_avaritia.neutronium",
             // Row 9
-            { "item": "solarflux:sp_1" },
-            { "item": "solarflux:sp_2" },
-            { "item": "solarflux:sp_3" },
-            { "item": "solarflux:sp_4" },
-            { "item": "gtceu:gas_large_turbine" },
-            { "item": "solarflux:sp_5" },
-            { "item": "solarflux:sp_6" },
-            { "item": "solarflux:sp_7" },
-            { "item": "solarflux:sp_8" }
-
-
-        ],
-        "result": {
-            "item": "kubejs:ultimate_generator"
-
-        }
-    })
+            "solarflux:sp_1",
+            "solarflux:sp_2",
+            "solarflux:sp_3",
+            "solarflux:sp_4",
+            "gtceu:gas_large_turbine",
+            "solarflux:sp_5",
+            "solarflux:sp_6",
+            "solarflux:sp_7",
+            "solarflux:sp_8"
+		]
+	)
 
     event.recipes.extendedcrafting.shaped_table(
         'kubejs:ultimate_power_storage', [
