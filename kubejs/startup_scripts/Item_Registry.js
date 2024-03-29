@@ -1,19 +1,19 @@
 //Microminers
 
 StartupEvents.registry('item', event => {
-    event.create('microminer_t1').displayName("§eSteel Plated Micro Miner [Tier One]").maxStackSize(16)
-    event.create('microminer_t2').displayName("§eTitanium Plated Micro Miner [Tier Two]").maxStackSize(16)
-    event.create('microminer_t3').displayName("§eTungsten Carbide Plated Micro Miner [Tier Three]").maxStackSize(16)
-    event.create('microminer_t4').displayName("§eSignalum Plated Micro Miner [Tier Four]").maxStackSize(16)
-    event.create('microminer_t5').displayName("§bIridium Plated Micro Miner [Tier Five]").maxStackSize(16)
-    event.create('microminer_t6').displayName("§bEnderium Plated Micro Miner [Tier Six]").maxStackSize(16)
-    event.create('microminer_t7').displayName("§bDraconium Plated Micro Dragon Hunter [Tier Seven]").maxStackSize(16)
-    event.create('microminer_t8').displayName("§dCrystal Matrix Plated Micro Leviathan Slayer [Tier Eight]").maxStackSize(16)
-    event.create('microminer_t9').displayName("§dEternium Plated Micro Sun Eater [Tier Nine]").maxStackSize(16)
-    event.create('microminer_t10').displayName("§dNeutronium Plated Micro Universe Harvester [Tier Ten]").maxStackSize(16)
+	// The microminers
+    event.create('microminer_t1').maxStackSize(16)
+    event.create('microminer_t2').maxStackSize(16)
+    event.create('microminer_t3').maxStackSize(16)
+    event.create('microminer_t4').maxStackSize(16)
+    event.create('microminer_t5').maxStackSize(16)
+    event.create('microminer_t6').maxStackSize(16)
+    event.create('microminer_t7').maxStackSize(16)
+    event.create('microminer_t8').maxStackSize(16)
+    event.create('microminer_t9').maxStackSize(16)
+    event.create('microminer_t10').maxStackSize(16)
 
-    //Microminer Components
-
+    // Microminer Components
     event.create('basic_mining_laser').displayName("§eBasic Mining Laser")
     event.create('supercharged_laser_array').displayName("§eSupercharged Laser Array")
     event.create('basic_micro_miner_guidance_system').displayName("§eBasic Micro Miner Guidance System")
@@ -26,10 +26,10 @@ StartupEvents.registry('item', event => {
     event.create('gem_sensor').displayName("Gemstone Sensor")
 
     //Nomi Coins
-    event.create('nomi_penny').displayName("Nomipenny [1]")
-    event.create('nomi_nickel').displayName("§eNominickel [5]")
-    event.create('nomi_quarter').displayName("§bNomiquarter [25]")
-    event.create('nomi_dollar').displayName("§dNomidollar [100]")
+    event.create('nomi_penny')
+    event.create('nomi_nickel')
+    event.create('nomi_quarter')
+    event.create('nomi_dollar').glow(true)
 
     //widgets
     event.create('wooden_widget').displayName("Wooden Widget")
@@ -110,7 +110,7 @@ StartupEvents.registry('item', event => {
     event.create('endest_star').displayName('§dEndest Star').glow(true)
     event.create('debug_laser').displayName('§dDebug Laser').glow(true)
     event.create('ender_energy_manipulator').displayName('Ender Energy Manipulator').glow(true)
-    event.create('infinity_plate'); //.displayName('\u00A7cInfinity Plate')
+    event.create('infinity_plate');
 
     //Jetpack Units
     event.create('empty_fluxed_jetpack_unit').displayName('Empty Fluxed Jetpack Unit')
@@ -172,9 +172,9 @@ StartupEvents.registry('item', event => {
     event.create('ender_shard')
 
     //Glitch Armor
-    event.create('glitch_fragment').displayName('§bGlitch Fragment')
-    event.create('glitch_heart').displayName('§bGlitch Heart')
-    event.create('glitch_infused_ingot').displayName('§bGlitch Infused Ingot')
+    event.create('glitch_fragment')
+    event.create('glitch_heart')
+    event.create('glitch_infused_ingot')
     event.create('glitch_infused_helmet', 'helmet').tier('glitch').displayName('§bGlitch Infused Helmet')
     event.create('glitch_infused_chestplate', 'chestplate').tier('glitch').displayName('§bGlitch Infused Chestplate')
     event.create('glitch_infused_leggings', 'leggings').tier('glitch').displayName('§bGlitch Infused Leggings')
@@ -214,14 +214,20 @@ StartupEvents.registry('item', event => {
 
 ItemEvents.armorTierRegistry(event => {
     event.add("glitch", (tier) => {
-        tier.durabilityMultiplier = 15
-        tier.equipSound = 'minecraft:item.armor.equip_iron'
-        tier.toughness = 4.0
-        tier.slotProtections = [3, 10, 6, 3]
+        tier.durabilityMultiplier = 120;
+        tier.equipSound = 'minecraft:item.armor.equip_iron';
+        tier.toughness = 4.0;
+        tier.slotProtections = [3, 10, 6, 3];
     })
 })
 
 ItemEvents.toolTierRegistry(event => {
+	event.add("glitch", tier => {
+		tier.attackDamageBonus = 10;
+		tier.speed = 1.6;
+		tier.uses = 2200;
+	})
+
     event.add("dev", (tier) => {
         tier.enchantmentValue = 42
         tier.level = 42

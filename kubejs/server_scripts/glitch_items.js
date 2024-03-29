@@ -1,3 +1,4 @@
+//! Functions for glitcharmor and stuff
 
 /**
  * @private
@@ -28,3 +29,41 @@ PlayerEvents.inventoryChanged('kubejs:glitch_infused_leggings', glitchArmorCallb
 PlayerEvents.inventoryChanged('kubejs:glitch_infused_boots', glitchArmorCallback);
 PlayerEvents.respawned(glitchArmorCallback); // if the armor has an enchant that keeps it
 PlayerEvents.loggedIn(glitchArmorCallback);
+
+/**
+ * @private
+ * @param {Internal.BlockRightClickedEventJS} ev
+ */
+const glitchHeartCallback = (ev) => {
+	const { item, block, player } = ev;
+	if (!item || item !== 'kubejs:glitch_heart') return;
+	if (!player.isCreative()) {
+		item.setCount(item.count - 1);
+	}
+	block.popItem('3x kubejs:glitch_fragment');
+}
+BlockEvents.rightClicked('obsidian', glitchHeartCallback);
+BlockEvents.rightClicked('crying_obsidian', glitchHeartCallback);
+
+ServerEvents.recipes(event => {
+	event.shaped('kubejs:glitch_infused_helmet', [
+		'   ',
+		'AAA',
+		'A A'
+	], { A: 'kubejs:glitch_infused_ingot' });
+	event.shaped('kubejs:glitch_infused_chestplate', [
+		'A A',
+		'AAA',
+		'AAA'
+	], { A: 'kubejs:glitch_infused_ingot' });
+	event.shaped('kubejs:glitch_infused_leggings', [
+		'AAA',
+		'A A',
+		'A A'
+	], { A: 'kubejs:glitch_infused_ingot' });
+	event.shaped('kubejs:glitch_infused_boots', [
+		'   ',
+		'A A',
+		'A A'
+	], { A: 'kubejs:glitch_infused_ingot' });
+})

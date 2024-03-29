@@ -1,15 +1,5 @@
 StartupEvents.registry('item', event => {
     //Smores
-    const smoreLang = [
-        `S'more S'mingot`,
-        `MoreS'more DoubleS'mingot`,
-        `FourS'more QuadS'mingot`,
-        `EightS'more OctoS'mingot`,
-        `SixteenS'more HexadecaS'mingot`,
-        `Half-stack-o'-S'more TriacontadyoS'mingot`,
-        `Stack-o'-S'more HexecontatessaraS'mingot`
-    ];
-
     const smoreHunger = [
         4, 10, 22, 46, 94, 190, 382
     ]
@@ -33,7 +23,7 @@ StartupEvents.registry('item', event => {
 
             food.alwaysEdible();
 
-        }).displayName(smoreLang[i]).maxStackSize(64);
+        }).maxStackSize(64).translationKey(`item.kubejs.smores.${i+1}`)
 
         effDuration *= 2;
     }

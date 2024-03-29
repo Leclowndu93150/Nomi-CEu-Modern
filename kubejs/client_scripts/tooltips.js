@@ -1,22 +1,18 @@
 ItemEvents.tooltip(tooltip => {
     //Microminers
-    tooltip.add('kubejs:microminer_t1', '§oHarvests Titanium and other light metals from asteroids in the microverse.')
-    tooltip.add('kubejs:microminer_t2', '§oHarvests Tungsten and other heavy metals from asteroids in the microverse.')
-    tooltip.add('kubejs:microminer_t3', '§oHarvests ultra hot metals and gems from Nether microverses.')
-    tooltip.add('kubejs:microminer_t4', '§oHarvests ultra cold materials from the deepest parts of empty space.')
-    tooltip.add('kubejs:microminer_t5', '§oHarvests strange materials from End microverses.')
-    tooltip.add('kubejs:microminer_t6', '§oHarvests extremely rare materials from every concievable reality.')
-    tooltip.add('kubejs:microminer_t7', '§oHunts Wyrms and End Dragons from the microverse')
-    tooltip.add('kubejs:microminer_t7', '§oand returns with parts from their carapaces.')
-    tooltip.add('kubejs:microminer_t8', '§oHunts inconcievable monstrosities from beyond the End')
-    tooltip.add('kubejs:microminer_t8', '§oand returns with bizzare trinkets.')
-    tooltip.add('kubejs:microminer_t9', '§oCollapses microverse stars and harvests their delicious neutronium cores.')
-    tooltip.add('kubejs:microminer_t10', '§oCollapses an entire microverse and harvests it whole.')
-    tooltip.add('kubejs:microminer_t10', '§oTry to aim for uninhabited ones.')
+    tooltip.add('kubejs:microminer_t1', Text.translatable('item.kubejs.microminer_t1.desc'))
+    tooltip.add('kubejs:microminer_t2', Text.translatable('item.kubejs.microminer_t2.desc'))
+    tooltip.add('kubejs:microminer_t3', Text.translatable('item.kubejs.microminer_t3.desc'))
+    tooltip.add('kubejs:microminer_t4', Text.translatable('item.kubejs.microminer_t4.desc'))
+    tooltip.add('kubejs:microminer_t5', Text.translatable('item.kubejs.microminer_t5.desc'))
+    tooltip.add('kubejs:microminer_t6', Text.translatable('item.kubejs.microminer_t6.desc'))
+    tooltip.add('kubejs:microminer_t7', Text.translatable('item.kubejs.microminer_t7.desc'))
+    tooltip.add('kubejs:microminer_t8', Text.translatable('item.kubejs.microminer_t8.desc'))
+    tooltip.add('kubejs:microminer_t9', Text.translatable('item.kubejs.microminer_t9.desc'))
+    tooltip.add('kubejs:microminer_t10', Text.translatable('item.kubejs.microminer_t10.desc'))
 
     //Microminer Components
     tooltip.add('universal_navigator', '§9See You Later, navigator!')
-
 
     //Endgame Items
     tooltip.add('ultimate_gem', '§eRecipe is shapeless.')
@@ -63,4 +59,8 @@ ItemEvents.tooltip(tooltip => {
         text.remove(1);
         text.add(Text.join(Text.translatable('gtceu.creative_tooltip.1'), rainbowify(Text.translatable('gtceu.creative_tooltip.2').getString(), Math.round(Client.lastNanoTime / 100000000)), Text.translatable('gtceu.creative_tooltip.3')))
     });
+
+	// dml glitch armor
+	tooltip.add('kubejs:glitch_fragment', Text.translatable('item.kubejs.glitch_fragment.desc'))
+	tooltip.add('kubejs:glitch_infused_ingot', Text.translatable('item.kubejs.glitch_infused_ingot.desc'))
 })
