@@ -93,7 +93,7 @@ ServerEvents.recipes(event => {
     )
 
     // Pattern Provider
-    event.remove({ output: 'ae2:pattern_provider' })
+    event.remove({ id: 'ae2:network/blocks/pattern_providers_interface' })
     event.shaped(
         Item.of('ae2:pattern_provider'), [
             'ABA',
@@ -125,7 +125,7 @@ ServerEvents.recipes(event => {
     )
 
     // Interface
-    event.remove({ output: 'ae2:interface' })
+    event.remove({ id: 'ae2:network/blocks/interfaces_interface' })
     event.shaped(
         Item.of('ae2:interface'), [
             'ABA',
@@ -251,7 +251,7 @@ ServerEvents.recipes(event => {
                 "item": "gtceu:certus_quartz_gem"
             },
         "result": {
-            "item": "ae2:charged_certus_quartz_crystal"
+            "item": 'gtceu:charged_certus_quartz_gem'
         }
     })
 
@@ -572,6 +572,7 @@ ServerEvents.recipes(event => {
         'gtceu:certus_quartz_gem',
         'gtceu:charged_certus_quartz_gem'
     )
+    
 
     // Presses
     function pressengrave(name, press, lens) {
