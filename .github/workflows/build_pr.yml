@@ -1,6 +1,16 @@
 name: Build PR
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: 'Build what'
+        required: true
+        default: 'build-client'
+        type: choice
+        options:
+          - build-client
+          - build-server
+          - build-all
 jobs:
   pack_pr:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
@@ -29,20 +39,12 @@ jobs:
       - name: Pack Modpack
         env:
           CFCORE_API_TOKEN: ${{ secrets.API_TOKEN }}
-        run: bash tools/build/build -c build-client
-      - name: Upload client artifact
+        run: bash tools/build/build -c ${{ inputs.target }}
+      - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: "client"
-          path: dist/client.zip
+          name: build-zipzip
+          path: dist/*.zip
           if-no-files-found: error
           overwrite: true
-      # - name: Upload server artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: "server"
-      #     path: dist/server.zip
-      #     if-no-files-found: error
-      #     retention-days: 30
-      #     overwrite: true
-
+          compression-level: 0
