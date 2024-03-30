@@ -540,4 +540,7 @@ ServerEvents.recipes(event => {
 
     //Whatever
     event.replaceInput({ input: '#forge:ingots/copper_alloy' }, 'enderio:copper_alloy_ingot', 'gtceu:pulsating_iron_ingot')
+    
+    //Clear tank
+    event.shapeless('enderio:fluid_tank', ['enderio:fluid_tank'])
 })

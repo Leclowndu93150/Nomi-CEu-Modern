@@ -16,15 +16,13 @@
 				""
 				"&bGregTech&r machines are built from a number of components, many of which are shared between the machines. Motors&r are used in a great number of recipes, even including other components."
 				""
-				"Make sure to encode the recipes needed for motors into a &3Crafting Station&r. You'll need quite a lot of them."
-				""
 				"The Wiremill requires a &6Programmed Circuit&r to run. Each machine comes with a free one - click on the circuit slot in the &dbottom right &rof the GUI. For making single wires, leave the circuit at &econfiguration 1&r. Refer to &eJEI&r for which circuit config a recipe calls for, and refer to the adjacent quest for more information."
 				""
 				"After you make the Wiremill, &econsider making a few stacks&r of LV motors. This might sound extreme, but &ebatch crafting&r in this manner is an important habit to pick up. This way you won't have to craft more for a while, and you &owill &ruse all those motors eventually, so you're not wasting materials."
 				""
 				"As you get access to more machinery you will no longer need to craft things manually. Instead, you will engineer factories to automate the production for you. It is useful to keep a stockpile of frequently used things like circuits and components crafted so you don't have to wait for them when you need them."
 				""
-				"&2If the machine sounds start to get on your nerves, you can mute GT machines with a GT Hammer."
+				"&2If the machine sounds start to get on your nerves, you can mute GT machines with a GT Hammer, &dor mute the sound entirely in the ESM menu, accessable from your inventory."
 			]
 			id: "62BBD1F6767A4D90"
 			rewards: [{
@@ -687,14 +685,14 @@
 			id: "545CCC24D9401794"
 			tasks: [
 				{
-					count: 2L
-					id: "68CB667BEFDBE67D"
-					item: "systeams:steam_dynamo"
+					id: "12315AEA66B77CB2"
+					item: { Count: 2b, id: "systeams:stirling_boiler" }
 					type: "item"
 				}
 				{
-					id: "12315AEA66B77CB2"
-					item: { Count: 2b, id: "systeams:stirling_boiler" }
+					count: 2L
+					id: "76CB286FDDD00D40"
+					item: "steamdynamo:steam_dynamo"
 					type: "item"
 				}
 			]

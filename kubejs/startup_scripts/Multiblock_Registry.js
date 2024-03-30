@@ -235,8 +235,25 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     //     .workableCasingRenderer("kubejs:block/empowerer_casing",
     //         "gtceu:block/multiblock/implosion_compressor", false)
 
-// Greenhouse
-    event.create('greenhouse', 'multiblock')
+		// Greenhouse
+
+		/* Ideally we would use code to automatically get all blocks with the minecraft:dirt block tag.
+		However, block tags aren't registered yet so we have to type them all in manually.
+		If you can find a way to enter a block tag here please let us know. */
+		const dirtIds = [
+		"minecraft:dirt",
+		"minecraft:grass_block",
+		"minecraft:podzol",
+		"minecraft:mycelium",
+		//"minecraft:dirt", //moved to top
+		"minecraft:coarse_dirt",
+		"minecraft:rooted_dirt",
+		"minecraft:mud",
+		"minecraft:moss_block",
+		"minecraft:muddy_mangrove_roots"
+		]
+
+		event.create('greenhouse', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('greenhouse')
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
@@ -245,8 +262,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle("CDC", "G#G", "G#G","G#G","CGC",)
             .aisle("CSC", "CGC", "CGC","CGC","CCC",)
             .where('S', Predicates.controller(Predicates.blocks(definition.get())))
-            .where('D', Predicates.blocks('minecraft:dirt')
-                .or(Predicates.blocks('minecraft:grass')))
+            .where('D', Predicates.blocks(dirtIds))
             .where('C', Predicates.blocks("gtceu:solid_machine_casing")
                 .or(Predicates.autoAbilities(definition.getRecipeTypes())))
             .where('G', Predicates.blocks(GTBlocks.CASING_TEMPERED_GLASS.get()))

@@ -23,9 +23,7 @@ ServerEvents.recipes(event => {
         }
     )
 
-
     // temp iron chest > sophisticated barrel recipe
-
     var ironchest = [
         ['ironchest:copper_chest', 'sophisticatedstorage:copper_barrel'],
         ['ironchest:iron_chest', 'sophisticatedstorage:iron_barrel'],
@@ -86,7 +84,7 @@ ServerEvents.recipes(event => {
         event.shapeless(material[1], [material[0]])
     })
 
-    //funny rubbah wood -> sign
+    //funny rubbah wood -> stuff
     event.shaped(
         "3x minecraft:oak_sign", [
             'PPP',
@@ -98,4 +96,17 @@ ServerEvents.recipes(event => {
         }
     )
 
+    event.shaped(
+        "6x minecraft:oak_slab", [
+            '   ',
+            'PPP',
+            '   '
+        ], {
+            P: "gtceu:rubber_planks"
+        }
+    )
+
+    // Temp until classic boiler has these built in
+    event.remove({ output: 'systeams:stirling_boiler' })
+    event.shapeless('systeams:stirling_boiler', ['steamdynamo:steam_dynamo', 'systeams:boiler_pipe'])
 })

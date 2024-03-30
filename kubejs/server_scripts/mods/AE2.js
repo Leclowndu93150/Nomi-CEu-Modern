@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
 
     // Base AE2
     // ME Controller
-    event.remove({ output: 'ae2:controller' })
+    event.remove({ id: 'ae2:network/blocks/controller' })
     event.shaped(
         Item.of('ae2:controller'), [
             'ABA',
@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
     )
 
     // Energy Acceptor
-    event.remove({ output: 'ae2:energy_acceptor' })
+    event.remove({ id: 'ae2:network/blocks/energy_energy_acceptor' })
     event.shaped(
         Item.of('ae2:energy_acceptor'), [
             'ABA',
@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
     )
 
     // ME Chest
-    event.remove({ output: 'ae2:chest' })
+    event.remove({ id: 'ae2:network/blocks/storage_chest' })
     event.shaped(
         Item.of('ae2:chest'), [
             'ABA',
@@ -48,7 +48,7 @@ ServerEvents.recipes(event => {
     )
 
     // ME Drive
-    event.remove({ output: 'ae2:drive' })
+    event.remove({ id: 'ae2:network/blocks/storage_drive' })
     event.shaped(
         Item.of('ae2:drive'), [
             'ABA',
@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
     )
 
     // Inscriber
-    event.remove({ output: 'ae2:inscriber' })
+    event.remove({ id: 'ae2:network/blocks/inscribers'})
     event.shaped(
         Item.of('ae2:inscriber'), [
             'ABA',
@@ -79,7 +79,7 @@ ServerEvents.recipes(event => {
     )
 
     // Patterns
-    event.remove({ output: 'ae2:blank_pattern' })
+    event.remove({ id: 'ae2:network/crafting/patterns_blank' })
     event.shaped(
         Item.of('ae2:blank_pattern', 8), [
             'AAA',
@@ -93,7 +93,7 @@ ServerEvents.recipes(event => {
     )
 
     // Pattern Provider
-    event.remove({ output: 'ae2:pattern_provider' })
+    event.remove({ id: 'ae2:network/blocks/pattern_providers_interface' })
     event.shaped(
         Item.of('ae2:pattern_provider'), [
             'ABA',
@@ -109,7 +109,7 @@ ServerEvents.recipes(event => {
     )
 
     // Molecular Assembler
-    event.remove({ output: 'ae2:molecular_assembler' })
+    event.remove({ id: 'ae2:network/crafting/molecular_assembler' })
     event.shaped(
         Item.of('ae2:molecular_assembler'), [
             'ABA',
@@ -125,7 +125,7 @@ ServerEvents.recipes(event => {
     )
 
     // Interface
-    event.remove({ output: 'ae2:interface' })
+    event.remove({ id: 'ae2:network/blocks/interfaces_interface' })
     event.shaped(
         Item.of('ae2:interface'), [
             'ABA',
@@ -141,7 +141,7 @@ ServerEvents.recipes(event => {
     )
 
     // Quantum Ring
-    event.remove({ output: 'ae2:quantum_ring' })
+    event.remove({ id: 'ae2:network/blocks/quantum_ring' })
     event.shaped(
         Item.of('ae2:quantum_ring'), [
             'ABA',
@@ -156,7 +156,7 @@ ServerEvents.recipes(event => {
     )
 
     // Quantum Link Chamber
-    event.remove({ output: 'ae2:quantum_link' })
+    event.remove({ id: 'ae2:network/blocks/quantum_link' })
     event.shaped(
         Item.of('ae2:quantum_link'), [
             'ABA',
@@ -165,7 +165,7 @@ ServerEvents.recipes(event => {
         ], {
             A: 'ae2:quartz_glass',
             B: 'ae2:fluix_pearl',
-            C: 'gregtech:certus_quartz_plate'
+            C: 'gtceu:certus_quartz_plate'
         }
     )
 
@@ -189,7 +189,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'ae2:network/cells/view_cell' })
 
     // Storage Housing
-    event.remove({ output: 'ae2:item_cell_housing' })
+    event.remove({ id: 'ae2:network/cells/item_cell_housing' })
     event.shaped(
         Item.of('ae2:item_cell_housing'), [
             'ABA',
@@ -201,7 +201,7 @@ ServerEvents.recipes(event => {
         }
     )
 
-    event.remove({ output: 'ae2:fluid_cell_housing' })
+    event.remove({ id: 'ae2:network/cells/fluid_cell_housing' })
     event.shaped(
         Item.of('ae2:fluid_cell_housing'), [
             'ABA',
@@ -214,7 +214,7 @@ ServerEvents.recipes(event => {
     )
 
     // CPUs
-    event.remove({ output: 'ae2:crafting_unit' })
+    event.remove({ id: 'ae2:network/crafting/cpu_crafting_unit' })
     event.shaped(
         Item.of('ae2:crafting_unit'), [
             'ABA',
@@ -229,7 +229,7 @@ ServerEvents.recipes(event => {
     )
 
     // Charger
-    event.remove({ output: 'ae2:charger' })
+    event.remove({ id: 'ae2:network/blocks/crystal_processing_charger' })
     event.shaped(
         Item.of('ae2:charger'), [
             'ABA',
@@ -251,13 +251,13 @@ ServerEvents.recipes(event => {
                 "item": "gtceu:certus_quartz_gem"
             },
         "result": {
-            "item": "ae2:charged_certus_quartz_crystal"
+            "item": 'gtceu:charged_certus_quartz_gem'
         }
     })
 
 
     // Matter Condenser
-    event.remove({ output: 'ae2:condenser' })
+    event.remove({ id: 'ae2:network/blocks/io_condenser' })
     event.shaped(
         Item.of('ae2:condenser'), [
             'AAA',
@@ -270,7 +270,7 @@ ServerEvents.recipes(event => {
     )
 
     // Storage Component 1K
-    event.remove({ output: 'ae2:cell_component_1k' })
+    event.remove({ id: 'ae2:network/cells/item_storage_components_cell_1k_part' })
     event.shaped(
         Item.of('ae2:cell_component_1k'), [
             'ABA',
@@ -284,7 +284,7 @@ ServerEvents.recipes(event => {
     )
 
     // Storage Component 4K
-    event.remove({ output: 'ae2:cell_component_4k' })
+    event.remove({ id: 'ae2:network/cells/item_storage_components_cell_4k_part' })
     event.shaped(
         Item.of('ae2:cell_component_4k'), [
             'ADA',
@@ -299,7 +299,7 @@ ServerEvents.recipes(event => {
     )
 
     // Storage Component 16K
-    event.remove({ output: 'ae2:cell_component_16k' })
+    event.remove({ id: 'ae2:network/cells/item_storage_components_cell_16k_part' })
     event.shaped(
         Item.of('ae2:cell_component_16k'), [
             'ADA',
@@ -314,7 +314,7 @@ ServerEvents.recipes(event => {
     )
 
     // Storage Component 64K
-    event.remove({ output: 'ae2:cell_component_64k' })
+    event.remove({ id: 'ae2:network/cells/item_storage_components_cell_64k_part' })
     event.shaped(
         Item.of('ae2:cell_component_64k'), [
             'ADA',
@@ -329,7 +329,7 @@ ServerEvents.recipes(event => {
     )
 
     // Storage Component 256K
-    event.remove({ output: 'ae2:cell_component_256k' })
+    event.remove({ id: 'ae2:network/cells/item_storage_components_cell_256k_part' })
     event.shaped(
         Item.of('ae2:cell_component_256k'), [
             'ADA',
@@ -344,7 +344,7 @@ ServerEvents.recipes(event => {
     )
 
     // Wireless Receiver
-    event.remove({ output: 'ae2:wireless_receiver' })
+    event.remove({ id: 'ae2:network/wireless_part' })
     event.shaped(
         Item.of('ae2:wireless_receiver'), [
             ' A ',
@@ -358,7 +358,7 @@ ServerEvents.recipes(event => {
     )
 
     // AE2 Cards
-    event.remove({ output: ['ae2:basic_card', 'ae2:advanced_card', 'ae2:memory_card'] })
+    event.remove({ id: 'ae2:materials/basiccard' })
     event.shaped(
         'ae2:basic_card', [
             'AB ',
@@ -370,6 +370,7 @@ ServerEvents.recipes(event => {
             C: 'ae2:calculation_processor'
         }
     )
+		event.remove({ id: 'ae2:materials/advancedcard' })
     event.shaped(
         'ae2:advanced_card', [
             'AB ',
@@ -381,45 +382,27 @@ ServerEvents.recipes(event => {
             C: 'ae2:calculation_processor'
         }
     )
-
+		event.remove({ id: 'ae2:tools/network_memory_card' })
     event.shapeless('ae2:memory_card', ['#gtceu:circuits/hv', 'ae2:basic_card'])
 
 
 
     //Level Emitter
-    event.remove({ output: ['ae2:level_emitter'] })
-    event.shaped(
-        'ae2:level_emitter', [
-            'AB ',
-            'CD ',
-            '   '
-        ], {
-            A: 'minecraft:redstone_torch',
-            B: 'gtceu:aluminium_plate',
-            C: 'ae2:calculation_processor',
-            D: '#forge:rods/stainless_steel'
-        })
+    event.remove({ id: 'ae2:network/parts/level_emitter' })
+    event.shapeless('ae2:level_emitter', ['minecraft:redstone_torch', 'gtceu:aluminium_plate', 'ae2:calculation_processor', '#forge:rods/stainless_steel'])
 
-    // Network Tool (SET RECIPE IF AE2 GLITCH IS FIXED)
-    event.remove({ output: 'ae2:network_tool' })
-    event.shaped(
-        'ae2:network_tool', [
-            'AB ',
-            'CD ',
-            '   '
-        ], {
-            A: 'enderio:yeta_wrench',
-            B: '#gtceu:circuits/ev',
-            C: 'ae2:calculation_processor',
-            D: 'ae2:terminal'
-        })
+		//Energy level Emitter
+    event.remove({ id: 'ae2:network/parts/energy_level_emitter' })
+		event.shapeless('ae2:energy_level_emitter', ['ae2:level_emitter', '#forge:gems/certus_quartz'])
 
+
+    // Network Tool (default recipe is fine)
 
 
     //TODO Big I/O (MAKE IN IV ASSEMBLY LINE)
 
-    //Processors
-    event.remove({ output: ['ae2:printed_silicon', 'ae2:logic_processor', 'ae2:calculation_processor', 'ae2:engineering_processor','ae2:printed_calculation_processor'] })
+    // Processors
+		// We don't have to call recipe.remove since creating a new recipe with the same id removes the old recipe
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -434,7 +417,7 @@ ServerEvents.recipes(event => {
         "result": {
             "item": "ae2:printed_calculation_processor"
         }
-    })
+    }).id('ae2:inscriber/calculation_processor_print')
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -449,7 +432,7 @@ ServerEvents.recipes(event => {
         "result": {
             "item": "ae2:printed_silicon"
         }
-    })
+    }).id('ae2:inscriber/silicon_print')
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -467,7 +450,7 @@ ServerEvents.recipes(event => {
         "result": {
             "item": "ae2:logic_processor"
         }
-    })
+    }).id('ae2:inscriber/logic_processor')
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -485,7 +468,7 @@ ServerEvents.recipes(event => {
         "result": {
             "item": "ae2:calculation_processor"
         }
-    })
+    }).id('ae2:inscriber/calculation_processor')
 
     event.custom({
         "type": "ae2:inscriber",
@@ -504,14 +487,14 @@ ServerEvents.recipes(event => {
         "result": {
             "item": "ae2:engineering_processor"
         }
-    })
+    }).id('ae2:inscriber/engineering_processor')
 
     //Storage bus
-    event.remove({ output: 'ae2:storage_bus' })
+    event.remove({ id: 'ae2:network/parts/storage_bus' })
     event.shapeless('ae2:storage_bus', ['ae2:interface', 'gtceu:mv_electric_piston', 'gtceu:mv_electric_pump'])
 
     //busses
-    event.remove({ output: ['ae2:import_bus', 'ae2:export_bus'] })
+    event.remove({ id: 'ae2:network/parts/import_bus' })
     event.shaped(
         'ae2:export_bus', [
             ' A ',
@@ -523,6 +506,7 @@ ServerEvents.recipes(event => {
             C: 'gtceu:mv_electric_piston',
             D: 'gtceu:aluminium_plate'
         })
+		event.remove({ id: 'ae2:network/parts/export_bus' })
     event.shaped(
         'ae2:import_bus', [
             ' A ',
@@ -536,7 +520,7 @@ ServerEvents.recipes(event => {
         })
 
     //P2P
-    event.remove({ output: 'ae2:me_p2p_tunnel' })
+    event.remove({ id: 'ae2:network/parts/tunnels_me' })
     event.shaped(
         'ae2:me_p2p_tunnel', [
             ' A ',
@@ -550,7 +534,7 @@ ServerEvents.recipes(event => {
 
     //cables
 
-    event.remove({ output: ['ae2:quartz_fiber'] })
+    event.remove({ id: 'ae2:network/parts/quartz_fiber_part' })
     event.remove({ id: 'gtceu:shapeless/gem_to_gem_flawedgem_nether_quartz' })
     event.remove({ id: "ae2:network/cables/glass_fluix" })
 
@@ -572,6 +556,45 @@ ServerEvents.recipes(event => {
         'gtceu:certus_quartz_gem',
         'gtceu:charged_certus_quartz_gem'
     )
+    
+
+		// cable recipes
+		event.remove({ id: "ae2:network/cables/covered_fluix" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/white_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/orange_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/magenta_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/light_blue_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/yellow_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/lime_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/pink_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/gray_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/light_gray_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/cyan_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/purple_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/blue_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/brown_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/green_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/red_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/black_covered_cable" })
+		
+		event.recipes.gtceu.assembler("fluix_covered_cable_rubber")
+        .itemInputs("#ae2:glass_cable")
+				.inputFluids('gtceu:rubber 144')
+        .itemOutputs("ae2:fluix_covered_cable")
+        .duration(100)
+        .EUt(7)
+		event.recipes.gtceu.assembler("fluix_covered_cable_silicone")
+        .itemInputs("#ae2:glass_cable")
+				.inputFluids('gtceu:silicone_rubber 72')
+        .itemOutputs("ae2:fluix_covered_cable")
+        .duration(100)
+        .EUt(7)
+		event.recipes.gtceu.assembler("fluix_covered_cable_styrene_butadiene")
+        .itemInputs("#ae2:glass_cable")
+				.inputFluids('gtceu:styrene_butadiene_rubber 36')
+        .itemOutputs("ae2:fluix_covered_cable")
+        .duration(100)
+        .EUt(7)
 
     // Presses
     function pressengrave(name, press, lens) {
@@ -593,7 +616,7 @@ ServerEvents.recipes(event => {
     // ExtendedAE
 
     //Pattern Modifier (NAE2's Pattern Multitool)
-    event.remove({ output: 'expatternprovider:pattern_modifier' })
+    event.remove({ id: 'expatternprovider:pattern_modifier' })
     event.shapeless('expatternprovider:pattern_modifier', ['ae2:calculation_processor', 'ae2:blank_pattern', 'ae2:logic_processor'])
 
     //Extended Pattern Provider
@@ -602,16 +625,16 @@ ServerEvents.recipes(event => {
         .itemInputs("4x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
         .itemOutputs("expatternprovider:ex_pattern_provider")
         .duration(180)
-        .circuit(0)
+        .circuit(2)
         .EUt(512)
 
-        event.remove({ output: 'expatternprovider:pattern_provider_upgrade' })
-        event.recipes.gtceu.assembler("ex_pattern_provider_upgrade")
-            .itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
-            .itemOutputs("expatternprovider:pattern_provider_upgrade")
-            .duration(180)
-            .circuit(1)
-            .EUt(512)
+		event.remove({ id: 'expatternprovider:epp_upgrade' })
+		event.recipes.gtceu.assembler("ex_pattern_provider_upgrade")
+				.itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
+				.itemOutputs("expatternprovider:pattern_provider_upgrade")
+				.duration(180)
+				.circuit(1)
+				.EUt(512)
 
     // Extended Interface
 
@@ -620,36 +643,38 @@ ServerEvents.recipes(event => {
         .itemInputs("4x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
         .itemOutputs("expatternprovider:ex_interface")
         .duration(180)
-        .circuit(0)
+        .circuit(2)
         .EUt(512)
 
-        event.remove({ output: 'expatternprovider:interface_upgrade' })
-        event.recipes.gtceu.assembler("ex_interface_upgrade")
-            .itemInputs("3x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
-            .itemOutputs("expatternprovider:interface_upgrade")
-            .duration(180)
-            .circuit(1)
-            .EUt(512)
+		event.remove({ id: 'expatternprovider:ei_upgrade' })
+		event.recipes.gtceu.assembler("ex_interface_upgrade")
+				.itemInputs("3x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
+				.itemOutputs("expatternprovider:interface_upgrade")
+				.duration(180)
+				.circuit(1)
+				.EUt(512)
 
-        event.remove({ output: 'expatternprovider:ex_molecular_assembler' })
-        event.recipes.gtceu.assembler("expatternprovider:ex_molecular_assembler")
-            .itemInputs("8x ae2:molecular_assembler", "8x gtceu:fluix_plate", "8x ae2:capacity_card")
-            .itemOutputs("expatternprovider:ex_molecular_assembler")
-            .duration(240)
-            .EUt(1024)
+		event.remove({ id: 'expatternprovider:ex_molecular_assembler' })
+		event.recipes.gtceu.assembler("expatternprovider:ex_molecular_assembler")
+				.itemInputs("8x ae2:molecular_assembler", "8x gtceu:fluix_plate", "8x ae2:capacity_card")
+				.itemOutputs("expatternprovider:ex_molecular_assembler")
+				.duration(240)
+				.EUt(1024)
     
     //Infinite Cobble/Water cell
-    event.replaceInput({ output: Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:f",id:"minecraft:water"}}') }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
-    event.replaceInput({ output: Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:f",id:"minecraft:water"}}') }, 'minecraft:diamond', 'gtceu:diamond_plate')
+    event.replaceInput({ id: 'expatternprovider:water_cell' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
+    event.replaceInput({ id: 'expatternprovider:cobblestone_cell' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
+    event.replaceInput({ id: 'expatternprovider:water_cell' }, 'minecraft:diamond', 'gtceu:diamond_plate')
+    event.replaceInput({ id: 'expatternprovider:cobblestone_cell' }, 'minecraft:diamond', 'gtceu:diamond_plate')
 
-    event.remove({ output: 'expatternprovider:ex_drive' })
+    event.remove({ id: 'expatternprovider:ex_drive' })
     event.recipes.gtceu.assembler("expatternprovider:ex_drive")
         .itemInputs("2x ae2:drive", "4x gtceu:fluix_plate", "ae2:capacity_card")
         .itemOutputs("expatternprovider:ex_drive")
         .duration(240)
         .EUt(1024)
 
-        event.remove({ output: 'expatternprovider:drive_upgrade' })
+    event.remove({ id: 'expatternprovider:ex_drive_upgrade' })
     event.recipes.gtceu.assembler('expatternprovider:drive_upgrade')
         .itemInputs("1x ae2:drive", "4x gtceu:fluix_plate", "ae2:capacity_card")
         .itemOutputs('expatternprovider:drive_upgrade')
