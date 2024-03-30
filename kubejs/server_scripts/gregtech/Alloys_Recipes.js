@@ -118,6 +118,12 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(30)
 
+        event.recipes.gtceu.mixer("glowstone_dust")
+        .itemInputs('gtceu:tricalcium_phosphate_dust', 'gtceu:gold_dust')
+        .itemOutputs('2x minecraft:glowstone_dust')
+        .duration(80)
+        .EUt(15)
+
     event.recipes.gtceu.mixer("mana_infused_dust")
         .itemInputs('kubejs:primal_mana', 'gtceu:titanium_dust')
         .itemOutputs('gtceu:mana_infused_metal_dust')
