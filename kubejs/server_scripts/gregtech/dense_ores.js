@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.chemical_reactor("undensify_" + name)
             .itemInputs(dense)
             .itemOutputs('16x ' + normal)
-            .inputFluids(Fluid.of("gtceu:nitric_acid"), 1000)
+            .inputFluids(Fluid.of("gtceu:nitric_acid", 1000))
             .duration(200)
             .EUt(500)
     }
@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.chemical_reactor("undensify_oilsands")
             .itemInputs("kubejs:dense_oilsands_ore")
             .itemOutputs('16x ' + "gtceu:endstone_oilsands_ore")
-            .inputFluids(Fluid.of("gtceu:nitric_acid"), 1000)
+            .inputFluids(Fluid.of("gtceu:nitric_acid", 1000))
             .duration(200)
             .EUt(500)
 })
