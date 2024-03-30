@@ -44,3 +44,9 @@ const alloySmelter = (ev, inputA, inputB, output, time, voltage) => {
 		.duration(time * 20)
 		.EUt(voltage)
 }
+
+//Java Classes
+//used to create FluidIngredientJS objects
+const JSONObject = Java.loadClass('com.google.gson.JsonObject')
+//Required to use fluid tags in gregtech recipes
+const FluidIngredientJS = Java.loadClass('com.gregtechceu.gtceu.integration.kjs.recipe.components.GTRecipeComponents$FluidIngredientJS')

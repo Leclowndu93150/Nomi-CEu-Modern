@@ -1,6 +1,3 @@
-const JSONObject = Java.loadClass('com.google.gson.JsonObject')
-const FluidIngredientJS = Java.loadClass('com.gregtechceu.gtceu.integration.kjs.recipe.components.GTRecipeComponents$FluidIngredientJS')
-
 ServerEvents.recipes(event => {
     // Ender Pearls
     event.recipes.gtceu.alloy_smelter("pulsating_ender_pearl")
@@ -103,7 +100,7 @@ ServerEvents.recipes(event => {
 	steam.add('amount', 4000)
 	steam.add('value', {tag:'forge:steam'})
 
-	//Look at the top of the script to see where FluidIngredientJS is defined
+		//JSON object and FluidIngredientJS are loaded in server script _initial.js
     event.recipes.gtceu.pyrolyse_oven('phenol_coal')
         .itemInputs('16x minecraft:coal')
         .inputFluids(FluidIngredientJS.of(steam))

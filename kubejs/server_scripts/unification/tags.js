@@ -94,19 +94,15 @@ ServerEvents.tags('fluid', event => {
 
 })
 
-let manualUnification = ['hammerlib:gears/netherite', 'hammerlib:gears/wooden', 'hammerlib:gears/stone', 'hammerlib:gears/copper', 'hammerlib:gears/iron', 'hammerlib:gears/gold', 'hammerlib:gears/diamond', 'draconicevolution:draconium_ingot', 'draconicevolution:draconium_nugget', 'draconicevolution:draconium_dust', 'draconicevolution:awakened_draconium_ingot', 'draconicevolution:awakened_draconium_nugget', 'draconicevolution:awakened_draconium_dust', 'hammerlib:gears/stone', 'hammerlib:gears/wooden', 'gtceu:neutronium_ingot', 'gtceu:neutronium_nugget']
-let UnificationExcludedItems = ['nuclearcraft:hard_carbon_ingot', 'nuclearcraft:ferroboron_ingot', 'nuclearcraft:tough_alloy_ingot', 'enderio:wood_gear', 'enderio:stone_gear', 'enderio:iron_gear', 'enderio:energized_gear', 'enderio:vibrant_gear', 'enderio:dark_bimetal_gear']
-let unificationPattern = new RegExp(`^(?!(${UnificationExcludedItems.join('|')})).*(nuclearcraft|thermal|enderio):(.*(_block|_plate|_ingot|_nugget|_gear|_dust))`, 'i')
-
-//EMI Hacky Fix   MODS TO FIX: DRACONIC EVOLUTION, THERMAL SERIES, GTCEU NEUTRONIUM, NUCLEARCRAFT
+// Unification regexes are definited in startup script _initial.js
 ServerEvents.tags('item', event => {
-    event.removeAllTagsFrom(unificationPattern)
-    event.removeAllTagsFrom(manualUnification)
+    event.removeAllTagsFrom(global.unificationPattern)
+    event.removeAllTagsFrom(global.manualUnification)
 })
 
 ServerEvents.recipes(event => {
-    event.remove({ output: unificationPattern })
-    event.remove({ output: manualUnification })
+    event.remove({ output: global.unificationPattern })
+    event.remove({ output: global.manualUnification })
 })
 
 
