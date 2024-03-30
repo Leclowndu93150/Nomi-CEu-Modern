@@ -1089,35 +1089,6 @@
 			y: 8.5d
 		}
 		{
-			dependencies: ["3E42B4AAA6D2A05B"]
-			description: [
-				"Having trouble finding a biome? Never fear, the &6Nature’s Compass&r is here! For a very small price, you’ll be able to find any biome your heart pleases!"
-				""
-				"&bRight-clicking&r with the Nature’s Compass in hand will open the &eSelect Biome GUI&r, where you can search any biome, modded or vanilla. Once you find the desired biome, double click or hit &aStart Search&r, and the compass will now point you in the direction of the biome, and tell you how far it it is."
-				""
-				"In the top left of the Select Biome GUI, you can hit the &aInfo&r button for additional information on the biome. You can also press &aSort By&r to change how the biomes are organized."
-				""
-				"Once you have found your desired biome, you can &bshift right-click&r while holding the compass to clear the selected biome. When no biome is selected, the compass will simply point to world spawn."
-			]
-			id: "29A9DFAEBB30F205"
-			rewards: [{
-				id: "32B5F5712D5AB1E9"
-				item: "kubejs:nomi_nickel"
-				type: "item"
-			}]
-			tasks: [{
-				id: "78AE70C6C0FB71DB"
-				item: {
-					Count: 1b
-					id: "naturescompass:naturescompass"
-					tag: { }
-				}
-				type: "item"
-			}]
-			x: 14.0d
-			y: 10.0d
-		}
-		{
 			dependencies: [
 				"7AA5FD63FA3BA43C"
 				"2DDCA4800EFB303E"
@@ -2744,6 +2715,25 @@
 			title: "&dFarming"
 			x: -6.75d
 			y: 4.75d
+		}
+		{
+			dependencies: ["3E42B4AAA6D2A05B"]
+			description: ["Placing a &dWireless Charger in a area that you frequent (as such where you do your crafting) will ensure that your items are always topped off on energy."]
+			id: "1AA0A089DCA17FC8"
+			rewards: [{
+				id: "67EDE8C53008B226"
+				item: "kubejs:nomi_nickel"
+				type: "item"
+			}]
+			subtitle: "Because waiting for items to charge is so last version"
+			tasks: [{
+				id: "6BB55ED56C49A2B0"
+				item: "wirelesschargers:basic_wireless_player_charger"
+				type: "item"
+			}]
+			title: "&dCharging Items Wirelessly"
+			x: 12.5d
+			y: 10.0d
 		}
 	]
 	title: "Early Game"

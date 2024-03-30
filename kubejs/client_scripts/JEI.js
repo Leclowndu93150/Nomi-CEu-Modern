@@ -77,6 +77,9 @@ JEIEvents.hideItems(event => {
 
     //Leave me alone
     //event.hide('kubejs:dev_tool')
+
+    // Wireless Chargers
+    event.hide(['wirelesschargers:basic_wireless_block_charger', 'wirelesschargers:advanced_wireless_block_charger'])
 })
 
 JEIEvents.hideFluids(event => {

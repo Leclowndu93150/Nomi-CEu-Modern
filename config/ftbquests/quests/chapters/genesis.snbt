@@ -1972,7 +1972,7 @@
 			description: [
 				"The &dTinker's Workstation&r is able to charge items at a modest rate, but can only charge items that use &aRF&r."
 				""
-				"The Turbo Charger is a litte more expensive, but is able to charge items at a &omuch&r faster rate and is able to charge items that use &aRF&r and &aEU&r."
+				"The Turbo Charger is a little more expensive, but is able to charge items at a &omuch&r faster rate and is able to charge items that use &aRF&r and &aEU&r."
 			]
 			icon: "gtceu:lv_charger_4x"
 			id: "06E9B9DDDB245F38"
