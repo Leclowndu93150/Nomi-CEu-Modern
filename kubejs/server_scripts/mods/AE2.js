@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
     )
 
     // Inscriber
-    event.remove({ id: 'ae2:network/blocks/inscribers' })
+    event.remove({ id: 'ae2:network/blocks/inscribers'})
     event.shaped(
         Item.of('ae2:inscriber'), [
             'ABA',
@@ -248,8 +248,8 @@ ServerEvents.recipes(event => {
     event.custom({
         "type": "ae2:charger",
         "ingredient": {
-            "item": "gtceu:certus_quartz_gem"
-        },
+                "item": "gtceu:certus_quartz_gem"
+            },
         "result": {
             "item": 'gtceu:charged_certus_quartz_gem'
         }
@@ -370,7 +370,7 @@ ServerEvents.recipes(event => {
             C: 'ae2:calculation_processor'
         }
     )
-    event.remove({ id: 'ae2:materials/advancedcard' })
+		event.remove({ id: 'ae2:materials/advancedcard' })
     event.shaped(
         'ae2:advanced_card', [
             'AB ',
@@ -382,7 +382,7 @@ ServerEvents.recipes(event => {
             C: 'ae2:calculation_processor'
         }
     )
-    event.remove({ id: 'ae2:tools/network_memory_card' })
+		event.remove({ id: 'ae2:tools/network_memory_card' })
     event.shapeless('ae2:memory_card', ['#gtceu:circuits/hv', 'ae2:basic_card'])
 
 
@@ -391,29 +391,18 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'ae2:network/parts/level_emitter' })
     event.shapeless('ae2:level_emitter', ['minecraft:redstone_torch', 'gtceu:aluminium_plate', 'ae2:calculation_processor', '#forge:rods/stainless_steel'])
 
-    //Energy level Emitter
+		//Energy level Emitter
     event.remove({ id: 'ae2:network/parts/energy_level_emitter' })
-    event.shapeless('ae2:energy_level_emitter', ['ae2:level_emitter', '#forge:gems/certus_quartz'])
+		event.shapeless('ae2:energy_level_emitter', ['ae2:level_emitter', '#forge:gems/certus_quartz'])
 
-    //Me Network Tool
-    event.remove({ output: 'ae2:network_tool' })
-    event.shaped(
-        'ae2:network_tool', [
-            'AB ',
-            'CD ',
-            '   '
-        ], {
-            A: 'enderio:yeta_wrench',
-            B: '#gtceu:circuits/ev',
-            C: 'ae2:calculation_processor',
-            D: 'ae2:terminal'
-        })
+
+    // Network Tool (default recipe is fine)
 
 
     //TODO Big I/O (MAKE IN IV ASSEMBLY LINE)
 
     // Processors
-    // We don't have to call recipe.remove since creating a new recipe with the same id removes the old recipe
+		// We don't have to call recipe.remove since creating a new recipe with the same id removes the old recipe
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -517,7 +506,7 @@ ServerEvents.recipes(event => {
             C: 'gtceu:mv_electric_piston',
             D: 'gtceu:aluminium_plate'
         })
-    event.remove({ id: 'ae2:network/parts/export_bus' })
+		event.remove({ id: 'ae2:network/parts/export_bus' })
     event.shaped(
         'ae2:import_bus', [
             ' A ',
@@ -562,46 +551,47 @@ ServerEvents.recipes(event => {
         .EUt(16)
 
     // Fix Certus
-    event.replaceInput({ type: 'ae2:item_tranformation' },
+    event.replaceInput(
+        { type: 'ae2:item_tranformation' },
         'gtceu:certus_quartz_gem',
         'gtceu:charged_certus_quartz_gem'
     )
+    
 
-
-    // cable recipes
-    event.remove({ id: "ae2:network/cables/covered_fluix" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/white_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/orange_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/magenta_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/light_blue_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/yellow_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/lime_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/pink_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/gray_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/light_gray_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/cyan_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/purple_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/blue_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/brown_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/green_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/red_covered_cable" })
-    event.remove({ id: "ae2qolrecipes:covered_cable/black_covered_cable" })
-
-    event.recipes.gtceu.assembler("fluix_covered_cable_rubber")
+		// cable recipes
+		event.remove({ id: "ae2:network/cables/covered_fluix" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/white_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/orange_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/magenta_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/light_blue_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/yellow_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/lime_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/pink_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/gray_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/light_gray_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/cyan_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/purple_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/blue_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/brown_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/green_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/red_covered_cable" })
+		event.remove({ id: "ae2qolrecipes:covered_cable/black_covered_cable" })
+		
+		event.recipes.gtceu.assembler("fluix_covered_cable_rubber")
         .itemInputs("#ae2:glass_cable")
-        .inputFluids('gtceu:rubber 144')
+				.inputFluids('gtceu:rubber 144')
         .itemOutputs("ae2:fluix_covered_cable")
         .duration(100)
         .EUt(7)
-    event.recipes.gtceu.assembler("fluix_covered_cable_silicone")
+		event.recipes.gtceu.assembler("fluix_covered_cable_silicone")
         .itemInputs("#ae2:glass_cable")
-        .inputFluids('gtceu:silicone_rubber 72')
+				.inputFluids('gtceu:silicone_rubber 72')
         .itemOutputs("ae2:fluix_covered_cable")
         .duration(100)
         .EUt(7)
-    event.recipes.gtceu.assembler("fluix_covered_cable_styrene_butadiene")
+		event.recipes.gtceu.assembler("fluix_covered_cable_styrene_butadiene")
         .itemInputs("#ae2:glass_cable")
-        .inputFluids('gtceu:styrene_butadiene_rubber 36')
+				.inputFluids('gtceu:styrene_butadiene_rubber 36')
         .itemOutputs("ae2:fluix_covered_cable")
         .duration(100)
         .EUt(7)
@@ -617,11 +607,11 @@ ServerEvents.recipes(event => {
     }
 
 
-    pressengrave("engineering", 'ae2:engineering_processor_press', '#forge:lenses/red');
-    pressengrave("calculation", 'ae2:calculation_processor_press', '#forge:lenses/blue');
-    pressengrave("silicon", "ae2:silicon_press", '#forge:lenses/light_blue');
-    pressengrave("logic", 'ae2:logic_processor_press', '#forge:lenses/green');
-    pressengrave("name", 'ae2:name_press', '#forge:lenses/white');
+    pressengrave("engineering",'ae2:engineering_processor_press','#forge:lenses/red');
+    pressengrave("calculation",'ae2:calculation_processor_press','#forge:lenses/blue');
+    pressengrave("silicon", "ae2:silicon_press",'#forge:lenses/light_blue');
+    pressengrave("logic", 'ae2:logic_processor_press','#forge:lenses/green');
+    pressengrave("name", 'ae2:name_press','#forge:lenses/white');
 
     // ExtendedAE
 
@@ -638,13 +628,13 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .EUt(512)
 
-    event.remove({ id: 'expatternprovider:epp_upgrade' })
-    event.recipes.gtceu.assembler("ex_pattern_provider_upgrade")
-        .itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
-        .itemOutputs("expatternprovider:pattern_provider_upgrade")
-        .duration(180)
-        .circuit(1)
-        .EUt(512)
+		event.remove({ id: 'expatternprovider:epp_upgrade' })
+		event.recipes.gtceu.assembler("ex_pattern_provider_upgrade")
+				.itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
+				.itemOutputs("expatternprovider:pattern_provider_upgrade")
+				.duration(180)
+				.circuit(1)
+				.EUt(512)
 
     // Extended Interface
 
@@ -656,21 +646,21 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .EUt(512)
 
-    event.remove({ id: 'expatternprovider:ei_upgrade' })
-    event.recipes.gtceu.assembler("ex_interface_upgrade")
-        .itemInputs("3x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
-        .itemOutputs("expatternprovider:interface_upgrade")
-        .duration(180)
-        .circuit(1)
-        .EUt(512)
+		event.remove({ id: 'expatternprovider:ei_upgrade' })
+		event.recipes.gtceu.assembler("ex_interface_upgrade")
+				.itemInputs("3x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
+				.itemOutputs("expatternprovider:interface_upgrade")
+				.duration(180)
+				.circuit(1)
+				.EUt(512)
 
-    event.remove({ id: 'expatternprovider:ex_molecular_assembler' })
-    event.recipes.gtceu.assembler("expatternprovider:ex_molecular_assembler")
-        .itemInputs("8x ae2:molecular_assembler", "8x gtceu:fluix_plate", "8x ae2:capacity_card")
-        .itemOutputs("expatternprovider:ex_molecular_assembler")
-        .duration(240)
-        .EUt(1024)
-
+		event.remove({ id: 'expatternprovider:ex_molecular_assembler' })
+		event.recipes.gtceu.assembler("expatternprovider:ex_molecular_assembler")
+				.itemInputs("8x ae2:molecular_assembler", "8x gtceu:fluix_plate", "8x ae2:capacity_card")
+				.itemOutputs("expatternprovider:ex_molecular_assembler")
+				.duration(240)
+				.EUt(1024)
+    
     //Infinite Cobble/Water cell
     event.replaceInput({ id: 'expatternprovider:water_cell' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
     event.replaceInput({ id: 'expatternprovider:cobblestone_cell' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
@@ -690,4 +680,4 @@ ServerEvents.recipes(event => {
         .itemOutputs('expatternprovider:drive_upgrade')
         .duration(240)
         .EUt(1024)
-})
+    })
