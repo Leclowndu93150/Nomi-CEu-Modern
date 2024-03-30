@@ -1361,6 +1361,7 @@
 				""
 				"Refer to the coil tooltip and EBF controller tooltip for the other bonuses provided."
 			]
+			disable_toast: true
 			id: "573B0EF472FDF0B1"
 			shape: "hexagon"
 			tasks: [{
