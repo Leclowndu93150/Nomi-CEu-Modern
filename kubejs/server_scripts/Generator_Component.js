@@ -5,7 +5,7 @@ ServerEvents.recipes(event => {
         'AZA',
         'BBB'
     ], {
-        A: "minecraft:cobblestone",
+        A: "#forge:cobblestone/normal",
         B: "gtceu:red_alloy_plate",
         Z: "gtceu:lv_machine_hull"
     })
@@ -52,7 +52,7 @@ ServerEvents.recipes(event => {
         C: "gtceu:red_alloy_plate",
         Z: "gtceu:lv_machine_hull"
     })
-    
+
     event.shaped("kubejs:slimey_generator_component", [
         'ABA',
         'BZB',

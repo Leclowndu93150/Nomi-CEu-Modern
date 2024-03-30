@@ -7,10 +7,10 @@ const cake_reset_time = 60; // in seconds
 
 /**
  * helper for compressing/decompress crafting
- * @param {Internal.RecipesEventJS} ev
- * @param {string | ResourceLocation_} output output
- * @param {string | Item_} input input
- * @param {Internal.RecipesEventJS} make_uncompacting make uncompacting recipie (default true)
+ * @param {Internal.RecipesEventJS_} ev
+ * @param {OutputItem_} output output
+ * @param {InputItem_} input input
+ * @param {boolean} make_uncompacting make uncompacting recipie (default true)
  * @returns {Internal.RecipeTypeFunction}
  */
 const comapcting = (ev, output, input, make_uncompacting) => {
@@ -26,4 +26,21 @@ const comapcting = (ev, output, input, make_uncompacting) => {
 		'aaa',
 		'aaa'
 	], { a: input });
+}
+
+/**
+ * shrimple helper for alloy smelter recipies
+ * @param {Internal.RecipesEventJS_} ev
+ * @param {InputItem_} inputA
+ * @param {InputItem_} inputB
+ * @param {OutputItem_} output
+ * @param {number} time in seconds
+ * @param {number} voltage
+ */
+const alloySmelter = (ev, inputA, inputB, output, time, voltage) => {
+	ev.recipes.gtceu.alloy_smelter(`nomi:generated_${Item.of(output).idLocation.path}_${Item.of(inputA).idLocation.path}_${Item.of(inputB).idLocation.path}`)
+		.itemInputs(inputA, inputB)
+		.itemOutputs(output)
+		.duration(time * 20)
+		.EUt(voltage)
 }

@@ -4,7 +4,7 @@ const FluidIngredientJS = Java.loadClass('com.gregtechceu.gtceu.integration.kjs.
 ServerEvents.recipes(event => {
     // Ender Pearls
     event.recipes.gtceu.alloy_smelter("pulsating_ender_pearl")
-        .itemInputs("minecraft:diamond", "kubejs:pulsating_dust")
+        .itemInputs('#forge:gems/diamond', "#forge:dusts/pulsating")
         .itemOutputs("minecraft:ender_pearl")
         .duration(300)
         .EUt(16)
@@ -12,21 +12,18 @@ ServerEvents.recipes(event => {
     // May as well remove ender dust usage while we're at it
     event.remove({ id: "miniutilities:ender_dust_to_ender_pearl" })
 
-    var plantMaterial = ["#minecraft:leaves", "#minecraft:saplings", "minecraft:vine"]
+    const plantMaterial = ["#minecraft:leaves", "#minecraft:saplings", "minecraft:vine"]
     plantMaterial.forEach(ballIngredient => {
         event.shaped(
             "gtceu:plant_ball", [
             'AAA',
             'A A',
             'AAA'
-        ], {
-            A: ballIngredient
-        }
-        )
+        ], { A: ballIngredient })
     });
 
     // Hand-crushing
-    event.shapeless("minecraft:gravel", ["minecraft:cobblestone", "#forge:tools/mortars"])
+    event.shapeless("minecraft:gravel", ['#forge:cobblestone/normal', "#forge:tools/mortars"])
     event.shapeless("minecraft:sand", ["minecraft:gravel", "#forge:tools/hammers"])
     event.shapeless("kubejs:dust", ["minecraft:sand", "#forge:tools/hammers"])
 
@@ -48,7 +45,7 @@ ServerEvents.recipes(event => {
         'CUC',
         'SSS'
     ], {
-        S: "minecraft:stick",
+        S: "#forge:rods/wood",
         C: "minecraft:coal",
         U: "storagedrawers:upgrade_template"
     }
@@ -73,11 +70,11 @@ ServerEvents.recipes(event => {
         I: "gtceu:iron_plate",
         C: "#gtceu:circuits/lv",
         D: "#storagedrawers:drawers",
-        G: "minecraft:gold_block"
+        G: "#forge:storage_blocks/gold"
     }
     ).id('storagedrawers:controller_slave')
 
-    var controllerCore = ["minecraft:diamond_block", "minecraft:emerald_block"]
+    const controllerCore = ["#forge:storage_blocks/diamond", "#forge:storage_blocks/emerald"]
     controllerCore.forEach(coreBlock => {
         event.shaped(
             "storagedrawers:controller", [
@@ -89,8 +86,7 @@ ServerEvents.recipes(event => {
             C: "#gtceu:circuits/lv",
             D: "#storagedrawers:drawers",
             E: coreBlock
-        }
-        )
+        })
     })
 
     event.remove({ id: 'gtceu:assembler/phenolic_board' })
@@ -101,15 +97,13 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(8)
 
-
     //phenol
 
-		let steam = new JSONObject()
-		steam.add('amount', 4000)
-		steam.add('value', {tag:'forge:steam'})
-		
+	let steam = new JSONObject()
+	steam.add('amount', 4000)
+	steam.add('value', {tag:'forge:steam'})
 
-		//Look at the top of the script to see where FluidIngredientJS is defined
+	//Look at the top of the script to see where FluidIngredientJS is defined
     event.recipes.gtceu.pyrolyse_oven('phenol_coal')
         .itemInputs('16x minecraft:coal')
         .inputFluids(FluidIngredientJS.of(steam))

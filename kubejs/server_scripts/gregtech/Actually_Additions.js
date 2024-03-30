@@ -1,56 +1,50 @@
-let reconstructedItems = [
-    ['minecraft:redstone', 'gtceu:restonia_gem', 'restonia'],
-    ['minecraft:iron_ingot', 'gtceu:enori_gem', 'enori'],
-    ['minecraft:coal', 'gtceu:void_gem', 'void'],
-    ['minecraft:lapis_lazuli', 'gtceu:palis_gem', 'palis'],
-    ['minecraft:diamond', 'gtceu:diamatine_gem', 'diamatine'],
-    ['minecraft:emerald', 'gtceu:emeradic_gem', 'emeradic'],
-    ['minecraft:coal_block', 'gtceu:void_block', 'void_block'],
-    ['minecraft:redstone_block', 'gtceu:restonia_block', 'restonia_block'],
-    ['minecraft:lapis_block', 'gtceu:palis_block', 'palis_block'],
-    ['minecraft:diamond_block', 'gtceu:diamatine_block', 'diamatine_block'],
-    ['minecraft:emerald_block', 'gtceu:emeradic_block', 'emeradic_block'],
-    ['minecraft:iron_block', 'gtceu:enori_block', 'enori_block'],
-    ['minecraft:sand', 'minecraft:soul_sand', 'soul_sand'],
-    ['minecraft:red_mushroom', 'minecraft:nether_wart', 'nether_wart'],
-    ['minecraft:quartz', 'minecraft:prismarine_shard', 'prismarine_shard'],
-    ['minecraft:rotten_flesh', 'minecraft:leather', 'leather'],
-    ['gtceu:topaz_gem', 'minecraft:prismarine_crystals', 'prismarine_crystals']
-]
-
-
-
-
 ServerEvents.recipes(event => {
+	const reconstructedItems = [
+		['minecraft:redstone', 'gtceu:restonia_gem', 'restonia'],
+		['minecraft:iron_ingot', 'gtceu:enori_gem', 'enori'],
+		['minecraft:coal', 'gtceu:void_gem', 'void'],
+		['minecraft:lapis_lazuli', 'gtceu:palis_gem', 'palis'],
+		['minecraft:diamond', 'gtceu:diamatine_gem', 'diamatine'],
+		['minecraft:emerald', 'gtceu:emeradic_gem', 'emeradic'],
+		['minecraft:coal_block', 'gtceu:void_block', 'void_block'],
+		['#forge:storage_blocks/redstone', 'gtceu:restonia_block', 'restonia_block'],
+		['#forge:storage_blocks/lapis', 'gtceu:palis_block', 'palis_block'],
+		['#forge:storage_blocks/diamond', 'gtceu:diamatine_block', 'diamatine_block'],
+		['#forge:storage_blocks/emerald', 'gtceu:emeradic_block', 'emeradic_block'],
+		['#forge:storage_blocks/iron', 'gtceu:enori_block', 'enori_block'],
+		['minecraft:sand', 'minecraft:soul_sand', 'soul_sand'],
+		['minecraft:red_mushroom', 'minecraft:nether_wart', 'nether_wart'],
+		['minecraft:quartz', 'minecraft:prismarine_shard', 'prismarine_shard'],
+		['minecraft:rotten_flesh', 'minecraft:leather', 'leather'],
+		['gtceu:topaz_gem', 'minecraft:prismarine_crystals', 'prismarine_crystals']
+	]
 
-    event.remove({ id: /gtceu:shaped\/gear_\w+_empowered/g })
+    event.remove({ id: /^gtceu:shaped\/gear_\w+_empowered/g })
     event.remove({ output: ['gtceu:enori_gear', 'gtceu:void_gear', 'gtceu:palis_gear', 'gtceu:diamatine_gear', 'gtceu:restonia_gear', 'gtceu:emeradic_gear'] })
-
 		// Black Quartz
-		event.recipes.gtceu.electrolyzer("kubejs:black_quartz_dust")
-			.itemInputs("4x gtceu:quartzite_dust")
-			.itemOutputs("gtceu:black_quartz_dust")
-			.duration(400)
-			.EUt(90)
-		event.recipes.gtceu.autoclave('kubejs:black_quartz_gem__water')
+	event.recipes.gtceu.electrolyzer("kubejs:black_quartz_dust")
+		.itemInputs("4x gtceu:quartzite_dust")
+		.itemOutputs("gtceu:black_quartz_dust")
+		.duration(400)
+		.EUt(90)
+	event.recipes.gtceu.autoclave('kubejs:black_quartz_gem__water')
 		.itemInputs('gtceu:black_quartz_dust')
 		.inputFluids(Fluid.of('minecraft:water', 250))
 		.itemOutputs('gtceu:black_quartz_gem')
 		.duration(1200)
 		.EUt(24)
-		event.recipes.gtceu.autoclave('kubejs:black_quartz_gem__distilled')
+	event.recipes.gtceu.autoclave('kubejs:black_quartz_gem__distilled')
 		.itemInputs('gtceu:black_quartz_dust')
 		.inputFluids(Fluid.of('gtceu:distilled_water', 50))
 		.itemOutputs('gtceu:black_quartz_gem')
 		.duration(600)
 		.EUt(24)
 
-
     // Reconstruction
-    reconstructedItems.forEach(itemPair => {
-        event.recipes.gtceu.atomic_reconstruction(itemPair[2])
-            .itemInputs(itemPair[0])
-            .itemOutputs(itemPair[1])
+    reconstructedItems.forEach(([input, output, id]) => {
+        event.recipes.gtceu.atomic_reconstruction(id)
+            .itemInputs(input)
+            .itemOutputs(output)
             .duration(20)
             .EUt(128)
     })
@@ -146,7 +140,6 @@ ServerEvents.recipes(event => {
 
 
     //Crystal Gears
-
     event.recipes.gtceu.extruder("restonia_gear")
         .itemInputs('4x gtceu:restonia_gem')
         .itemOutputs('gtceu:restonia_gear')
@@ -183,5 +176,4 @@ ServerEvents.recipes(event => {
         .notConsumable('gtceu:gear_extruder_mold')
         .duration(80)
         .EUt(32)
-
 })

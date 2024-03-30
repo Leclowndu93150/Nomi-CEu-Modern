@@ -27,7 +27,6 @@ ServerEvents.recipes(event => {
         .duration(40)
         .EUt(7)
 
-
     // Netherrack
     event.recipes.gtceu.chemical_reactor('dust_to_netherrack')
         .itemInputs('kubejs:dust')
@@ -35,7 +34,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('minecraft:netherrack')
         .duration(20)
         .EUt(32)
-
 
     // Infinity Dust Blocks
 	comapcting(event, 'kubejs:infinity_dust_block', 'enderio:grains_of_infinity');
@@ -143,7 +141,7 @@ ServerEvents.recipes(event => {
         ], {
             B: "gtceu:steam_machine_casing",
             G: "gtceu:potin_gear",
-            D: "minecraft:diamond"
+            D: "#forge:gems/diamond"
         }
     )
 
@@ -238,7 +236,7 @@ ServerEvents.recipes(event => {
             'PPP',
             'PPP'
         ], {
-            P: "minecraft:glass_pane"
+            P: "#forge:panes/glass"
         }
     )
 
@@ -267,7 +265,7 @@ ServerEvents.recipes(event => {
             'SDS',
             'SSS'
         ], {
-            S: "minecraft:stick",
+            S: "#forge:rods/wood",
             D: "#storagedrawers:drawers"
         }
     )
@@ -512,7 +510,7 @@ ServerEvents.recipes(event => {
 
     //Chest
     event.shaped(
-        Item.of('enderchests:ender_chest', '{BlockEntityTag:{ForgeCaps:{},code:"000",id:"enderchests:ender_chest.tile",owner:"all",owner_id:"all"},code:"000",owner:"all"}').strongNBT(), [
+        'enderchests:ender_chest', [ // these default to 000 anyways
             'ABA',
             'DED',
             'AFA'
@@ -552,20 +550,20 @@ ServerEvents.recipes(event => {
         }
     ).damageIngredient('#minecraft:swords')
 
-		//Wooden rods from armor plus are easy to accidentally craft instead of wood gears. Turn it into a shaped recipe
-		event.remove( {id: "armorplus:crafting/shapeless/wooden_rod" })
-		event.shaped(
-			'2x armorplus:wooden_rod', [
-				'SS',
-				'SS'
-			], {
-				S: 'minecraft:stick'
-			}
-		).id('kubejs:not_a_wood_gear')
+	//Wooden rods from armor plus are easy to accidentally craft instead of wood gears. Turn it into a shaped recipe
+	event.remove( {id: "armorplus:crafting/shapeless/wooden_rod" })
+	event.shaped(
+		'2x armorplus:wooden_rod', [
+			'SS',
+			'SS'
+		], {
+			S: 'minecraft:stick'
+		}
+	).id('kubejs:not_a_wood_gear')
 
-		//Bounty board recipes only accept oak. The dev has stated this is intended. https://github.com/ejektaflex/Bountiful/issues/271
-		event.replaceInput( { id:"bountiful:crafting/bountyboard"}, "minecraft:oak_log", "#minecraft:logs")
-		event.replaceInput( { id:"bountiful:crafting/bountyboard"}, "minecraft:oak_planks", "#minecraft:planks")
+	//Bounty board recipes only accept oak. The dev has stated this is intended. https://github.com/ejektaflex/Bountiful/issues/271
+	event.replaceInput( { id:"bountiful:crafting/bountyboard"}, "minecraft:oak_log", "#minecraft:logs")
+	event.replaceInput( { id:"bountiful:crafting/bountyboard"}, "minecraft:oak_planks", "#minecraft:planks")
 
 	// avaritia ext crafting table (unused, doesnt exist in 1.12)
 	event.remove({ output: "avaritia:extreme_crafting_table" })

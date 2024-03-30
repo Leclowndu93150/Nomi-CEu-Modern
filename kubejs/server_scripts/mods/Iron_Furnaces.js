@@ -56,10 +56,22 @@ ServerEvents.recipes(event => {
         }
     )
 
+	event.shapeless('ironfurnaces:diamond_furnace', ['ironfurnaces:obsidian_furnace'])
+    event.shaped(
+        'ironfurnaces:diamond_furnace', [
+            'AAA',
+            'ABA',
+            'AAA'
+        ], {
+            A: 'minecraft:diamond',
+            B: 'ironfurnaces:gold_furnace'
+        }
+    )
+
     event.shaped(
         'ironfurnaces:obsidian_furnace', [
             'AAA',
-            'ABA',
+            'BAB',
             'AAA'
         ], {
             A: 'minecraft:obsidian',
@@ -73,7 +85,7 @@ ServerEvents.recipes(event => {
             'BDB',
             'AEA'
         ], {
-            A: 'minecraft:cobblestone', //FIXME
+            A: '#forge:cobblestone/normal', //FIXME
             B: 'minecraft:netherite_ingot',
             C: 'minecraft:magma_block',
             D: 'ironfurnaces:obsidian_furnace',
@@ -100,7 +112,7 @@ ServerEvents.recipes(event => {
             'SRS',
             'SSS'
         ], {
-            S: 'minecraft:cobblestone',
+            S: '#forge:cobblestone/normal',
             R: "minecraft:redstone",
             I: "minecraft:iron_ingot"
         }
