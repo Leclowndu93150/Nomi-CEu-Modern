@@ -24,7 +24,7 @@ GTCEuStartupEvents.materialModification(() => {
 	// TagPrefix.block.setIgnored(OMNIUM, 'extendedcrafting:the_ultimate_block');
 	// TagPrefix.block.setIgnored(GTMaterials.Neutronium, 'avaritia:neutronium_block');
 
-	TagPrefix.plate.setIgnored(INFINITY, 'kubejs:infinity_plate')
+	//TagPrefix.plate.setIgnored(INFINITY, 'kubejs:infinity_plate')
 
 	TagPrefix.dustTiny.setIgnored(GTMaterials.Neutronium, 'avaritia:pile_of_neutrons');
 	INFINITY.setFormula("∞");
