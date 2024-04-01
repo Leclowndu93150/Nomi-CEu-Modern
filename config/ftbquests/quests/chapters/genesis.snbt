@@ -2018,16 +2018,6 @@
 			x: -3.5d
 			y: 11.5d
 		}
-		{
-			can_repeat: true
-			id: "319FB8E210480B5A"
-			tasks: [{
-				id: "3A8CF8D4541F1725"
-				type: "checkmark"
-			}]
-			x: -5.5d
-			y: -4.25d
-		}
 	]
 	title: "Genesis"
 }
