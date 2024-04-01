@@ -1,15 +1,18 @@
 ServerEvents.recipes(event => {
-    event.smelting('gtceu:sticky_resin', 'thermal:tar');
+	
+    event.remove({ id: 'armorplus:crafting/shaped/redstone/redstone_helmet' });
+    event.remove({ id: 'armorplus:crafting/shaped/redstone/redstone_helmet_alt' });
+    event.remove({ id: 'armorplus:crafting/shaped/redstone/redstone_chestplate' });
+    event.remove({ id: 'armorplus:crafting/shaped/redstone/redstone_leggings' });
+    event.remove({ id: 'armorplus:crafting/shaped/redstone/redstone_boots' });
+    event.remove({ id: 'armorplus:crafting/shaped/redstone/redstone_boots_alt' });
 
-    event.remove({ output: 'armorplus:redstone_helmet' });
-    event.remove({ output: 'armorplus:redstone_chestplate' });
-    event.remove({ output: 'armorplus:redstone_leggings' });
-    event.remove({ output: 'armorplus:redstone_boots' });
-
-    event.remove({ output: 'armorplus:lapis_helmet' });
-    event.remove({ output: 'armorplus:lapis_chestplate' });
-    event.remove({ output: 'armorplus:lapis_leggings' });
-    event.remove({ output: 'armorplus:lapis_boots' });
+    event.remove({ id: 'armorplus:crafting/shaped/lapis/lapis_helmet' });
+    event.remove({ id: 'armorplus:crafting/shaped/lapis/lapis_helmet_alt' });
+    event.remove({ id: 'armorplus:crafting/shaped/lapis/lapis_chestplate' });
+    event.remove({ id: 'armorplus:crafting/shaped/lapis/lapis_leggings' });
+    event.remove({ id: 'armorplus:crafting/shaped/lapis/lapis_boots' });
+    event.remove({ id: 'armorplus:crafting/shaped/lapis/lapis_boots_alt' });
 
     let materials = [
         "redstone",
@@ -26,7 +29,7 @@ ServerEvents.recipes(event => {
         'AAA',
         'A A'], {
         A: 'gtceu:' + material + "_plate"
-        });
+        }).id("kubejs:armorplus/"+material+"_helmet");
     });
 
     materials.forEach(material => {
@@ -35,7 +38,7 @@ ServerEvents.recipes(event => {
         'AAA',
         'A A'], {
         A: 'gtceu:' + material + "_plate"
-        });
+        }).id("kubejs:armorplus/"+material+"_chestplate");
     });
 
     materials.forEach(material => {
@@ -44,7 +47,7 @@ ServerEvents.recipes(event => {
         'A A',
         'A A'], {
         A: 'gtceu:' + material + "_plate"
-        });
+        }).id("kubejs:armorplus/"+material+"_leggings");
     });
 
     materials.forEach(material => {
@@ -53,7 +56,7 @@ ServerEvents.recipes(event => {
         'A A',
         'A A'], {
         A: 'gtceu:' + material + "_plate"
-        });
+        }).id("kubejs:armorplus/"+material+"_boots");
     });
 
     event.shaped('armorplus:knight_slime_helmet',
@@ -63,7 +66,7 @@ ServerEvents.recipes(event => {
         {
             A: "gtceu:titanium_carbide_plate",
             B: "minecraft:slime_block"
-        });
+        }).id("kubejs:armorplus/knight_slime_helmet");
 
     event.shaped('armorplus:knight_slime_chestplate',
         ['ABA',
@@ -72,7 +75,7 @@ ServerEvents.recipes(event => {
         {
             A: "gtceu:titanium_carbide_plate",
             B: "minecraft:slime_block"
-        });
+        }).id("kubejs:armorplus/knight_slime_chestplate");
 
     event.shaped('armorplus:knight_slime_leggings',
         ['AAA',
@@ -81,7 +84,7 @@ ServerEvents.recipes(event => {
         {
             A: "gtceu:titanium_carbide_plate",
             B: "minecraft:slime_block"
-        });
+        }).id("kubejs:armorplus/knight_slime_leggings");
 
     event.shaped('armorplus:knight_slime_boots',
         ['ABA',
@@ -90,14 +93,14 @@ ServerEvents.recipes(event => {
         {
             A: "gtceu:titanium_carbide_plate",
             B: "minecraft:slime_block"
-        });
+        }).id("kubejs:armorplus/knight_slime_boots");
 
     // Fix buggy recipes
     event.remove( { id: 'armorplus:crafting/shapeless/storage/infused_frost_crystal_to_item' } )
     event.remove( { id: 'armorplus:crafting/shapeless/storage/block_infused_frost_crystal_to_item' } )
 
     // Lava Crystal
-    event.recipes.gtceu.chemical_reactor("infused_lava_crystal")
+    event.recipes.gtceu.chemical_reactor("kubejs:armorplus/infused_lava_crystal")
         .itemInputs('minecraft:quartz')
         .inputFluids('minecraft:lava 1000')
         .itemOutputs('armorplus:infused_lava_crystal')
@@ -105,7 +108,7 @@ ServerEvents.recipes(event => {
         .EUt(15)
 
     // Ultimate Material
-    event.recipes.gtceu.assembly_line("ultimate_material")
+    event.recipes.gtceu.assembly_line("kubejs:armorplus/the_ultimate_material")
         .itemInputs('draconicevolution:dragon_heart', '4x armorplus:guardian_scale', '8x armorplus:wither_bone', '12x armorplus:ender_dragon_scale')
         .itemOutputs('armorplus:the_ultimate_material')
         .duration(600)
