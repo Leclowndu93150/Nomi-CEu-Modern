@@ -162,11 +162,9 @@ export const DownloadModsTarget = new Juke.Target({
           Juke.logger.info(`Mod was removed from modpack: ${pid}`)
           continue;
         }
-        if (newData[`${pid}`]) { // new mod added
-          if (mIdToDownload.find(`${pid}`)) {
-            mIdToDownload.push(`${pid}`);
-            Juke.logger.info(`Mod was added from modpack: ${pid}`)
-          }
+        if (newData[`${pid}`] && !mIdToDownload.includes(`${pid}`)) { // new mod added
+          mIdToDownload.push(`${pid}`);
+          Juke.logger.info(`Mod was added from modpack: ${pid}`)
         }
       }
 
@@ -174,15 +172,15 @@ export const DownloadModsTarget = new Juke.Target({
       for (const pid of oldDataKeys.filter(pid => (
           newData[pid] && oldData[pid]['fileID'] !== newData[pid]['fileID']))) {
         const fromOldData = oldData[`${pid}`];
+        // from old, which means this is updated
         if (fromOldData) {
-          // from old, which means this is updated
           Juke.rm(`dist/modcache/${fromOldData['file']}`)
           Juke.logger.info(`Mod was updated from modpack: ${pid}`)
-          if (mIdToDownload.find(`${pid}`))
-            mIdToDownload.push(`${pid}`);
+          if (!mIdToDownload.includes(`${pid}`)) mIdToDownload.push(`${pid}`);
+          oldData[`${pid}`]['file'] = undefined;
         }
       }
-      dataKeys = newData;
+      dataKeys = oldData;
     } else {
       Juke.logger.info('Modmeta remapping')
       for (const key in manifest.files) {
