@@ -160,11 +160,13 @@ export const DownloadModsTarget = new Juke.Target({
           // from old, which means this is removed
           Juke.rm(`dist/modcache/${fromOldData['file']}`)
           Juke.logger.info(`Mod was removed from modpack: ${pid}`)
+          delete oldData[`${pid}`]
           continue;
         }
         if (newData[`${pid}`] && !mIdToDownload.includes(`${pid}`)) { // new mod added
           mIdToDownload.push(`${pid}`);
           Juke.logger.info(`Mod was added from modpack: ${pid}`)
+          oldData[`${pid}`] = {...newData[`${pid}`]} // copy
         }
       }
 
