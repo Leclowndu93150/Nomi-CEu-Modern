@@ -1,8 +1,9 @@
 FTBQuestsEvents.completed('319FB8E210480B5A', event => {
-    event.updateSDRPState()
+	SDRP.setState(`Just started nomifactory!`, event.player.username, 'creative')
 })
 
-sdrp.dimension_change(event => {
-    const dimPath = event.level.dimension().location().getPath()
-    event.updateSDRPState(`sdrp.${dimPath}.in`, `sdrp.${dimPath}`, "dimPath")
+PlayerEvents.loggedIn(event => {
+	const name = capitalize(event.level.dimension.path);
+	// i have no clue why tf is this working on the server
+	SDRP.setState(`In ${name}`, name, "creative")
 })
