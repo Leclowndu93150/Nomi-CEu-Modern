@@ -46,3 +46,18 @@ const rainbowify = (text, offset) => {
 	}
 	return Text.join(components);
 }
+
+// Tier enums for easier data handling
+const TIER_ULV = 0; // ulv
+const TIER_LV = 1;
+const TIER_MV = 2;
+const TIER_HV = 3;
+const TIER_EV = 4;
+const TIER_IV = 5;
+const TIER_LUV = 6;
+const TIER_ZPM = 7;
+const TIER_UV = 8;
+const TIER_UHV = 9;
+const TIER_ID_MAPPING = [
+	'ULV', 'LV', 'MV', 'HV', 'EV', 'IV', 'LuV', 'ZPM', 'UV', 'UHV'
+]
