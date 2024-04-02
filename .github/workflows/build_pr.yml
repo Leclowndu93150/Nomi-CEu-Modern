@@ -1,4 +1,4 @@
-name: Build PR
+name: Build
 on:
   workflow_dispatch:
     inputs:
@@ -32,7 +32,9 @@ jobs:
         uses: actions/cache@v4
         with:
           # observe if this makes broken builds due to outdated mods (server onl)
-          path: dist/modcache
+          path: |
+            dist/modcache
+            dist/cache.json
           key: ${{ runner.os }}-mods-${{ hashFiles('manifest.json') }}
           restore-keys: |
             ${{ runner.os }}-mods-

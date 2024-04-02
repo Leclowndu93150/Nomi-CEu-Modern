@@ -23,7 +23,7 @@ StartupEvents.registry('item', event => {
 
             food.alwaysEdible();
 
-        }).maxStackSize(64).translationKey(`item.kubejs.smores.${i+1}`)
+        }).maxStackSize(64)
 
         effDuration *= 2;
     }

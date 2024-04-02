@@ -17,26 +17,37 @@
 				"&bGregTech&r machines are built from a number of components, many of which are shared between the machines. Motors&r are used in a great number of recipes, even including other components."
 				""
 				"The Wiremill requires a &6Programmed Circuit&r to run. Each machine comes with a free one - click on the circuit slot in the &dbottom right &rof the GUI. For making single wires, leave the circuit at &econfiguration 1&r. Refer to &eJEI&r for which circuit config a recipe calls for, and refer to the adjacent quest for more information."
-				""
+				"{@pagebreak}"
 				"After you make the Wiremill, &econsider making a few stacks&r of LV motors. This might sound extreme, but &ebatch crafting&r in this manner is an important habit to pick up. This way you won't have to craft more for a while, and you &owill &ruse all those motors eventually, so you're not wasting materials."
 				""
 				"As you get access to more machinery you will no longer need to craft things manually. Instead, you will engineer factories to automate the production for you. It is useful to keep a stockpile of frequently used things like circuits and components crafted so you don't have to wait for them when you need them."
 				""
 				"&2If the machine sounds start to get on your nerves, you can mute GT machines with a GT Hammer, &dor mute the sound entirely in the ESM menu, accessable from your inventory."
 			]
+			icon: "gtceu:lv_electric_motor"
 			id: "62BBD1F6767A4D90"
 			rewards: [{
+				count: 2
 				id: "33683A0D0F389BD0"
 				item: "kubejs:nomi_nickel"
 				type: "item"
 			}]
 			shape: "hexagon"
 			size: 2.0d
-			tasks: [{
-				id: "298288137C88DDFF"
-				item: "gtceu:lv_wiremill"
-				type: "item"
-			}]
+			subtitle: "The factory begins"
+			tasks: [
+				{
+					id: "298288137C88DDFF"
+					item: "gtceu:lv_wiremill"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7B350C87343A8A00"
+					item: "gtceu:lv_electric_motor"
+					type: "item"
+				}
+			]
 			title: "&2LV Wiremill"
 			x: 0.0d
 			y: 2.0d
@@ -46,7 +57,7 @@
 			description: [
 				"Although you could &emagnetize&r &6Iron Ingots&r by hand using &6Redstone&r, doing that consumes considerable amounts of dust and that's not an option for more advanced materials. This machine will let you magnetize &6Steel Rods&r, as well as even more advanced materials later."
 				""
-				"&2Polarizer recipes in GTCEu go up to HV."
+				"&2Polarizer recipes in GTCEu go up to UV."
 			]
 			id: "19233A97579E0BDD"
 			rewards: [{
@@ -55,10 +66,17 @@
 				type: "item"
 			}]
 			shape: "hexagon"
-			subtitle: "Note: this quest accepts both LV and MV Polarizer."
+			subtitle: "Automatic magnetizers"
 			tasks: [{
 				id: "2AAE22F760F73AD8"
-				item: "gtceu:lv_polarizer"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "nomi:polarizer"
+					}
+				}
+				title: "LV or MV Polarizer"
 				type: "item"
 			}]
 			title: "&2Polarizer"
@@ -94,7 +112,7 @@
 				"A &6Programmed Circuit&r is an item used to configure machines. In essence, they tell a machine what to make if there's multiple things it could make from a certain input."
 				""
 				"For example, the &3Wiremill&r produces different thicknesses of &6wires&r depending on the config - &ecircuit 1&r produces &61x wires&r, &ecircuit 4&r produces &64x wires&r, etc. The &eJEI&r recipe will tell you which circuit configuration is required."
-				""
+				"{@pagebreak}"
 				"Each machine and item input bus comes with a &2free \"ghost circuit\"&r. Click the circuit slot on the &dbottom right&r of the GUI to access this ghost circuit. Left- and right-click or scroll to adjust the configuration. "
 				""
 				"That said, the Programmed Circuit item (crafted from a single &6LV Circuit&r) still has its uses:"
@@ -150,6 +168,7 @@
 			}]
 			shape: "hexagon"
 			size: 2.0d
+			subtitle: "Assembling Machine 1"
 			tasks: [{
 				id: "4FEE8532736A49E2"
 				item: "gtceu:lv_assembler"
@@ -613,12 +632,13 @@
 				type: "item"
 			}]
 			shape: "hexagon"
+			subtitle: "Copper... Nickel... Cupronickel?"
 			tasks: [{
 				id: "708858A9BC1F9ABE"
 				item: "gtceu:cupronickel_ingot"
 				type: "item"
 			}]
-			title: "Copper... Nickel... Cupronickel?"
+			title: "Cupronickel"
 			x: 2.5d
 			y: 2.0d
 		}
@@ -1045,7 +1065,9 @@
 				""
 				"This device can be powered with RF via energy conduits or use AE energy from a network via ME conduits or cables."
 				""
-				"It accepts power from two sides. Which two sides? It's pretty easy to guess."
+				"It accepts power from &dfive&r sides. Which &dfive&r sides? It's pretty easy to guess."
+				""
+				"You can also early automate charging by having hoppers input item from top or sides, and pull items from the bottom."
 			]
 			icon: "gtceu:certus_quartz_gem"
 			id: "6D03BB4A6A4BBA27"
@@ -1062,8 +1084,13 @@
 					type: "item"
 				}
 				{
-					id: "5359172F26D9A46A"
+					id: "04AC6A5A46C16692"
 					item: "gtceu:certus_quartz_gem"
+					type: "item"
+				}
+				{
+					id: "11C67D466485AF01"
+					item: "gtceu:charged_certus_quartz_gem"
 					type: "item"
 				}
 			]
@@ -1620,6 +1647,7 @@
 				type: "item"
 			}]
 			shape: "hexagon"
+			subtitle: "Will it blend?"
 			tasks: [{
 				id: "0199D55D895EDDC9"
 				item: "gtceu:lv_mixer"
@@ -1823,7 +1851,7 @@
 				"&aFilters&r are a type of machine cover that controls what items or fluids are allowed to pass through it. They can be used directly on the side of a machine to affect external automation or the Machine's &aAuto-Output Functionality&r."
 				""
 				"You can also &eplace filters inside of other covers&r to control what items or fluids that cover will interact with. When used in a &6Robot Arm&r, &aItem Filters&r make for a powerful automation tool for &ekeeping specific items in stock&r in specific quantities in Machines. With &6Fluid Regulators&r, similar behavior is possible with fluids using a &aFluid Filter&r. For &6Conveyors&r and &6Pumps&r, it simply limits what that cover will move."
-				""
+				"{@pagebreak}"
 				"&aFilters&r all have 9 configurable slots and whitelist/blacklist modes, and can be applied to multiple sides of machines. When placed inside a &6Robot Arm&r in &eKeep Exact&r or &eSupply Exact&r mode&r, the item count in a filter can be incremented by &eRight Clicking&r and decremented by &eLeft Clicking&r. Holding &eShift&r causes the count to increase/decrease by a factor of 2. This controls the number of each type of item that will be kept in stock or moved at a time."
 				""
 				"Similar controls are available for the &aFluid Filter&r when placed inside a &6Fluid Regulator&r."
@@ -2037,6 +2065,7 @@
 				type: "item"
 			}]
 			size: 1.5d
+			subtitle: "Money!"
 			tasks: [{
 				id: "79EF1B91285482AB"
 				item: "bountiful:bountyboard"

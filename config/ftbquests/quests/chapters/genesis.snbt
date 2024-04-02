@@ -5,7 +5,7 @@
 	disable_toast: true
 	filename: "genesis"
 	group: ""
-	icon: "minecraft:iron_ingot"
+	icon: "gtceu:vacuum_tube"
 	id: "0654B76C306712BE"
 	order_index: 0
 	quest_links: [ ]
@@ -124,6 +124,10 @@
 					disable_toast: true
 					icon: "minecraft:clock"
 					id: "138B92A597D63C12"
+					tags: [
+						"nomi_timer"
+						"nomi_timer_60"
+					]
 					title: "Timer"
 					type: "custom"
 				}
@@ -156,7 +160,7 @@
 						value: "storagedrawers:drawers"
 					}
 				}
-				title: "Any #storagedrawers:drawers"
+				title: "Any Storage Drawers"
 				type: "item"
 			}]
 			title: "Drawers"
@@ -583,6 +587,7 @@
 				type: "item"
 			}]
 			shape: "hexagon"
+			subtitle: "Bonk!"
 			tasks: [{
 				id: "253D34B000F903DD"
 				item: {
@@ -881,7 +886,7 @@
 				"Make the Tool Belt, and you can use the keybind (default is `R'), while the belt is in your inventory or Bauble Slots &cand you are holding something, or the belt is not empty&r, to open its GUI. "
 				""
 				"Alternatively, you can right click while holding the belt to open its inventory."
-				""
+				"{@pagebreak}"
 				"The Tool Belt is equipable as a &bBauble&r. Open your inventory and look for the Baubles button, and click it to reveal the additional bauble slots menu, and then put it in the Belt Slot. Or, just click in every bauble slot until it goes in, if you can't tell which bauble slot looks like a belt."
 				""
 				"The Tool Belt can store anything with a stack size of 1, like swords, pickaxes, &bGregTech&r tools, and the &6Terminal&r. It has also been modified a bit, so it also allows any &bStorage Drawers&r key, and &cdoesn't allow any Thermal Satchel&r."
@@ -988,14 +993,16 @@
 			y: 1.5d
 		}
 		{
+			dependencies: ["66FCC26399376B55"]
 			description: [
 				"While there are no types of veins that are extremely rare, you're likely to struggle with finding at least one of the less common vein types. This isn't really avoidable."
 				""
 				"[\"You will accumulate a lot of \",{\"text\":\"Nomicoins\",\"color\":\"dark_purple\",\"hoverEvent\":{\"action\":\"show_item\",\"contents\":{\"id\":\"kubejs:nomi_quarter\"}}},\" from quest turn-ins while playing Nomifactory. Do not be hesitant to spend them on things you need!\"]"
 				""
-				"Search for various ores (generally the first one listed in &bJEI&f) to find the coin recipes for them. Alternatively, hover your cursor over a coin and press &6U&f to see what you can buy with it."
+				"[\"Search for various ores (generally the first one listed in \",{\"text\":\"EMI\",\"color\":\"aqua\"},\") to find the coin recipes for them. Alternatively, hover your cursor over a coin and press \",{\"keybind\":\"key.jei.showRecipe\",\"color\":\"gold\",\"bold\":true,\"underlined\":true,\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"\\\"Show Recipe\\\" in keybind option\"}},\" to see what you can buy with it.\"]"
 			]
-			icon: "kubejs:nomi_penny"
+			hide_dependency_lines: true
+			icon: "kubejs:nomi_dollar"
 			id: "115D2BEB18929C7C"
 			rewards: [{
 				id: "43415141DBD13CDD"
@@ -1009,10 +1016,25 @@
 				type: "item"
 			}]
 			subtitle: "Don't be a hoarder!"
-			tasks: [{
-				id: "7275E7D7E7F140B8"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "7275E7D7E7F140B8"
+					type: "checkmark"
+				}
+				{
+					disable_toast: true
+					id: "34ADCB8BA7F14B03"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "nomi:coins"
+						}
+					}
+					title: "Nomicoins"
+					type: "item"
+				}
+			]
 			title: "Spend Your Coins!"
 			x: -10.0d
 			y: 1.0d
@@ -1135,6 +1157,7 @@
 			y: 5.5d
 		}
 		{
+			dependencies: ["66FCC26399376B55"]
 			description: [
 				"&b&lEMI&r is the list of all items that you see every time you open your inventory. It's the better(tm) recipe book that shows you all available items and recipes in the modpack. Note that &b&lEMI&r is based on &b&lJEI&r, and people tend to use the names interchangably."
 				""
@@ -1149,10 +1172,10 @@
 				"One of the remarkable features of EMI is that it's also capable of helping you with recipes, covered more in the quest to the right of this one."
 			]
 			disable_toast: true
+			hide_dependency_lines: true
 			icon: "ftbquests:book"
 			id: "3B200AD6EFF90DFA"
-			shape: "hexagon"
-			size: 1.5d
+			size: 1.0d
 			subtitle: "&eUSE EMI!!!&r"
 			tasks: [{
 				id: "7449A54608D60DF8"
@@ -1160,9 +1183,10 @@
 			}]
 			title: "&d&lUse EMI! Use EMI! USE. EMI."
 			x: -11.5d
-			y: -1.5d
+			y: -0.5d
 		}
 		{
+			dependencies: ["66FCC26399376B55"]
 			description: [
 				"Open your inventory and look at the top-left corner of the screen. Click the map-looking icon called &eClaimed Chunks&r."
 				""
@@ -1173,6 +1197,7 @@
 				"To invite players to your &bFTB Utils&f party, look for a corresponding button in the same corner. Parties share claimed chunks with each other. You can configure permissions for your party's claimed chunks in the party settings menu."
 			]
 			disable_toast: true
+			hide_dependency_lines: true
 			icon: "minecraft:tnt"
 			id: "6A7A480FAC6103D2"
 			optional: true
@@ -1184,7 +1209,7 @@
 			}]
 			title: "Claim Your Chunks and Invite Teammates!"
 			x: -11.5d
-			y: 4.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["1229234A71CE0A99"]
@@ -1760,8 +1785,7 @@
 			icon: "gtceu:crafting_table_cover"
 			id: "58566C7BF4C22D86"
 			optional: true
-			shape: "hexagon"
-			size: 1.5d
+			size: 1.0d
 			subtitle: "Extremely powerful when crafting."
 			tasks: [{
 				id: "3768A707E0489471"
@@ -1769,9 +1793,10 @@
 			}]
 			title: "&dRecipe Trees and Crafting Trees"
 			x: -10.0d
-			y: -1.5d
+			y: -0.5d
 		}
 		{
+			dependencies: ["66FCC26399376B55"]
 			description: [
 				"&bEffortless Building&r is a mod that makes it much easier to build. You can create large platforms or various other shapes in just a few clicks, and even build multiple identical structures at the same time!"
 				""
@@ -1792,6 +1817,7 @@
 				"Overall, &bEffortless Building&r is a powerful mod that is very useful for construction. Experiment with it and you'll see how much time it can save you!"
 			]
 			disable_toast: true
+			hide_dependency_lines: true
 			icon: "effortlessbuilding:reach_upgrade1"
 			id: "0137ECCCD7A11A15"
 			optional: true
@@ -1825,6 +1851,7 @@
 			y: 2.5d
 		}
 		{
+			dependencies: ["66FCC26399376B55"]
 			description: [
 				"&n&5Nomifactory Modern&r&r shares an official Discord server with &5Nomifactory&r and &5Nomi-CEu&r, which serves as a useful community resource."
 				""
@@ -1837,6 +1864,7 @@
 				"[\"Issue tracking and development is handled on our respective GitHub project repositories. The repository for this pack is \", {\"text\": \"here\", \"color\": \"blue\", \"underlined\": \"true\", \"clickEvent\": {\"action\": \"open_url\", \"value\": \"https://github.com/Nomi-CEu/Nomi-CEu-Modern\"}}, \".\"]"
 			]
 			disable_toast: true
+			hide_dependency_lines: true
 			icon: "minecraft:writable_book"
 			id: "70026930847E8EC0"
 			optional: true
@@ -1846,8 +1874,8 @@
 				type: "checkmark"
 			}]
 			title: "Discord and GitHub"
-			x: -11.5d
-			y: 1.0d
+			x: -10.0d
+			y: 4.0d
 		}
 		{
 			can_repeat: true
@@ -1907,9 +1935,9 @@
 		{
 			dependencies: ["2E8BFA2E719B1C47"]
 			description: [
-				"Sophisticated Storage and Sophisticated Backpacks are great options for storing items, both at base and on the go, as well as offering a variety of both helpful and fun upgrades."
+				"&bSophisticated Storage&r and &bSophisticated Backpacks&r are great options for storing items, both at base and on the go, as well as offering a variety of both helpful and fun upgrades."
 				""
-				"Sophisticated Storage in particular is great for cheap storage, able to store 3 barrels worth of items at it's lowest tier, costing only a bit of iron to craft, and can be upgraded with barrel upgrades to hold even more items and upgrades."
+				"&bSophisticated Storage&r in particular is great for cheap storage, able to store 3 barrels worth of items at it's lowest tier, costing only a bit of iron to craft, and can be upgraded with barrel upgrades to hold even more items and upgrades."
 				""
 				"&5Retextures and such are WIP."
 			]
@@ -1958,6 +1986,7 @@
 			icon: "thermal:nuke_tnt"
 			id: "2A511DB40C66CF35"
 			size: 1.5d
+			subtitle: "Bleeding Edge!"
 			tasks: [{
 				id: "1A2BD249B1DBDA09"
 				title: "Acknowleged"
@@ -2017,6 +2046,303 @@
 			title: "&dCharging Items"
 			x: -3.5d
 			y: 11.5d
+		}
+		{
+			dependencies: ["66FCC26399376B55"]
+			description: [
+				"Whether or not you (or your server admin) picked the default &bLost Cities&r overworld type, you have the option of teleporting yourself to the &eLost Cities Dimension&r. This is useful if you like other world types but want to still be able to explore cities for things like &eloot and spawners&r."
+				""
+				"To create a portal, you must place a &aBed&r down on two &6Blocks of Diamond&r. Then, you surround the bed with any kind of &eMonster Skulls&r. Sleep in this bed and you will be teleported there."
+				""
+				"&cDon't forget to have a way to get back!&r You can use the &e/sethome&r command to register where your house is, and &e/home&r to return to it. If you supply a name (default \"home\") then you can register and go to multiple locations. There are some &erestrictions&r on this though: &eit takes a few seconds of standing still to activate&r and there is a &ecooldown&r between uses."
+				""
+				"Later on you'll have other means of teleportation."
+				""
+				"Monster Skulls might take a little while to get if you're playing in &ePeaceful&r&r. &6Skeleton Skulls&r would be the way to go in that case."
+			]
+			disable_toast: true
+			hide_dependency_lines: true
+			icon: "minecraft:purple_bed"
+			id: "33195ED6D7008E5F"
+			optional: true
+			rewards: [{
+				id: "3DE844F3B9CF2903"
+				item: "kubejs:nomi_nickel"
+				type: "item"
+			}]
+			subtitle: "Free materials!"
+			tasks: [
+				{
+					count: 10L
+					id: "0221039A21A1C266"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:heads"
+						}
+					}
+					title: "Any Heads"
+					type: "item"
+				}
+				{
+					id: "0E70B83A51A0ADEC"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "minecraft:beds"
+						}
+					}
+					title: "Any Bed"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "0DA16402F8B9CC9B"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+			]
+			title: "Lost Cities and Registring Homes"
+			x: -11.5d
+			y: 4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["66FCC26399376B55"]
+			description: [
+				"If you &osomehow&r run out of charge on your prospector. Simply submit it back in, and we'll give you a fresh one!"
+				""
+				"Available once per hour."
+			]
+			disable_toast: true
+			hide_dependency_lines: true
+			icon: "gtceu:prospector.hv"
+			id: "726528BE5A1A6AC2"
+			optional: true
+			rewards: [{
+				id: "21CED765A341AC89"
+				item: "gtceu:prospector.hv"
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "652A1DDFD9E1626F"
+					item: "gtceu:prospector.hv"
+					match_nbt: false
+					type: "item"
+				}
+				{
+					icon: "minecraft:clock"
+					id: "028124026E3BCE59"
+					tags: [
+						"nomi_timer"
+						"nomi_timer_60"
+					]
+					title: "Timer"
+					type: "custom"
+				}
+			]
+			title: "Recharge Your Prospector!"
+			x: -11.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["66FCC26399376B55"]
+			description: [
+				"[\"The \",{\"text\":\"Progression tab\",\"color\":\"yellow\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"395B849AC6294153\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"Click to go to the chapter\"}},\" was added so you can keep track of the important bits of the pack.\"]"
+				""
+				"Circuits are the baseline of the entire Nomifactory-GTCEu progression, so keep climbing!"
+			]
+			disable_toast: true
+			hide_dependency_lines: true
+			icon: "gtceu:quantum_processor"
+			id: "400AD2B735FF135D"
+			tasks: [{
+				id: "3378D5EF8B48960E"
+				type: "checkmark"
+			}]
+			title: "Progression Tab"
+			x: -10.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["66FCC26399376B55"]
+			description: [
+				"[\"\",{\"text\":\"This tab\",\"color\":\"dark_green\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"395B849AC6294153\"},\"hoverEvent\":{\"action\":\"show_text\",\"value\":\"055C0B43FE14258F\",\"contents\":\"Click to go to the chapter\"}},{\"text\":\" was added to help you visualise and give you tips on making chemicals, among other important things to automate. Use it wisely!\",\"color\":\"dark_green\"}]"
+				""
+				"Each quest in the tab will give you a description of the machine and the minimum voltage required to run the recipe. Furthermore, although each quest can be completed via a checkbox, all quests in a processing line will auto-complete once you get the item positioned on the right. Either the checkbox or achieving the product will complete the quests."
+			]
+			disable_toast: true
+			hide_dependency_lines: true
+			icon: "gtceu:mv_chemical_bath"
+			id: "73C713703AB6387C"
+			tasks: [{
+				id: "4BEDF2126C896A50"
+				type: "checkmark"
+			}]
+			title: "&2Processing Lines Tab"
+			x: -11.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["66FCC26399376B55"]
+			description: ["[\"This pack has \",{\"text\":\"Inventory Tweaks\",\"color\":\"aqua\"},\", allowing for quick, customizable, and easy sorting of any inventory! The keybind is \",{\"keybind\":\"key.invtweaks_sort_player.desc\",\"color\":\"gold\",\"bold\":true,\"underlined\":true,\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"\\\"Sort Player Inventory\\\" in keybind option\"}}]"]
+			disable_toast: true
+			hide_dependency_lines: true
+			icon: "minecraft:chest"
+			id: "0DE9B264A3BA75BB"
+			subtitle: "Clean your inventory"
+			tasks: [{
+				id: "6EF2221B59F470CB"
+				type: "checkmark"
+			}]
+			title: "Inventory Sorting"
+			x: -10.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["66FCC26399376B55"]
+			description: [
+				"&bGregTech&r adds an &einteractive in-world preview&r for all &bGregTech&r multiblocks! &6Shift-right-click&r a placed controller &ewith an empty hand&r to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the &efirst incorrect block&r it detects will be highlighted in red."
+				""
+				"&6Sneak-right-click&r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview."
+				""
+				"&6Sneak-left-click&r to go back to the previous layer, or close the preview from the full view."
+				""
+				"In the &eJEI previews&r for multiblocks, &6left-click&r and drag the mouse to rotate the preview."
+				""
+				"Additionally, you can &6right-click&r and drag the mouse to pan the preview or &6shift-right-click&r and drag to zoom in or out."
+				""
+				"Some blocks in the multiblock preview have additional tooltips to provide more information on how the multiblock can form."
+			]
+			disable_toast: true
+			hide_dependency_lines: true
+			icon: "gtceu:electric_blast_furnace"
+			id: "50591843C8501055"
+			tasks: [{
+				id: "0765BFA6BDBFD386"
+				type: "checkmark"
+			}]
+			title: "Multiblock Machine Previews"
+			x: -11.5d
+			y: 8.5d
+		}
+		{
+			dependencies: [
+				"70026930847E8EC0"
+				"6F9041F256F517A3"
+			]
+			description: [
+				"Neeve, the master of Leveret. Summon him, and then bless him with your presents, and you shall gain access to his all-powerful rabbit."
+				""
+				"All items will be &c&lconsumed&r&r throught this quest chain."
+			]
+			hide: true
+			hide_dependency_lines: true
+			hide_details_until_startable: true
+			icon: "minecraft:rabbit_hide"
+			id: "44B49F5F76ADE0C2"
+			tasks: [{
+				id: "7E0065B408204E13"
+				type: "checkmark"
+			}]
+			title: "Neeve: The Begining"
+			x: -10.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["44B49F5F76ADE0C2"]
+			description: ["Almost there! One more after this"]
+			hide: true
+			hide_details_until_startable: true
+			icon: "minecraft:rabbit_hide"
+			id: "407A580EFD127B93"
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "375AB099001CDEC3"
+					item: "minecraft:rotten_flesh"
+					title: "Neeve's Body"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 32L
+					id: "53351F27BB92BD42"
+					item: "minecraft:bone"
+					title: "Neeve's Bones"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "1E661FCC2798ACB2"
+					item: "kubejs:heart_of_a_universe"
+					title: "Neeve's Heart"
+					type: "item"
+				}
+			]
+			title: "Neeve: Mid Game"
+			x: -8.25d
+			y: 8.5d
+		}
+		{
+			dependencies: ["407A580EFD127B93"]
+			description: ["Writer department forgot to add fluff here"]
+			hide: true
+			hide_details_until_startable: true
+			icon: "minecraft:rabbit_hide"
+			id: "06D8466B2C58201D"
+			rewards: [{
+				id: "42A56AE6A025DE8C"
+				item: {
+					Count: 1b
+					id: "minecraft:rabbit_spawn_egg"
+					tag: {
+						display: {
+							Name: "{\"text\":\"Neeve's Rabbit (Leveret)\",\"color\":\"light_purple\",\"bold\":true}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "5BC3D980767295EA"
+					item: "kubejs:universal_navigator"
+					title: "&dNeeve Finder"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "13DC281D3155BF67"
+					item: "kubejs:microminer_t10"
+					title: "&dNeeve Retriever"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "7295F203DE286C05"
+					item: "kubejs:smore_64"
+					title: "&dNeeve Feeder"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "68DFDED564D9F5FE"
+					item: "gtceu:ancient_gold_coin"
+					title: "&dNeeve Bargaining Chip"
+					type: "item"
+				}
+			]
+			title: "Neeve: End Game"
+			x: -6.5d
+			y: 8.5d
 		}
 	]
 	title: "Genesis"

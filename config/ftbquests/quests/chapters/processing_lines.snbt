@@ -91,12 +91,19 @@
 				"Also a cheap building block."
 			]
 			disable_toast: true
-			icon: "minecraft:cobblestone"
 			id: "1881488CEB982FCD"
+			progression_mode: "flexible"
 			size: 2.0d
 			tasks: [{
 				id: "6A1B4224E18DC3EC"
-				item: "minecraft:cobblestone"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:cobblestone"
+					}
+				}
+				title: "Cobblestone"
 				type: "item"
 			}]
 			x: 7.0d
@@ -138,7 +145,7 @@
 			id: "7F165C2BCCCBA565"
 			subtitle: "&oThis step requires a Mixer at voltage &lLV&r&o or higher.&r"
 			tasks: [{
-				id: "1BE153396C6622CB"
+				id: "0D045E8E928B8757"
 				type: "checkmark"
 			}]
 			title: "Concrete"
@@ -272,7 +279,6 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["626330BB4A59E567"]
 			description: [
 				"&6Lava&r can be achieved in two main ways. The first is using a &3Chemical Reactor&r to turn &6Magma Blocks&r into &6Lava&r. The second is using a &bGregTech &6Fluid Drill&r in the Nether above a &6Lava&r vein."
 				""
@@ -289,7 +295,10 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["36100ACD3655DAFF"]
+			dependencies: [
+				"36100ACD3655DAFF"
+				"626330BB4A59E567"
+			]
 			description: ["Combine your &6Dust&r and &6Lava&r into &6Netherrack&r. Pretty much used for nothing, apart from your first &6Hellish Matter&r and &6Netherrack Dust&r. No need to passive this."]
 			id: "33714BC51815A665"
 			subtitle: "&oThis step requires a Chemical Reactor at voltage &lLV&r&o or higher.&r"
@@ -410,9 +419,17 @@
 			subtitle: "&oThis step requires a Furnace"
 			tasks: [{
 				id: "70D37DC6A4C89B21"
-				item: "minecraft:glass"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:glass"
+					}
+				}
+				title: "Glass"
 				type: "item"
 			}]
+			title: "Glass"
 			x: 7.0d
 			y: 3.0d
 		}
@@ -579,7 +596,14 @@
 			size: 1.0d
 			tasks: [{
 				id: "44F09B9F2D173993"
-				item: "minecraft:cobblestone"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:cobblestone"
+					}
+				}
+				title: "Cobblestone"
 				type: "item"
 			}]
 			x: -4.0d

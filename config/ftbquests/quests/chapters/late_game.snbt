@@ -1396,6 +1396,7 @@
 				""
 				"Fun fact: you'll need to make 487 motes. You've got all this automated, right?"
 			]
+			icon: "kubejs:mote_of_omnium"
 			id: "7A7FFE9E89D19A2F"
 			rewards: [{
 				id: "722444CB8E93D6CF"
@@ -1404,11 +1405,19 @@
 			}]
 			shape: "hexagon"
 			size: 2.0d
-			tasks: [{
-				id: "69983BE8E7F45F6E"
-				item: "kubejs:mote_of_omnium"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "69983BE8E7F45F6E"
+					item: "kubejs:mote_of_omnium"
+					type: "item"
+				}
+				{
+					id: "70E21F11ED5BDBBB"
+					item: "kubejs:stabilized_einsteinium"
+					type: "item"
+				}
+			]
+			title: "&2Synthesizing Your First Omnium"
 			x: 9.0d
 			y: 24.0d
 		}
@@ -2387,7 +2396,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "67E4E186D212226D"
-				item: "gtceu:neutronium_ingot"
+				item: "avaritia:neutronium_ingot"
 				type: "item"
 			}]
 			title: "&2Neutronium Ingot"
@@ -3173,6 +3182,7 @@
 					type: "item"
 				}
 			]
+			title: "Naquadah Reactor Mk1"
 			x: 11.0d
 			y: 24.0d
 		}
@@ -3198,7 +3208,14 @@
 				}
 				{
 					id: "5B267E479790306D"
-					item: "gtceu:omnium_block"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:storage_blocks/omnium"
+						}
+					}
+					title: "Omnium Block"
 					type: "item"
 				}
 				{
@@ -3213,6 +3230,7 @@
 					type: "item"
 				}
 			]
+			title: "Naquadah Reactor Mk2"
 			x: 13.0d
 			y: 24.0d
 		}

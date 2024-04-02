@@ -1061,6 +1061,7 @@
 			}]
 			shape: "hexagon"
 			size: 2.0d
+			subtitle: "Pick-n-Place"
 			tasks: [{
 				id: "7A8C8FD7EA66D590"
 				item: "gtceu:lv_circuit_assembler"

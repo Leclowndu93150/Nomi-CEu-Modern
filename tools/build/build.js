@@ -139,10 +139,10 @@ export const DownloadModsTarget = new Juke.Target({
     // get old jsondata files cache
     let dataKeys = {};
     const mIdToDownload = [];
-    if (fs.existsSync('dist/modcache/cache.json')) {
+    if (fs.existsSync('dist/cache.json')) {
       Juke.logger.info('Modmeta cache hit')
       // diff new & old data
-      const oldData = JSON.parse(fs.readFileSync('dist/modcache/cache.json', 'utf-8'));
+      const oldData = JSON.parse(fs.readFileSync('dist/cache.json', 'utf-8'));
       const newData = {}
       for (const key in manifest.files) {
         const data = manifest.files[key];
@@ -154,7 +154,8 @@ export const DownloadModsTarget = new Juke.Target({
       const newDataKeys = Object.keys(newData);
 
       // filter returns changed mods, lets see now who owns them
-      for (const pid of oldDataKeys.filter(pid => !newDataKeys.includes(pid))) {
+      for (const pid of oldDataKeys.filter(pid => !newDataKeys.includes(pid))
+                                   .concat(newDataKeys.filter(x => !oldDataKeys.includes(x)))) {
         const fromOldData = oldData[`${pid}`];
         if (fromOldData) {
           // from old, which means this is removed
@@ -201,7 +202,7 @@ export const DownloadModsTarget = new Juke.Target({
       }, `dist/modcache/`);
       dataKeys[modID]['file'] = res.fileName;
     }
-    fs.writeFileSync('dist/modcache/cache.json', JSON.stringify(dataKeys))
+    fs.writeFileSync('dist/cache.json', JSON.stringify(dataKeys))
   }
 });
 
@@ -282,10 +283,7 @@ export const BuildDevTarget = new Juke.Target({
     }
 
     // "merge" both mod folders
-    fs.cpSync('dist/modcache', 'dist/.devtmp', {
-      recursive: true,
-      filter: file => file.toLowerCase().includes('.jar')
-    });
+    fs.cpSync('dist/modcache', 'dist/.devtmp', { recursive: true });
     fs.cpSync('mods', 'dist/.devtmp', { recursive: true, force: true });
     fs.cpSync('dist/.devtmp', 'dist/dev/mods', { recursive: true });
     fs.cpSync('config', 'dist/dev/config', { recursive: true });
