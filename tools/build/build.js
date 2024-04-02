@@ -7,7 +7,7 @@
 */
 
 import fs from 'fs';
-import { resolve } from 'path';
+import path, { resolve } from 'path';
 import { env } from 'process';
 import Juke from './juke/index.js';
 import { DownloadCF, GetModInfo, UploadCF } from './lib/curseforge.js';
@@ -43,6 +43,18 @@ const symlinkSync = (ourDir, newDir) => {
     return;
   }
   fs.symlinkSync(ourDir, newDir)
+}
+
+/**
+ * @param {fs.PathLike} ourDir
+ * @param {fs.PathLike} newDir
+ * @param {(file: string) => boolean} filter
+ */
+const cpSyncFiltered = (ourDir, newDir, filter) => {
+  for (const file of fs.readdirSync(ourDir, { recursive:false })) {
+    if (!filter(file)) continue;
+    fs.copyFileSync(path.join(ourDir, file), path.join(newDir, file))
+  }
 }
 
 async function packMod(group) {
@@ -244,17 +256,13 @@ export const BuildServerTarget = new Juke.Target({
       fs.cpSync(folders, `dist/server/${folders}`, { recursive: true })
     }
 
-    fs.cpSync('dist/modcache', 'dist/server/mods', {
-      recursive: true,
-      force: true,
-      filter: file => {
-        const fillet = file.toLowerCase();
-        return (
-          !fillet.includes('oculus')
-          && !fillet.includes('citresewn')
-          && fillet.includes('.jar')
-        )
-      }
+    cpSyncFiltered('dist/modcache/', 'dist/server/mods', file => {
+      const fillet = file.toLowerCase();
+      return (
+        !fillet.includes('oculus')
+        && !fillet.includes('citresewn')
+        && fillet.includes('.jar')
+      )
     })
 
     await packMod("server");
