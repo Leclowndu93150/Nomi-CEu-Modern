@@ -82,6 +82,7 @@
     "mod_name": true
   },
   "expatternprovider": {
+    "jade_chamber": true,
     "jade_wireless": true
   },
   "telepastries": {

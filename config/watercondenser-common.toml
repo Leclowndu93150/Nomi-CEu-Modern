@@ -12,4 +12,6 @@
 	"Fluid multiplier chance min" = 0.0
 	#For random variance, the maximum multiplier for each fill cycle
 	"Fluid multiplier chance max" = 1.0
+	#Bottle consumption per bottle, in mB
+	"Fluid amount in mB" = 250
 
