@@ -402,7 +402,7 @@ ServerEvents.recipes(event => {
     //TODO Big I/O (MAKE IN IV ASSEMBLY LINE)
 
     // Processors
-		event.remove({ id:'ae2:inscriber/calculation_processor_print' })
+	event.remove({ id:'ae2:inscriber/calculation_processor_print' })
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -419,7 +419,7 @@ ServerEvents.recipes(event => {
         }
     }).id('kubejs:ae2/calculation_processor_print')
 
-		event.remove({ id:'ae2:inscriber/silicon_print' })
+	event.remove({ id:'ae2:inscriber/silicon_print' })
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -435,8 +435,8 @@ ServerEvents.recipes(event => {
             "item": "ae2:printed_silicon"
         }
     }).id('kubejs:ae2/silicon_print')
-		
-		event.remove({ id:'ae2:inscriber/logic_processor' })
+
+	event.remove({ id:'ae2:inscriber/logic_processor' })
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -456,7 +456,7 @@ ServerEvents.recipes(event => {
         }
     }).id('kubejs:ae2/logic_processor')
 
-		event.remove({ id:'ae2:inscriber/calculation_processor' })
+	event.remove({ id:'ae2:inscriber/calculation_processor' })
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -476,7 +476,7 @@ ServerEvents.recipes(event => {
         }
     }).id('kubejs:ae2/calculation_processor')
 
-		event.remove({ id:'ae2:inscriber/engineering_processor' })
+	event.remove({ id:'ae2:inscriber/engineering_processor' })
     event.custom({
         "type": "ae2:inscriber",
         "ingredients": {
@@ -563,45 +563,44 @@ ServerEvents.recipes(event => {
         'gtceu:certus_quartz_gem',
         'gtceu:charged_certus_quartz_gem'
     )
-    
 
-		// cable recipes
-		event.remove({ id: "ae2:network/cables/covered_fluix" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/white_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/orange_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/magenta_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/light_blue_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/yellow_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/lime_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/pink_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/gray_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/light_gray_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/cyan_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/purple_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/blue_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/brown_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/green_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/red_covered_cable" })
-		event.remove({ id: "ae2qolrecipes:covered_cable/black_covered_cable" })
-		
-		event.recipes.gtceu.assembler("kubejs:ae2/fluix_covered_cable_rubber")
-        .itemInputs("#ae2:glass_cable")
-				.inputFluids('gtceu:rubber 144')
-        .itemOutputs("ae2:fluix_covered_cable")
-        .duration(100)
-        .EUt(7)
-		event.recipes.gtceu.assembler("kubejs:ae2/fluix_covered_cable_silicone")
-        .itemInputs("#ae2:glass_cable")
-				.inputFluids('gtceu:silicone_rubber 72')
-        .itemOutputs("ae2:fluix_covered_cable")
-        .duration(100)
-        .EUt(7)
-		event.recipes.gtceu.assembler("kubejs:ae2/fluix_covered_cable_styrene_butadiene")
-        .itemInputs("#ae2:glass_cable")
-				.inputFluids('gtceu:styrene_butadiene_rubber 36')
-        .itemOutputs("ae2:fluix_covered_cable")
-        .duration(100)
-        .EUt(7)
+	// cable recipes
+	event.remove({ id: "ae2:network/cables/covered_fluix" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/white_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/orange_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/magenta_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/light_blue_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/yellow_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/lime_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/pink_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/gray_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/light_gray_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/cyan_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/purple_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/blue_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/brown_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/green_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/red_covered_cable" })
+	event.remove({ id: "ae2qolrecipes:covered_cable/black_covered_cable" })
+
+	event.recipes.gtceu.assembler("kubejs:ae2/fluix_covered_cable_rubber")
+		.itemInputs("#ae2:glass_cable")
+		.inputFluids('gtceu:rubber 144')
+		.itemOutputs("ae2:fluix_covered_cable")
+		.duration(100)
+		.EUt(7)
+	event.recipes.gtceu.assembler("kubejs:ae2/fluix_covered_cable_silicone")
+		.itemInputs("#ae2:glass_cable")
+		.inputFluids('gtceu:silicone_rubber 72')
+		.itemOutputs("ae2:fluix_covered_cable")
+		.duration(100)
+		.EUt(7)
+	event.recipes.gtceu.assembler("kubejs:ae2/fluix_covered_cable_styrene_butadiene")
+		.itemInputs("#ae2:glass_cable")
+		.inputFluids('gtceu:styrene_butadiene_rubber 36')
+		.itemOutputs("ae2:fluix_covered_cable")
+		.duration(100)
+		.EUt(7)
 
     // Presses
     function pressengrave(name, press, lens) {
@@ -612,7 +611,6 @@ ServerEvents.recipes(event => {
             .duration(1600)
             .EUt(120)
     }
-
 
     pressengrave("kubejs:ae2/engineering_processor_press",'ae2:engineering_processor_press','#forge:lenses/red');
     pressengrave("kubejs:ae2/calculation_processor_press",'ae2:calculation_processor_press','#forge:lenses/blue');
@@ -635,16 +633,15 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .EUt(512)
 
-		event.remove({ id: 'expatternprovider:epp_upgrade' })
-		event.recipes.gtceu.assembler("kubejs:epp/ex_pattern_provider_upgrade")
-				.itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
-				.itemOutputs("expatternprovider:pattern_provider_upgrade")
-				.duration(180)
-				.circuit(1)
-				.EUt(512)
+	event.remove({ id: 'expatternprovider:epp_upgrade' })
+	event.recipes.gtceu.assembler("kubejs:epp/ex_pattern_provider_upgrade")
+		.itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
+		.itemOutputs("expatternprovider:pattern_provider_upgrade")
+		.duration(180)
+		.circuit(1)
+		.EUt(512)
 
     // Extended Interface
-
     event.remove({ id: 'expatternprovider:ei' })
     event.recipes.gtceu.assembler("kubejs:epp/ex_interface")
         .itemInputs("4x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
@@ -653,21 +650,21 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .EUt(512)
 
-		event.remove({ id: 'expatternprovider:ei_upgrade' })
-		event.recipes.gtceu.assembler("kubejs:epp/ex_interface_upgrade")
-				.itemInputs("3x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
-				.itemOutputs("expatternprovider:interface_upgrade")
-				.duration(180)
-				.circuit(1)
-				.EUt(512)
+	event.remove({ id: 'expatternprovider:ei_upgrade' })
+	event.recipes.gtceu.assembler("kubejs:epp/ex_interface_upgrade")
+		.itemInputs("3x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
+		.itemOutputs("expatternprovider:interface_upgrade")
+		.duration(180)
+		.circuit(1)
+		.EUt(512)
 
-		event.remove({ id: 'expatternprovider:ex_molecular_assembler' })
-		event.recipes.gtceu.assembler("kubejs:epp/ex_molecular_assembler")
-				.itemInputs("8x ae2:molecular_assembler", "8x gtceu:fluix_plate", "8x ae2:capacity_card")
-				.itemOutputs("expatternprovider:ex_molecular_assembler")
-				.duration(240)
-				.EUt(1024)
-    
+	event.remove({ id: 'expatternprovider:ex_molecular_assembler' })
+	event.recipes.gtceu.assembler("kubejs:epp/ex_molecular_assembler")
+		.itemInputs("8x ae2:molecular_assembler", "8x gtceu:fluix_plate", "8x ae2:capacity_card")
+		.itemOutputs("expatternprovider:ex_molecular_assembler")
+		.duration(240)
+		.EUt(1024)
+
     //Infinite Cobble/Water cell
     event.replaceInput({ id: 'expatternprovider:water_cell' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
     event.replaceInput({ id: 'expatternprovider:cobblestone_cell' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
@@ -687,4 +684,23 @@ ServerEvents.recipes(event => {
         .itemOutputs('expatternprovider:drive_upgrade')
         .duration(240)
         .EUt(1024)
-    })
+
+	// qbridge card
+	event.remove({ id: 'ae2wtlib:quantum_bridge_card' })
+	event.custom({
+		type: 'ae2:inscriber',
+		ingredients: {
+			bottom: {
+				item: "ae2:singularity"
+			},
+			middle: {
+				item: "ae2:advanced_card"
+			},
+			top: {
+				item: "ae2:singularity"
+			}
+		},
+		mode: "press",
+		result: { item: "ae2wtlib:quantum_bridge_card" }
+	}).id('kubejs:ae2wtlib/quantum_bridge_card')
+})

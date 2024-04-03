@@ -956,7 +956,13 @@
 		}
 		{
 			dependencies: ["2E8BFA2E719B1C47"]
-			description: ["&5This is currently not in GT Modern.&r"]
+			description: [
+				"&2Check out the new Material Tree tab!&r"
+				""
+				"This tab can be accessed in &bEMI&r, when finding the &ausages or recipes&r of &aany form&r of a &bGregTech&r material!&r"
+				""
+				"It will show you nearly all the different forms of a &bGregTech&r material (&ePlates, Rods, Screws, Dusts...&r) on a single page, as well as showing what can be turned into what. You can then click on those to see their recipes."
+			]
 			icon: "gtceu:aluminium_ingot"
 			id: "53E600ADCC9DD608"
 			rewards: [{
@@ -2160,6 +2166,7 @@
 			hide_dependency_lines: true
 			icon: "gtceu:quantum_processor"
 			id: "400AD2B735FF135D"
+			optional: true
 			tasks: [{
 				id: "3378D5EF8B48960E"
 				type: "checkmark"
@@ -2179,6 +2186,7 @@
 			hide_dependency_lines: true
 			icon: "gtceu:mv_chemical_bath"
 			id: "73C713703AB6387C"
+			optional: true
 			tasks: [{
 				id: "4BEDF2126C896A50"
 				type: "checkmark"
@@ -2194,6 +2202,7 @@
 			hide_dependency_lines: true
 			icon: "minecraft:chest"
 			id: "0DE9B264A3BA75BB"
+			optional: true
 			subtitle: "Clean your inventory"
 			tasks: [{
 				id: "6EF2221B59F470CB"
@@ -2207,7 +2216,7 @@
 			dependencies: ["66FCC26399376B55"]
 			description: [
 				"&bGregTech&r adds an &einteractive in-world preview&r for all &bGregTech&r multiblocks! &6Shift-right-click&r a placed controller &ewith an empty hand&r to activate a hologram depicting the default layout of the structure to help you with building. As you place blocks, the structure will be validated and the &efirst incorrect block&r it detects will be highlighted in red."
-				""
+				"{@pagebreak}"
 				"&6Sneak-right-click&r to cycle from the full view through each layer. When on the final layer of the preview, this will remove the preview."
 				""
 				"&6Sneak-left-click&r to go back to the previous layer, or close the preview from the full view."
@@ -2222,6 +2231,7 @@
 			hide_dependency_lines: true
 			icon: "gtceu:electric_blast_furnace"
 			id: "50591843C8501055"
+			optional: true
 			tasks: [{
 				id: "0765BFA6BDBFD386"
 				type: "checkmark"
@@ -2245,6 +2255,7 @@
 			hide_details_until_startable: true
 			icon: "minecraft:rabbit_hide"
 			id: "44B49F5F76ADE0C2"
+			optional: true
 			tasks: [{
 				id: "7E0065B408204E13"
 				type: "checkmark"
@@ -2260,6 +2271,7 @@
 			hide_details_until_startable: true
 			icon: "minecraft:rabbit_hide"
 			id: "407A580EFD127B93"
+			optional: true
 			tasks: [
 				{
 					consume_items: true
@@ -2296,6 +2308,7 @@
 			hide_details_until_startable: true
 			icon: "minecraft:rabbit_hide"
 			id: "06D8466B2C58201D"
+			optional: true
 			rewards: [{
 				id: "42A56AE6A025DE8C"
 				item: {

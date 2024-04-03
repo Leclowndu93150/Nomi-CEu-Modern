@@ -1069,7 +1069,7 @@
 				""
 				"You can also early automate charging by having hoppers input item from top or sides, and pull items from the bottom."
 			]
-			icon: "gtceu:certus_quartz_gem"
+			icon: "ae2:charger"
 			id: "6D03BB4A6A4BBA27"
 			rewards: [{
 				id: "4450EEE7F4D93EF0"
@@ -1109,11 +1109,18 @@
 			]
 			icon: "ae2:energy_acceptor"
 			id: "4174A6C6403DD245"
-			rewards: [{
-				id: "67642A41B1F7F4E8"
-				item: "kubejs:nomi_nickel"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "67642A41B1F7F4E8"
+					item: "kubejs:nomi_nickel"
+					type: "item"
+				}
+				{
+					id: "2EAC8635F1C7A8DB"
+					item: "ae2:guide"
+					type: "item"
+				}
+			]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [
@@ -1272,16 +1279,14 @@
 			shape: "hexagon"
 			tasks: [
 				{
-					amount: 1000L
-					fluid: "gtceu:hydrogen"
-					id: "3811A2C3181FBC0D"
-					type: "fluid"
+					id: "47392B270D61CD4C"
+					item: "gtceu:hydrogen_bucket"
+					type: "item"
 				}
 				{
-					amount: 1000L
-					fluid: "gtceu:oxygen"
-					id: "6732F515AE6C060A"
-					type: "fluid"
+					id: "7F2D244D03684EB3"
+					item: "gtceu:oxygen_bucket"
+					type: "item"
 				}
 			]
 			title: "Hydrogen and Oxygen"

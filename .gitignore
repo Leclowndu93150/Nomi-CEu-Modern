@@ -49,6 +49,8 @@ config/embeddium++.toml
 config/embeddium++.toml
 config/emi.css
 
+/config/**/*client.*
+
 defaultconfigs/ftbultimine/ftbultimine-client.snbt
 defaultconfigs/ftbultimine/ftbultimine-server.snbt
 

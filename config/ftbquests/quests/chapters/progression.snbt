@@ -920,7 +920,6 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0A65FC6D798ABFC5"]
 			description: [
 				"Holding one of these reveals &aTravel Anchors&r and &aTelepads&r in range."
 				""
