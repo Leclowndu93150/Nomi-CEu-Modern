@@ -65,7 +65,19 @@ export const DownloadCF = async (key, modInfo = {}, dest, retrycount) => {
   }
 
   Juke.logger.info(`Downloading: ${modDataJson.fileName}`)
-  await download_file(modDataJson.downloadUrl, { headers: headers }, dest);
+
+  try {
+    await download_file(modDataJson.downloadUrl, { headers: headers }, dest);
+  } catch (error) {
+    Juke.logger.warn(`Download failed ${modDataJson.fileName}`)
+    if (retrycount <= 0) {
+      Juke.logger.error('Exhausted retries, exiting download');
+      throw new Juke.ExitCode(1);
+    }
+    retrycount--;
+    return await DownloadCF(key, modInfo, dest, retrycount);
+  }
+
   if (!fs.existsSync(dest) || fs.statSync(dest).size !== modDataJson.fileLength) {
     Juke.logger.warn(`Download failed ${modDataJson.fileName}`)
     if (retrycount <= 0) {

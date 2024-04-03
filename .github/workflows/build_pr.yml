@@ -44,7 +44,7 @@ jobs:
           path: dist/modlist.html
           key: ${{ runner.os }}-modlist-${{ hashFiles('manifest.json') }}
           restore-keys: |
-            ${{ runner.os }}-mods-
+            ${{ runner.os }}-modlist-
       - name: Pack Modpack
         env:
           CFCORE_API_TOKEN: ${{ secrets.API_TOKEN }}

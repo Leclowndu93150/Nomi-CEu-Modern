@@ -192,7 +192,11 @@ export const DownloadModsTarget = new Juke.Target({
           Juke.rm(`dist/modcache/${fromOldData['file']}`)
           Juke.logger.info(`Mod was updated from modpack: ${pid}`)
           if (!mIdToDownload.includes(`${pid}`)) mIdToDownload.push(`${pid}`);
-          oldData[`${pid}`]['file'] = undefined;
+          oldData[`${pid}`] = {
+            file: undefined,
+            fileID: newData[pid]['fileID'],
+            required: newData[pid]['required']
+          }
         }
       }
       dataKeys = oldData;
@@ -298,6 +302,7 @@ export const BuildDevTarget = new Juke.Target({
 
     // todo find the mod to blame, or just remove this and the filters up there if this ever gets fixed
     Juke.logger.warn('Due to a bug with a mod, symlinking the mod folder or config causes errors which breaks game startup.')
+    Juke.logger.warn('When updating, the config and mod requires manual copy. Dev mods are packed in "dist/.devtmp"')
     await packMod("dev");
   }
 })
