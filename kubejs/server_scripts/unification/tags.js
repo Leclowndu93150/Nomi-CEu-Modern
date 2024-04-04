@@ -1,28 +1,27 @@
-
 /**
  * unify chisel since they dont do that anymore
  * @private
  * @param {TagEvent.Item & TagEvent.Block} event
  */
 const unifyChisel = (event) => {
-	// regex here means
-	// `^` = beginning, `$` = end, `.+` = anything that isnt whitespace, any length
-	event.add('forge:glass/colorless', /^chisel:.+\/glass$/) // most of the glass here only have fancy trims, but they are all not dyed
-	event.add('forge:cobblestone/normal', /^chisel:.+\/cobblestone$/)
-	event.add('forge:cobblestone', /^chisel:.+\/cobblestone$/)
-	event.add('forge:storage_blocks/glowstone', /^chisel:.+\/glowstone$/)
-	event.add('forge:storage_blocks/redstone', /^chisel:.+\/redstone_block$/)
-	event.add('forge:storage_blocks/iron', /^chisel:.+\/iron_block$/)
-	event.add('forge:storage_blocks/gold', /^chisel:.+\/gold_block$/)
-	event.add('forge:storage_blocks/diamond', /^chisel:.+\/diamond_block$/)
-	event.add('forge:storage_blocks/emerald', /^chisel:.+\/emerald_block$/)
-	event.add('forge:storage_blocks/lapis', /^chisel:.+\/lapis_block$/)
+    // regex here means
+    // `^` = beginning, `$` = end, `.+` = anything that isnt whitespace, any length
+    event.add('forge:glass/colorless', /^chisel:.+\/glass$/) // most of the glass here only have fancy trims, but they are all not dyed
+    event.add('forge:cobblestone/normal', /^chisel:.+\/cobblestone$/)
+    event.add('forge:cobblestone', /^chisel:.+\/cobblestone$/)
+    event.add('forge:storage_blocks/glowstone', /^chisel:.+\/glowstone$/)
+    event.add('forge:storage_blocks/redstone', /^chisel:.+\/redstone_block$/)
+    event.add('forge:storage_blocks/iron', /^chisel:.+\/iron_block$/)
+    event.add('forge:storage_blocks/gold', /^chisel:.+\/gold_block$/)
+    event.add('forge:storage_blocks/diamond', /^chisel:.+\/diamond_block$/)
+    event.add('forge:storage_blocks/emerald', /^chisel:.+\/emerald_block$/)
+    event.add('forge:storage_blocks/lapis', /^chisel:.+\/lapis_block$/)
 
-	event.add('minecraft:planks', [/^chisel:.+\/oak_planks$/, /^chisel:.+\/dark_oak_planks$/, /^chisel:.+\/acacia_planks$/, /^chisel:.+\/birch_planks$/, /^chisel:.+\/jungle_planks$/])
+    event.add('minecraft:planks', [/^chisel:.+\/oak_planks$/, /^chisel:.+\/dark_oak_planks$/, /^chisel:.+\/acacia_planks$/, /^chisel:.+\/birch_planks$/, /^chisel:.+\/jungle_planks$/])
 
-	event.add('forge:glass', /^chisel:.+\/glass$/)
-	event.add('forge:storage_blocks', [/^chisel:.+\/iron_block$/, /^chisel:.+\/gold_block$/, /^chisel:.+\/diamond_block$/, /^chisel:.+\/emerald_block$/, /^chisel:.+\/glowstone$/, /^chisel:.+\/lapis_block$/, /^chisel:.+\/redstone_block$/])
-	event.add('minecraft:piglin_loved', /^chisel:.+\/gold_block$/)
+    event.add('forge:glass', /^chisel:.+\/glass$/)
+    event.add('forge:storage_blocks', [/^chisel:.+\/iron_block$/, /^chisel:.+\/gold_block$/, /^chisel:.+\/diamond_block$/, /^chisel:.+\/emerald_block$/, /^chisel:.+\/glowstone$/, /^chisel:.+\/lapis_block$/, /^chisel:.+\/redstone_block$/])
+    event.add('minecraft:piglin_loved', /^chisel:.+\/gold_block$/)
 }
 
 ServerEvents.tags('item', event => {
@@ -37,46 +36,46 @@ ServerEvents.tags('item', event => {
     event.remove('forge:ingots/aluminum', 'nuclearcraft:aluminum_ingot')
     event.add('forge:ingots/aluminium', 'nuclearcraft:aluminum_ingot')
 
-	// can't replace tags in recipes so we just add the tag to the item instead
-	event.add('forge:ingots/redstone_alloy', 'gtceu:red_alloy_ingot')
-	event.add('forge:ingots/copper_alloy', 'gtceu:electrical_steel_ingot')
+    // can't replace tags in recipes so we just add the tag to the item instead
+    event.add('forge:ingots/redstone_alloy', 'gtceu:red_alloy_ingot')
+    event.add('forge:ingots/copper_alloy', 'gtceu:electrical_steel_ingot')
 
-	event.remove('forge:gears/wood', 'enderio:wood_gear')
-	event.remove('forge:gears/stone', 'enderio:stone_gear')
-	event.remove('forge:gears/iron', 'enderio:iron_gear')
-	event.remove('forge:gears/dark_steel', 'enderio:dark_bimetal_gear')
+    event.remove('forge:gears/wood', 'enderio:wood_gear')
+    event.remove('forge:gears/stone', 'enderio:stone_gear')
+    event.remove('forge:gears/iron', 'enderio:iron_gear')
+    event.remove('forge:gears/dark_steel', 'enderio:dark_bimetal_gear')
 
-	// NOT pulsating iron ingot
-	event.add('forge:dusts/pulsating', 'kubejs:pulsating_dust')
+    // NOT pulsating iron ingot
+    event.add('forge:dusts/pulsating', 'kubejs:pulsating_dust')
 
-	// endgame mats
-	// neutronium
+    // endgame mats
+    // neutronium
     event.add('forge:ingots/neutronium', 'avaritia:neutronium_ingot')
     event.add('forge:nuggets/neutronium', 'avaritia:neutronium_nugget')
     event.add('forge:tiny_dusts/neutronium', 'avaritia:pile_of_neutrons')
     event.add('forge:storage_blocks/neutronium', 'avaritia:neutronium_block')
-	// crystal matrix
-	event.add('forge:ingots/crystal_matrix', 'avaritia:crystal_matrix_ingot')
-	event.add('forge:storage_blocks/crystal_matrix', 'avaritia:crystal_matrix_block')
-	event.add('forge:plates/crystal_matrix', 'kubejs:crystal_matrix_plate')
-	// omnium
+        // crystal matrix
+    event.add('forge:ingots/crystal_matrix', 'avaritia:crystal_matrix_ingot')
+    event.add('forge:storage_blocks/crystal_matrix', 'avaritia:crystal_matrix_block')
+    event.add('forge:plates/crystal_matrix', 'kubejs:crystal_matrix_plate')
+        // omnium
     event.add('forge:ingots/the_ultimate', 'kubejs:omnium_ingot') // this sucks!
     event.add('forge:ingots/omnium', 'kubejs:omnium_ingot')
-	// HACK: remove extreme crafting tags
-	event.add('forge:nuggets/omnium', 'extendedcrafting:the_ultimate_nugget')
-	event.add('forge:storage_blocks/omnium', 'extendedcrafting:the_ultimate_block')
-	// infinity
-	event.add('forge:ingots/infinity', 'avaritia:infinity_ingot')
-	event.add('forge:storage_blocks/infinity', 'avaritia:infinity_block')
-	event.add('forge:plates/infinity', 'kubejs:infinity_plate')
+        // HACK: remove extreme crafting tags
+    event.add('forge:nuggets/omnium', 'extendedcrafting:the_ultimate_nugget')
+    event.add('forge:storage_blocks/omnium', 'extendedcrafting:the_ultimate_block')
+        // infinity
+    event.add('forge:ingots/infinity', 'avaritia:infinity_ingot')
+    event.add('forge:storage_blocks/infinity', 'avaritia:infinity_block')
+    event.add('forge:plates/infinity', 'kubejs:infinity_plate')
 
-	// generic unification
+    // generic unification
     event.add('forge:storage_blocks', ['avaritia:neutronium_block', 'avaritia:crystal_matrix_block', 'avaritia:infinity_block'])
     event.add('forge:nuggets', ['extendedcrafting:the_ultimate_nugget', 'avaritia:neutronium_nugget'])
-	event.add('forge:plates', ['kubejs:crystal_matrix_plate', 'kubejs:infinity_plate'])
-	event.add('forge:dusts', ['kubejs:pulsating_dust'])
+    event.add('forge:plates', ['kubejs:crystal_matrix_plate', 'kubejs:infinity_plate'])
+    event.add('forge:dusts', ['kubejs:pulsating_dust'])
 
-	unifyChisel(event);
+    unifyChisel(event);
 })
 
 ServerEvents.tags('block', event => {
@@ -87,7 +86,7 @@ ServerEvents.tags('block', event => {
     event.add('minecraft:azalea_grows_on', compacted_sand);
     event.add('framedblocks:camo_sustain_plant', compacted_sand);
 
-	unifyChisel(event);
+    unifyChisel(event);
 })
 
 ServerEvents.tags('fluid', event => {
@@ -98,11 +97,13 @@ ServerEvents.tags('fluid', event => {
 ServerEvents.tags('item', event => {
     event.removeAllTagsFrom(global.unificationPattern)
     event.removeAllTagsFrom(global.manualUnification)
+    event.removeAllTagsFrom(global.nuclearcraftFuelPattern)
 })
 
 ServerEvents.recipes(event => {
     event.remove({ output: global.unificationPattern })
     event.remove({ output: global.manualUnification })
+    event.remove({ output: global.nuclearcraftFuelPattern })
 })
 
 
