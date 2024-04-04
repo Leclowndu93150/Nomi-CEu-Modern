@@ -665,12 +665,12 @@ ServerEvents.recipes(event => {
         .duration(180)
         .EUt(128)
 
-    event.remove({ id: 'expatternprovider:epp_upgrade' })
-    event.recipes.gtceu.assembler("kubejs:epp/ex_pattern_provider_upgrade")
-        .itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:steel_plate")
-        .itemOutputs("expatternprovider:pattern_provider_upgrade")
-        .duration(180)
-        .EUt(128)
+	event.remove({ id: 'expatternprovider:epp_upgrade' })
+	event.recipes.gtceu.assembler("kubejs:epp/ex_pattern_provider_upgrade")
+		.itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:steel_plate")
+		.itemOutputs("expatternprovider:pattern_provider_upgrade")
+		.duration(180)
+		.EUt(128)
 
     // Extended Interface
     event.remove({ id: 'expatternprovider:ei' })
