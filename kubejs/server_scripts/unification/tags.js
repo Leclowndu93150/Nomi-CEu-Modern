@@ -27,6 +27,8 @@ const unifyChisel = (event) => {
 
 ServerEvents.tags('item', event => {
     event.add('ae2:all_fluix', 'gtceu:fluix_gem')
+    event.add('ae2:all_certus_quartz', 'gtceu:charged_certus_quartz_gem')
+    event.add('forge:gems/certus_quartz', 'gtceu:charged_certus_quartz_gem')
     event.add('forge:singularities/ultimate', 'kubejs:mote_of_omnium')
     event.add('forge:singularities/ultimate', 'extendedcrafting:ultimate_singularity')
     event.add('forge:ingots/electrum_flux', 'redstone_arsenal:flux_ingot')
@@ -34,6 +36,8 @@ ServerEvents.tags('item', event => {
     event.add('forge:nuggets/electrum_flux', 'redstone_arsenal:flux_nugget')
     event.add('forge:gears/electrum_flux', 'redstone_arsenal:flux_gear')
     event.removeAllTagsFrom('ae2:certus_quartz_crystal')
+    event.removeAllTagsFrom('ae2:charged_certus_quartz_crystal')
+    event.removeAllTagsFrom('ae2:fluix_crystal')
     event.remove('forge:ingots/aluminum', 'nuclearcraft:aluminum_ingot')
     event.add('forge:ingots/aluminium', 'nuclearcraft:aluminum_ingot')
 
