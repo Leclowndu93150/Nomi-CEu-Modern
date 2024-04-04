@@ -630,16 +630,14 @@ ServerEvents.recipes(event => {
         .itemInputs("4x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
         .itemOutputs("expatternprovider:ex_pattern_provider")
         .duration(180)
-        .circuit(2)
-        .EUt(512)
+        .EUt(128)
 
 	event.remove({ id: 'expatternprovider:epp_upgrade' })
 	event.recipes.gtceu.assembler("kubejs:epp/ex_pattern_provider_upgrade")
-		.itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
+		.itemInputs("3x ae2:pattern_provider", "4x ae2:capacity_card", "4x gtceu:steel_plate")
 		.itemOutputs("expatternprovider:pattern_provider_upgrade")
 		.duration(180)
-		.circuit(1)
-		.EUt(512)
+		.EUt(128)
 
     // Extended Interface
     event.remove({ id: 'expatternprovider:ei' })
@@ -647,23 +645,21 @@ ServerEvents.recipes(event => {
         .itemInputs("4x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
         .itemOutputs("expatternprovider:ex_interface")
         .duration(180)
-        .circuit(2)
-        .EUt(512)
+        .EUt(128)
 
 	event.remove({ id: 'expatternprovider:ei_upgrade' })
 	event.recipes.gtceu.assembler("kubejs:epp/ex_interface_upgrade")
-		.itemInputs("3x ae2:interface", "4x ae2:capacity_card", "4x gtceu:aluminium_plate")
+		.itemInputs("3x ae2:interface", "4x ae2:capacity_card", "4x gtceu:steel_plate")
 		.itemOutputs("expatternprovider:interface_upgrade")
 		.duration(180)
-		.circuit(1)
-		.EUt(512)
+		.EUt(128)
 
 	event.remove({ id: 'expatternprovider:ex_molecular_assembler' })
 	event.recipes.gtceu.assembler("kubejs:epp/ex_molecular_assembler")
 		.itemInputs("8x ae2:molecular_assembler", "8x gtceu:fluix_plate", "8x ae2:capacity_card")
 		.itemOutputs("expatternprovider:ex_molecular_assembler")
 		.duration(240)
-		.EUt(1024)
+		.EUt(512)
 
     //Infinite Cobble/Water cell
     event.replaceInput({ id: 'expatternprovider:water_cell' }, 'minecraft:water_bucket', 'gtceu:infinite_water_cover')
