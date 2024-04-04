@@ -222,7 +222,7 @@
 	[Machines.Insolator]
 		#This sets the base power consumption (RF/t) for the Phytogenic Insolator.
 		#Range: 1 ~ 32000
-		"Base Power" = 20
+		"Base Power" = 10
 
 	[Machines.Centrifuge]
 		#This sets the base power consumption (RF/t) for the Centrifugal Separator.
