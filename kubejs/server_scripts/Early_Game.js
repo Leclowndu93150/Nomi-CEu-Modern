@@ -137,4 +137,15 @@ ServerEvents.recipes(event => {
     //Toolbelts
     event.replaceInput({ output: 'toolbelt:pouch' }, 'minecraft:gold_ingot', 'gtceu:steel_ingot')
 
+	// early canning (using this explicitly as it has types)
+	// lithium, cadmium, sodium
+	event.recipes.minecraft.crafting_shapeless('gtceu:lv_lithium_battery', [
+		'gtceu:lv_battery_hull', '2x #forge:dusts/lithium'
+	]).id('nomi:lv_lithium_battery')
+	event.recipes.minecraft.crafting_shapeless('gtceu:lv_cadmium_battery', [
+		'gtceu:lv_battery_hull', '2x #forge:dusts/cadmium'
+	]).id('nomi:lv_cadmium_battery')
+	event.recipes.minecraft.crafting_shapeless('gtceu:lv_sodium_battery', [
+		'gtceu:lv_battery_hull', '2x #forge:dusts/sodium'
+	]).id('nomi:lv_sodium_battery')
 })
