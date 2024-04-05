@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
         ['gtceu:topaz_gem', 'minecraft:prismarine_crystals', 'prismarine_crystals']
     ]
 
-    let crystals = ['enori', 'void', 'palis', 'diamatine', 'restonia', 'emeradic']
+    const crystals = ['enori', 'void', 'palis', 'diamatine', 'restonia', 'emeradic']
     crystals.forEach(crystal => {
         event.remove({ id: 'gtceu:shaped/gear_' + crystal })
         event.remove({ id: 'gtceu:shaped/gear_' + crystal + '_empowered' })
