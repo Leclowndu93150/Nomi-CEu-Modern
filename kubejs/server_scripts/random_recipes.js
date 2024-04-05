@@ -469,6 +469,12 @@ ServerEvents.recipes(event => {
         }
     )
 
+    // Obby grinding
+    event.recipes.gtceu.macerator('obsidian_dust')
+        .itemInputs('minecraft:obsidian')
+        .itemOutputs('gtceu:obsidian_dust')
+        .duration(40)
+        .EUt(2)
 
     //
     // Recycling below here

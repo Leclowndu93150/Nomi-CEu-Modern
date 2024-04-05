@@ -1106,6 +1106,8 @@
 				"The &3Energy Acceptor&r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected &6ME Cables&r, &6ME Conduits&r, and &6Quartz Fiber&r. "
 				""
 				"Quartz Fiber are &emicroparts&r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source."
+				""
+				"Applied Energistics 2 can be complicated for a new player, so I recommend either using &dthe ingame guide&r or a video as a supplement to this chapter if need be. I personally recommend &9Pansmith's guide to Applied Energistics 2&r, while written for the 1.12 verison of AE2, most of the infomation is the exact same between the versions, and was made with &5Nomifactory&r players in mind."
 			]
 			icon: "ae2:energy_acceptor"
 			id: "4174A6C6403DD245"
@@ -2033,9 +2035,9 @@
 		{
 			dependencies: ["5301E546BAA69844"]
 			description: [
-				"The &bPhytogenic Insolator&r is a way to &dpassively produce wood in the earlygame&r. While somewhat slow, it only requires &a20 rf/t&r to operate, meaning you can just set it down and not have to worry about it, and then come back to wood when you need some for crafting or steel production."
+				"The &bPhytogenic Insolator&r is a way to &dpassively produce wood in the earlygame&r. While somewhat slow, it only requires &a10 rf/t&r to operate, meaning you can just set it down and not have to worry about it, and then come back to wood when you need some for crafting or steel production."
 				""
-				"Using &bHardened Integral Components&r in it will cause it to work 1.5x faster, while only requiring an extra &a10 rf/t&r to operate, and using &6Bonemeal&r or otherwise will boost how much wood you get per cycle."
+				"Using &bHardened Integral Components&r in it will cause it to work 1.5x faster, while only requiring an extra &a5 rf/t&r to operate, and using &6Bonemeal&r or otherwise will boost how much wood you get per cycle."
 				""
 				"By the way, &bThermal&r Machines are capable of Automatic I/O, try placing a 2x2 drawer beside your &bPhytogenic Insolator&r and configuring it to both push to and pull from the side with the drawer."
 			]
