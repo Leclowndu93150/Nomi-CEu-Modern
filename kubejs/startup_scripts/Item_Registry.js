@@ -99,6 +99,7 @@ StartupEvents.registry('item', event => {
     event.create('ultimate_gem').displayName("§dUltimate Gem").glow(true)
     event.create('mote_of_omnium').displayName("Mote of Omnium").glow(true).rarity("epic")
     event.create('omnium_ingot').displayName("Omnium Ingot").glow(true).rarity("epic")
+    event.create('creative_storage_component').displayName("Creative Storage Component").glow(true).rarity("epic")
 
     //Misc Items
     event.create('grains_of_innocence').displayName("Grains of Innocence")

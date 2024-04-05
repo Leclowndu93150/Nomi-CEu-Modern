@@ -109,4 +109,6 @@ ServerEvents.recipes(event => {
     // Temp until classic boiler has these built in
     event.remove({ output: 'systeams:stirling_boiler' })
     event.shapeless('systeams:stirling_boiler', ['steamdynamo:steam_dynamo', 'systeams:boiler_pipe'])
+
+    event.remove({ id: /storagedrawers/ })
 })
