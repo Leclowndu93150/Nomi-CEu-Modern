@@ -560,7 +560,7 @@ ServerEvents.recipes(event => {
     //Certus
 
     event.replaceInput(
-        { id: /transform/ },
+        { id: /^ae2:transform/ },
         'ae2:charged_certus_quartz_crystal',
         'gtceu:charged_certus_quartz_gem'
     )
