@@ -1,7 +1,6 @@
 ServerEvents.recipes(event => {
     event.shaped(
-        'gtceu:creative_tank_fabricator',
-        [
+        'gtceu:creative_tank_fabricator', [
             'EFE',
             'FCF',
             'LUL'
