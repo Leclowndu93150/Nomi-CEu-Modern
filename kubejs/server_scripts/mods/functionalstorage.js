@@ -105,7 +105,7 @@ ServerEvents.recipes(event => {
 		'SVS',
 		'SRS'
 	], {
-		S: 'minecraft:stone',
+		S: '#forge:stone',
 		V: 'enderio:vacuum_chest',
 		R: 'minecraft:redstone'
 	}).id('functionalstorage:collector_upgrade')
@@ -117,11 +117,10 @@ ServerEvents.recipes(event => {
 		'EBE'
 	], {
 		E: 'minecraft:emerald',
-		B: 'minecraft:emerald_block',
+		B: "#forge:storage_blocks/emerald",
 		C: '#forge:chests/wooden',
 		D: 'functionalstorage:diamond_upgrade'
 	}).id('functionalstorage:netherite_upgrade')
 
 	event.replaceInput({ id: /functionalstorage:fluid/ }, 'minecraft:bucket', 'gtceu:lv_super_tank')
-
 })
