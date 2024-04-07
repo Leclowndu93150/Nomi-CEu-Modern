@@ -10,4 +10,5 @@ JEIEvents.hideItems(event => {
     event.hide(global.unificationPattern)
     event.hide(global.manualUnification)
     event.hide(global.nuclearcraftFuelPattern)
+    event.hide(global.nuclearcraftMaterialPattern)
 })

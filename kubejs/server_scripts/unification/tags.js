@@ -103,12 +103,14 @@ ServerEvents.tags('item', event => {
     event.removeAllTagsFrom(global.unificationPattern)
     event.removeAllTagsFrom(global.manualUnification)
     event.removeAllTagsFrom(global.nuclearcraftFuelPattern)
+    event.removeAllTagsFrom(global.nuclearcraftMaterialPattern)
 })
 
 ServerEvents.recipes(event => {
     event.remove({ output: global.unificationPattern })
     event.remove({ output: global.manualUnification })
     event.remove({ output: global.nuclearcraftFuelPattern })
+    event.remove({ output: global.nuclearcraftMaterialPattern })
 })
 
 
