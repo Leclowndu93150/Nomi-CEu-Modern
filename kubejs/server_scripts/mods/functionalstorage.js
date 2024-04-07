@@ -84,44 +84,44 @@ ServerEvents.recipes(event => {
             'III'
         ], {
             I: 'minecraft:iron_nugget',
-            B: 'functionalstorage:' + Block 
+            B: 'functionalstorage:' + Block
         }).id('functionalstorage:framed_' + Block)
     })
 
-// Framed Compacting Drawer has a nonstandard ID for some reason
-event.shaped(
-    'functionalstorage:compacting_framed_drawer', [
-    'III',
-    'IBI',
-    'III'
-], {
-    I: 'minecraft:iron_nugget',
-    B: 'functionalstorage:compacting_drawer'
-}).id('functionalstorage:compacting_framed_drawer')
+	// Framed Compacting Drawer has a nonstandard ID for some reason
+	event.shaped(
+		'functionalstorage:compacting_framed_drawer', [
+		'III',
+		'IBI',
+		'III'
+	], {
+		I: 'minecraft:iron_nugget',
+		B: 'functionalstorage:compacting_drawer'
+	}).id('functionalstorage:compacting_framed_drawer')
 
-event.shaped(
-    'functionalstorage:collector_upgrade', [
-    'SRS',
-    'SVS',
-    'SRS'
-], {
-    S: 'minecraft:stone',
-    V: 'enderio:vacuum_chest',
-    R: 'minecraft:redstone'
-}).id('functionalstorage:collector_upgrade')
+	event.shaped(
+		'functionalstorage:collector_upgrade', [
+		'SRS',
+		'SVS',
+		'SRS'
+	], {
+		S: 'minecraft:stone',
+		V: 'enderio:vacuum_chest',
+		R: 'minecraft:redstone'
+	}).id('functionalstorage:collector_upgrade')
 
-event.shaped(
-    'functionalstorage:netherite_upgrade', [
-    'EBE',
-    'CDC',
-    'EBE'
-], {
-    E: 'minecraft:emerald',
-    B: 'minecraft:emerald_block',
-    C: '#forge:chests/wooden',
-    D: 'functionalstorage:diamond_upgrade'
-}).id('functionalstorage:netherite_upgrade')
+	event.shaped(
+		'functionalstorage:netherite_upgrade', [
+		'EBE',
+		'CDC',
+		'EBE'
+	], {
+		E: 'minecraft:emerald',
+		B: 'minecraft:emerald_block',
+		C: '#forge:chests/wooden',
+		D: 'functionalstorage:diamond_upgrade'
+	}).id('functionalstorage:netherite_upgrade')
 
-event.replaceInput({ id: /functionalstorage:fluid/ }, 'minecraft:bucket', 'gtceu:lv_super_tank')
+	event.replaceInput({ id: /functionalstorage:fluid/ }, 'minecraft:bucket', 'gtceu:lv_super_tank')
 
 })
