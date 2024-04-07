@@ -215,7 +215,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.alloy_blast_smelter("kubejs:vibrant_alloy_fluid")
         .itemInputs('gtceu:energetic_alloy_dust', 'gtceu:ender_pearl_dust')
         .outputFluids(Fluid.of('gtceu:vibrant_alloy', 288))
-        .duration(900)
+        .duration(600) // 30s
         .EUt(120)
         .circuit(2)
         .blastFurnaceTemp(1350)
@@ -224,16 +224,26 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:energetic_alloy_dust', 'gtceu:ender_pearl_dust')
         .inputFluids(Fluid.of('gtceu:nitrogen', 2000))
         .outputFluids(Fluid.of('gtceu:vibrant_alloy', 288))
-        .duration(600)
+        .duration(402) // 20.1s
         .EUt(120)
         .circuit(12)
         .blastFurnaceTemp(1350)
 
-    event.recipes.gtceu.alloy_blast_smelter("kubejs:dark_soularium_fluid")
-        .itemInputs('gtceu:soularium_ingot', 'gtceu:dark_steel_ingot')
-        .inputFluids(Fluid.of('gtceu:tritium', 1000))
-        .outputFluids(Fluid.of('gtceu:dark_soularium', 144))
-        .duration(1200)
-        .EUt(32000)
-        .blastFurnaceTemp(8600)
+	// soularium
+    event.recipes.gtceu.alloy_blast_smelter('kubejs:solarium_fluid')
+        .itemInputs('#forge:dusts/gold', 'soul_sand')
+		.circuit(2)
+        .outputFluids(Fluid.of('gtceu:soularium', 144))
+        .duration(90) // 4.5s
+        .EUt(16)
+        .blastFurnaceTemp(1200)
+
+	// nomi ceu 1.7 normal
+	event.recipes.gtceu.electric_blast_furnace('kubejs:dark_soularium_ingot')
+		.itemInputs('#forge:ingots/soularium', '#forge:ingots/dark_steel')
+		.inputFluids(Fluid.of('gtceu:tritium', 1000))
+		.itemOutputs('gtceu:dark_soularium_ingot')
+		.duration(1200) // 60 sec
+		.EUt(32000)
+		.blastFurnaceTemp(8600)
 })
