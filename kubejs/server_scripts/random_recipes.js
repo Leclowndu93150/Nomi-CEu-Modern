@@ -27,6 +27,14 @@ ServerEvents.recipes(event => {
         .duration(40)
         .EUt(7)
 
+    // Void Air (normal air)
+    event.recipes.gtceu.gas_collector('void_air')
+        .dimension('javd:void')
+        .outputFluids(Fluid.of('gtceu:air', 10000))
+        .circuit(1)
+        .EUt(16)
+        .duration(200)
+
     // Netherrack
     event.recipes.gtceu.chemical_reactor('dust_to_netherrack')
         .itemInputs('kubejs:dust')
