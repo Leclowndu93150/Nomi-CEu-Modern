@@ -30,13 +30,6 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.basic_microverse('kubejs:t_two_second')
         .itemInputs('kubejs:microminer_t2', '2x kubejs:quantum_flux')
-        .itemOutputs('4x kubejs:stellar_creation_data')
-        .inputFluids(Fluid.of('gtceu:rocket_fuel', 12000))
-        .duration(120)
-        .EUt(1000)
-
-    event.recipes.gtceu.basic_microverse('kubejs:t_two_third')
-        .itemInputs('kubejs:microminer_t2', '2x kubejs:quantum_flux')
         .itemOutputs('64x kubejs:dense_copper_ore', '64x gtceu:endstone_bauxite_ore', '64x gtceu:endstone_pyrochlore_ore', '64x gtceu:endstone_pyrochlore_ore', '64x gtceu:endstone_sphalerite_ore', '64x gtceu:endstone_cassiterite_ore', '64x gtceu:endstone_scheelite_ore', '64x gtceu:endstone_scheelite_ore', '64x gtceu:endstone_scheelite_ore', '64x gtceu:endstone_tungstate_ore', '64x gtceu:endstone_tungstate_ore', '64x gtceu:endstone_tungstate_ore', '64x kubejs:radium_salt', '64x kubejs:radium_salt')
         .inputFluids(Fluid.of('gtceu:rocket_fuel', 12000))
         .duration(600)
@@ -57,7 +50,7 @@ ServerEvents.recipes(event => {
         .duration(700)
         .EUt(2000)
 
-    event.recipes.gtceu.basic_microverse('kubejs:t_two_forth')
+    event.recipes.gtceu.basic_microverse('kubejs:t_two_third')
         .itemInputs('kubejs:microminer_t2', '4x gtceu:hv_electric_pump', '64x kubejs:cryotheum_dust')
         .itemOutputs('10x kubejs:solidified_neon', '10x kubejs:solidified_krypton', '10x kubejs:solidified_xenon')
         .inputFluids(Fluid.of('gtceu:rocket_fuel', 12000))

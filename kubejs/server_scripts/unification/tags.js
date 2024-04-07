@@ -34,6 +34,7 @@ ServerEvents.tags('item', event => {
     event.add('forge:dusts/electrum_flux', 'redstone_arsenal:flux_dust')
     event.add('forge:nuggets/electrum_flux', 'redstone_arsenal:flux_nugget')
     event.add('forge:gears/electrum_flux', 'redstone_arsenal:flux_gear')
+    event.add('forge:dusts/quartz', 'gtceu:nether_quartz_dust')
     event.removeAllTagsFrom('ae2:certus_quartz_crystal')
     event.removeAllTagsFrom('ae2:charged_certus_quartz_crystal')
     event.removeAllTagsFrom('ae2:fluix_crystal')
