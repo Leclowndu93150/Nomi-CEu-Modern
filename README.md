@@ -17,8 +17,6 @@
 - LV-ZPM tier in-parity of Nomifactory CEu
 
 ## Contributing and Maintainer Information
-This is available on our [wiki](https://github.com/Nomi-CEu/Nomi-CEu/wiki).
-
 If you want to contribute it is recommended to check out the [project board](https://github.com/orgs/Nomi-CEu/projects/1) for issues/features still missing
 
 ## Credits
