@@ -13,6 +13,10 @@
     "author": "Nomifactory CEu Modern Team",
     "overrides": "overrides",
     "files": [{
+            "projectID": 460341,
+            "fileID": 5233493,
+            "required": true
+        },{
             "projectID": 233019,
             "fileID": 4578262,
             "required": true
