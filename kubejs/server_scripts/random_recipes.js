@@ -250,7 +250,7 @@ ServerEvents.recipes(event => {
 
     // Crystal Chip shit
     event.recipes.gtceu.autoclave("starter_enderium_chip")
-        .itemInputs(["gtceu:olivine_exquisite_gem", "gtceu:emerald_exquisite_gem"])
+        .itemInputs(["gtceu:exquisite_olivine_gem", "gtceu:exquisite_emerald_gem"])
         .inputFluids("gtceu:enderium 144")
         .chancedOutput("gtceu:raw_crystal_chip", 900, 1800)
         .duration(12000)
