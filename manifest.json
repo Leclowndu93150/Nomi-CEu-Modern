@@ -11,8 +11,8 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Nomifactory CEu: Modern",
-  "version": null,
-  "author": "",
+  "version": "0.1.4",
+  "author": "Nomifactory Modern Team",
   "overrides": "overrides",
   "files": [
     {
