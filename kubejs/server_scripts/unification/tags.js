@@ -81,6 +81,9 @@ ServerEvents.tags('item', event => {
     event.add('forge:plates', ['kubejs:crystal_matrix_plate', 'kubejs:infinity_plate'])
     event.add('forge:dusts', ['kubejs:pulsating_dust'])
 
+	// enderio!!!!
+	event.add('forge:heads', 'enderio:enderman_head')
+
     unifyChisel(event);
 })
 
