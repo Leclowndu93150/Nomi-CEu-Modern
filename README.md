@@ -1,4 +1,4 @@
-<p align="center">Project Discontinued in favor of <a href="https://github.com/ThePansmith/Monifactory">Monifactory</a></p>
+<p align="center">Project Discontinued in favor of <a href="https://github.com/ThePansmith/Monifactory">Monifactory</a> as of 18/04/2023</p>
 <p align="center">It has been forked by an other dev and the contributors behind it due to a drama i won't be talking about</p>
 <p align="center">I'm sorry to anyone that i offended but i tried to keep a stable image in public, all that burned to ashes by private DMs that leaked</p>
 <p align="center">I have never insulted any person in the LGBT community and i don't think that i deserve all that hate while other people are far worse</p>
