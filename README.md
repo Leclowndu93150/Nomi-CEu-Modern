@@ -1,4 +1,8 @@
-<p align="center">FOR DOWNLOADS GO TO THE <a href="https://github.com/Leclowndu93150/Nomi-CEu-Modern/releases">RELEASES</a> TAB</p>
+<p align="center">Project Discontinued in favor of <a href="https://github.com/ThePansmith/Monifactory">Monifactory</a></p>
+<p align="center">It has been forked by an other dev and the contributors behind it due to a drama i won't be talking about</p>
+<p align="center">I'm sorry to anyone that i offended but i tried to keep a stable image in public, all that burned to ashes by private DMs that leaked</p>
+<p align="center">I have never insulted any person in the LGBT community and i don't think that i deserve all that hate while other people are far worse</p>
+<p align="center">Anyways i don't deny any of the alegations that have concrete proof but i read some crazy shit that i wasn't aware of</p>
 <p align="center"><img src="https://i.imgur.com/pu2DwIP.png" width="250" height="250" alt="Logo"></p>
 <h1 align="center">Nomifactory CEu Modern</h1>
 <p align="center"><b><i>Port of <a href="https://github.com/Nomi-CEu/Nomi-CEu"> Nomifactory CEu</a>, using <a href="https://github.com/GregTechCEu/GregTech-Modern"> GregTech CEu Modern</a> and its related mods.</i></b></p>
